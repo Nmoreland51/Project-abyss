@@ -44,7 +44,7 @@ Status words: **implemented** (code exists and is tested), **partial**, **specif
 
 | Capability | Status | What exists | What's missing | Validated? |
 |---|---|---|---|---|
-| Historical research | partial | Taxonomy origin/disclosure facets with 160 verified quotes | Engine to mine patterns across sources (R13) | Quotes are live-verified. The faithfulness of paraphrases hasn't been human-reviewed |
+| Historical research | partial | Taxonomy origin/disclosure facets with verified quotes (221 of 222 taxonomy quotes verified) | Engine to mine patterns across sources (R13) | Quotes are live-verified. Paraphrases have had one AI review, not a human one |
 | Architecture intelligence | partial | 18-entry taxonomy with controlled vocabularies (layers, topology, identification, discovery, patterns) | Classifier (R03, B01) | Schema-tested only |
 | Signature library | specified | `Signature` contract; SIGNATURE_SPECIFICATION | Library and extraction (R14) | No |
 | Open-set recognition | specified | B02/B03 pre-registered | Everything (R04) | No |
@@ -52,7 +52,7 @@ Status words: **implemented** (code exists and is tested), **partial**, **specif
 | Hypothesis engine | partial | `Hypothesis` contract requires alternatives and falsifiers; REFUTED needs contradiction | Engine and persistence (R06) | Contract unit tests |
 | Source adapters | partial | Registry of 36 candidate sources with probe results; bounded fetcher | Adapters, terms review (R01) | Reachability probed live at commit 321cc12: 30 ok, 3 rate-limited, 2 failed, 1 blocked (an earlier run got 29 ok, because Wikidata was rate-limited) |
 | Hidden-value engine | specified | DISCOVERY_ENGINE_SPECIFICATION; B05 | Everything (R07) | No |
-| Evidence engine | partial | `RetrievalRecord` with hash/time/outcome; citation verifier; `ClaimBasis`/`RecordScope` | Persistent evidence store (R16) | Live: 161 citations checked |
+| Evidence engine | partial | `RetrievalRecord` with hash/time/outcome; citation verifier; `ClaimBasis`/`RecordScope` | Persistent evidence store (R16) | Live: 222 citations checked |
 | Knowledge graph | missing | Taxonomy `related` edges (seed) | Store, history, contradiction tracking (R15) | No |
 | Autonomous orchestration | specified | `Job`/`Budget` contracts | Queue, scheduler, recovery (R08) | No |
 | Continuous improvement | specified | Pre-registration policy | Versioning, ablation, rollback (R17) | No |
@@ -62,9 +62,9 @@ Status words: **implemented** (code exists and is tested), **partial**, **specif
 
 | ID | Gap | Why it matters | Next step |
 |---|---|---|---|
-| P0-1 | 14 of 216 facets are `unverified` and 83 are `analysis` | Only sourced facets are evidence | Register more primary sources (each entry lists `open_questions`) |
-| P0-2 | 1 of 161 citations (Kademlia PDF) is `SOURCE_UNEXTRACTABLE` | It can't be machine-verified. The DHT origin facet also cites Chord, which is verified | Find a text-extractable copy, or OCR in Phase 1 |
-| P0-3 | A VERIFIED citation proves the quote is in the source, not that the facet's paraphrase is faithful | Paraphrase drift is a hallucination risk | Owner or independent review of facet text (Phase 0 exit gate) |
+| P0-1 | 17 of 216 facets are `unverified` and 77 are `analysis` | Only sourced facets are evidence | Register more primary sources (each entry lists `open_questions`) |
+| P0-2 | 1 of 222 citations (Kademlia PDF) is `SOURCE_UNEXTRACTABLE` | It can't be machine-verified. The DHT origin facet also cites Chord and BEP 5, which are verified | Find a text-extractable copy, or OCR in Phase 1 |
+| P0-3 | A VERIFIED citation proves the quote is in the source, not that the facet's paraphrase is faithful | Paraphrase drift is a hallucination risk. A fresh-context AI review found 60 issues in v0.1.0 (44 sourced facets saying more than their quotes, 10 analysis facets stating checkable facts, 1 factual error, 5 inconsistencies). All were fixed in v0.1.1 by adding supporting quotes, cutting unsupported wording or downgrading the basis | Human (owner) review of facet text remains the Phase 0 exit gate. The AI review isn't independent of the model that wrote the text |
 | P0-4 | No source's terms have been read (`terms_verified: false` for all 94) | Ingestion legality and retention | Phase 1 gate, per adapter |
 | P0-5 | Freenet (new) entry is thin (4 unverified facets) | Its documentation wasn't registered | Register whitepaper and manual |
 | P0-6 | Single-author design. No independent review yet | Directive and owner process require independent audit | Owner review; optional second-agent review |

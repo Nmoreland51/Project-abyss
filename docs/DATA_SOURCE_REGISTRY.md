@@ -4,9 +4,9 @@
 
 Machine-readable source of truth: `data/registry/references.yaml` (documents cited as evidence) and `data/registry/ingestion_sources.yaml` (APIs, feeds and datasets Phase 1+ adapters may use). Every record states its access basis, what is known about its licence or terms, and whether those terms were actually read (`terms verified`). **Reachability results are from the environment the probe ran in** (a cloud container with a policy-enforcing egress proxy), not from the owner's machine.
 
-- `data/registry/references.yaml`: version 0.1.0, 58 sources, SHA-256 `8ae982b95065b926…`
+- `data/registry/references.yaml`: version 0.1.0, 58 sources, SHA-256 `1fb596e92057e689…`
 - `data/registry/ingestion_sources.yaml`: version 0.1.0, 36 sources, SHA-256 `534fb4ac5c3eac52…`
-- Citation retrievals from run 2026-11-24T07:22:30Z
+- Citation retrievals from run 2026-11-24T07:38:29Z
 - Reachability probe run 2026-11-24T07:23:18Z: blocked=1, fetch_failed=2, ok=30, rate_limited=3
 
 ## Reference documents (58)

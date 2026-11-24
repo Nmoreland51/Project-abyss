@@ -1,25 +1,25 @@
 {
   "report_type": "citation_verification",
-  "started_at": "2026-11-24T07:22:30.547882+00:00",
-  "finished_at": "2026-11-24T07:23:17.793970+00:00",
+  "started_at": "2026-11-24T07:38:29.941967+00:00",
+  "finished_at": "2026-11-24T07:39:14.237229+00:00",
   "environment": {
     "python": "3.13.18",
     "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
     "abyss_version": "0.1.0",
     "contract_version": "0.1.0",
-    "git_commit": "321cc1267bbb0ee5183cd29375927bb5849c09bc",
-    "git_worktree_dirty": false
+    "git_commit": "241b4195f8a3f25a5d359f2049ca165adebf8fa7",
+    "git_worktree_dirty": true
   },
   "inputs": {
     "taxonomy": {
       "path": "data/taxonomy/network_taxonomy.yaml",
-      "sha256": "e799af9f12890d12f4c6bac06bbd137cb1c52f6229f05c843b4f9d1c534987e2",
-      "version": "0.1.0"
+      "sha256": "6a0553820bd922a5e6438a47ba6ffcc2ec384678bb111cecbd9d82f5084426fe",
+      "version": "0.1.1"
     },
     "registry": [
       {
         "path": "data/registry/references.yaml",
-        "sha256": "8ae982b95065b92662badd7f3bfbbf3c5499a48e2bfa3b59198541ae37b3310d",
+        "sha256": "1fb596e92057e689a7973490e6be224c2bbe276f13309986d422cee325b65e8f",
         "version": "0.1.0"
       },
       {
@@ -30,12 +30,12 @@
     ]
   },
   "summary": {
-    "citations_total": 161,
+    "citations_total": 222,
     "citations_by_outcome": {
       "SOURCE_UNEXTRACTABLE": 1,
-      "VERIFIED": 160
+      "VERIFIED": 221
     },
-    "citations_verified_fraction": 0.9938,
+    "citations_verified_fraction": 0.9955,
     "sources_total": 58,
     "sources_by_outcome": {
       "ok": 57,
@@ -46,22 +46,22 @@
     {
       "source_id": "batman_adv_docs",
       "uri": "https://www.open-mesh.org/projects/batman-adv/wiki",
-      "retrieved_at": "2026-11-24T07:22:30.547996Z",
+      "retrieved_at": "2026-11-24T07:38:29.942108Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 23560,
       "truncated": false,
-      "sha256": "0c350dc6540ab9e6b10afc8c852d075e40e704b9f86340480d0579d4df57f155",
+      "sha256": "1a05ab00711768f503bfe0b9c8ec7e37692dbebd580b6889764ce74fa54abdbb",
       "text_chars": 6058,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 856
+      "elapsed_ms": 926
     },
     {
       "source_id": "bep3",
       "uri": "https://www.bittorrent.org/beps/bep_0003.html",
-      "retrieved_at": "2026-11-24T07:22:31.409078Z",
+      "retrieved_at": "2026-11-24T07:38:30.875626Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -71,12 +71,12 @@
       "text_chars": 15972,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 389
+      "elapsed_ms": 242
     },
     {
       "source_id": "bep5",
       "uri": "https://www.bittorrent.org/beps/bep_0005.html",
-      "retrieved_at": "2026-11-24T07:22:32.409388Z",
+      "retrieved_at": "2026-11-24T07:38:31.875846Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -86,12 +86,12 @@
       "text_chars": 17755,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 181
+      "elapsed_ms": 294
     },
     {
       "source_id": "bitcoin_whitepaper",
       "uri": "https://bitcoin.org/bitcoin.pdf",
-      "retrieved_at": "2026-11-24T07:22:32.592974Z",
+      "retrieved_at": "2026-11-24T07:38:32.172445Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -101,12 +101,12 @@
       "text_chars": 21214,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 227
+      "elapsed_ms": 240
     },
     {
       "source_id": "cern_info_first_website",
       "uri": "https://info.cern.ch/",
-      "retrieved_at": "2026-11-24T07:22:33.189542Z",
+      "retrieved_at": "2026-11-24T07:38:32.814312Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -116,12 +116,12 @@
       "text_chars": 271,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 660
+      "elapsed_ms": 855
     },
     {
       "source_id": "chord_sigcomm2001",
       "uri": "https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf",
-      "retrieved_at": "2026-11-24T07:22:33.849937Z",
+      "retrieved_at": "2026-11-24T07:38:33.670168Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -131,12 +131,12 @@
       "text_chars": 68320,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 269
+      "elapsed_ms": 235
     },
     {
       "source_id": "freenet_home",
       "uri": "https://freenet.org/",
-      "retrieved_at": "2026-11-24T07:22:34.658339Z",
+      "retrieved_at": "2026-11-24T07:38:34.399774Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -146,12 +146,12 @@
       "text_chars": 2146,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 184
+      "elapsed_ms": 256
     },
     {
       "source_id": "gemini_faq",
       "uri": "https://geminiprotocol.net/docs/faq.gmi",
-      "retrieved_at": "2026-11-24T07:22:34.844003Z",
+      "retrieved_at": "2026-11-24T07:38:34.658627Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -161,12 +161,12 @@
       "text_chars": 160376,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 743
+      "elapsed_ms": 763
     },
     {
       "source_id": "gemini_spec",
       "uri": "https://geminiprotocol.net/docs/protocol-specification.gmi",
-      "retrieved_at": "2026-11-24T07:22:35.844222Z",
+      "retrieved_at": "2026-11-24T07:38:35.658836Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -176,12 +176,12 @@
       "text_chars": 29577,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 542
+      "elapsed_ms": 499
     },
     {
       "source_id": "gnunet_about",
       "uri": "https://www.gnunet.org/en/about.html",
-      "retrieved_at": "2026-11-24T07:22:36.389677Z",
+      "retrieved_at": "2026-11-24T07:38:36.161879Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -191,12 +191,12 @@
       "text_chars": 3723,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 573
+      "elapsed_ms": 572
     },
     {
       "source_id": "gnunet_home",
       "uri": "https://www.gnunet.org/en/",
-      "retrieved_at": "2026-11-24T07:22:37.389859Z",
+      "retrieved_at": "2026-11-24T07:38:37.162163Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -206,12 +206,12 @@
       "text_chars": 5299,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 624
+      "elapsed_ms": 580
     },
     {
       "source_id": "hyphanet_about",
       "uri": "https://www.hyphanet.org/pages/about.html",
-      "retrieved_at": "2026-11-24T07:22:38.017000Z",
+      "retrieved_at": "2026-11-24T07:38:37.747735Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -221,12 +221,12 @@
       "text_chars": 13008,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 174
+      "elapsed_ms": 220
     },
     {
       "source_id": "hyphanet_docs",
       "uri": "https://www.hyphanet.org/pages/documentation.html",
-      "retrieved_at": "2026-11-24T07:22:39.017195Z",
+      "retrieved_at": "2026-11-24T07:38:38.747986Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -236,12 +236,12 @@
       "text_chars": 26150,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 186
+      "elapsed_ms": 182
     },
     {
       "source_id": "hyphanet_home",
       "uri": "https://www.hyphanet.org/",
-      "retrieved_at": "2026-11-24T07:22:40.017360Z",
+      "retrieved_at": "2026-11-24T07:38:39.748174Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -251,12 +251,12 @@
       "text_chars": 3107,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 306
+      "elapsed_ms": 244
     },
     {
       "source_id": "hyphanet_rename_2023",
       "uri": "https://www.hyphanet.org/freenet-renamed-to-hyphanet.html",
-      "retrieved_at": "2026-11-24T07:22:41.017589Z",
+      "retrieved_at": "2026-11-24T07:38:40.748346Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -266,12 +266,12 @@
       "text_chars": 1312,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 197
+      "elapsed_ms": 224
     },
     {
       "source_id": "i2p_intro",
       "uri": "https://geti2p.net/en/about/intro",
-      "retrieved_at": "2026-11-24T07:22:41.215755Z",
+      "retrieved_at": "2026-11-24T07:38:40.973522Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -281,12 +281,12 @@
       "text_chars": 52074,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 1332
+      "elapsed_ms": 1148
     },
     {
       "source_id": "ipfs_docs_cid",
       "uri": "https://docs.ipfs.tech/concepts/content-addressing/",
-      "retrieved_at": "2026-11-24T07:22:42.558300Z",
+      "retrieved_at": "2026-11-24T07:38:42.132496Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -296,12 +296,12 @@
       "text_chars": 15290,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 285
+      "elapsed_ms": 358
     },
     {
       "source_id": "ipfs_docs_dht",
       "uri": "https://docs.ipfs.tech/concepts/dht/",
-      "retrieved_at": "2026-11-24T07:22:43.558487Z",
+      "retrieved_at": "2026-11-24T07:38:43.132712Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -311,12 +311,12 @@
       "text_chars": 14120,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 252
+      "elapsed_ms": 246
     },
     {
       "source_id": "ipfs_docs_what",
       "uri": "https://docs.ipfs.tech/concepts/what-is-ipfs/",
-      "retrieved_at": "2026-11-24T07:22:44.558658Z",
+      "retrieved_at": "2026-11-24T07:38:44.132905Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -326,12 +326,12 @@
       "text_chars": 2379,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 292
+      "elapsed_ms": 227
     },
     {
       "source_id": "ipfs_whitepaper_arxiv",
       "uri": "https://arxiv.org/abs/1407.3561",
-      "retrieved_at": "2026-11-24T07:22:44.855035Z",
+      "retrieved_at": "2026-11-24T07:38:44.363127Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -341,27 +341,27 @@
       "text_chars": 4014,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 128
+      "elapsed_ms": 127
     },
     {
       "source_id": "isoc_brief_history",
       "uri": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
-      "retrieved_at": "2026-11-24T07:22:44.989505Z",
+      "retrieved_at": "2026-11-24T07:38:44.495582Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 249294,
+      "bytes": 249290,
       "truncated": false,
-      "sha256": "fdcd558dbaad25a84fc1b505d0347207b9fafef60d69499e481d1e4f167e7d87",
-      "text_chars": 59714,
+      "sha256": "b34230d17bf63119a519cc923074d5291c1556c0736bb99992d87a28ffe08e84",
+      "text_chars": 59710,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 927
+      "elapsed_ms": 933
     },
     {
       "source_id": "kademlia_iptps2002",
       "uri": "https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf",
-      "retrieved_at": "2026-11-24T07:22:45.935194Z",
+      "retrieved_at": "2026-11-24T07:38:45.454259Z",
       "outcome": "text_unextractable",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -371,27 +371,27 @@
       "text_chars": 0,
       "extraction_method": "none",
       "error": "no readable text extracted",
-      "elapsed_ms": 299
+      "elapsed_ms": 320
     },
     {
       "source_id": "matrix_spec",
       "uri": "https://spec.matrix.org/latest/",
-      "retrieved_at": "2026-11-24T07:22:46.600671Z",
+      "retrieved_at": "2026-11-24T07:38:46.076256Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 59724,
       "truncated": false,
-      "sha256": "f3a378eefa9e6e7b1f92d6f4ec26dc5d69e160aeeb8f6ceec6fa1ae9069799eb",
+      "sha256": "54affb0c1facacdc3579ef114b5cb5c9627e319d331ed277fb950df7e991b40e",
       "text_chars": 21816,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 205
+      "elapsed_ms": 193
     },
     {
       "source_id": "meshtastic_docs",
       "uri": "https://meshtastic.org/docs/",
-      "retrieved_at": "2026-11-24T07:22:46.811867Z",
+      "retrieved_at": "2026-11-24T07:38:46.275363Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -401,12 +401,12 @@
       "text_chars": 3382,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 363
+      "elapsed_ms": 368
     },
     {
       "source_id": "ndn_project",
       "uri": "https://named-data.net/project/",
-      "retrieved_at": "2026-11-24T07:22:47.179344Z",
+      "retrieved_at": "2026-11-24T07:38:46.650676Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
@@ -416,12 +416,12 @@
       "text_chars": 4008,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 2742
+      "elapsed_ms": 382
     },
     {
       "source_id": "nist_sp800_207",
       "uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
-      "retrieved_at": "2026-11-24T07:22:49.924687Z",
+      "retrieved_at": "2026-11-24T07:38:47.036462Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -431,12 +431,12 @@
       "text_chars": 154152,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 738
+      "elapsed_ms": 359
     },
     {
       "source_id": "reticulum_home",
       "uri": "https://reticulum.network/",
-      "retrieved_at": "2026-11-24T07:22:52.136904Z",
+      "retrieved_at": "2026-11-24T07:38:48.805433Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -446,12 +446,12 @@
       "text_chars": 2809,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 154
+      "elapsed_ms": 144
     },
     {
       "source_id": "rfc1",
       "uri": "https://www.rfc-editor.org/rfc/rfc1.txt",
-      "retrieved_at": "2026-11-24T07:22:52.292962Z",
+      "retrieved_at": "2026-11-24T07:38:48.951297Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -461,12 +461,12 @@
       "text_chars": 15582,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 189
+      "elapsed_ms": 180
     },
     {
       "source_id": "rfc1036",
       "uri": "https://www.rfc-editor.org/rfc/rfc1036.txt",
-      "retrieved_at": "2026-11-24T07:22:53.293183Z",
+      "retrieved_at": "2026-11-24T07:38:49.951545Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -476,12 +476,12 @@
       "text_chars": 39750,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 206
+      "elapsed_ms": 202
     },
     {
       "source_id": "rfc1436",
       "uri": "https://www.rfc-editor.org/rfc/rfc1436.txt",
-      "retrieved_at": "2026-11-24T07:22:54.293442Z",
+      "retrieved_at": "2026-11-24T07:38:50.951745Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -491,12 +491,12 @@
       "text_chars": 32701,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 170
+      "elapsed_ms": 198
     },
     {
       "source_id": "rfc1918",
       "uri": "https://www.rfc-editor.org/rfc/rfc1918.txt",
-      "retrieved_at": "2026-11-24T07:22:55.293661Z",
+      "retrieved_at": "2026-11-24T07:38:51.952001Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -506,12 +506,12 @@
       "text_chars": 19804,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 197
+      "elapsed_ms": 187
     },
     {
       "source_id": "rfc2501",
       "uri": "https://www.rfc-editor.org/rfc/rfc2501.txt",
-      "retrieved_at": "2026-11-24T07:22:56.293808Z",
+      "retrieved_at": "2026-11-24T07:38:52.952273Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -521,12 +521,12 @@
       "text_chars": 25970,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 182
+      "elapsed_ms": 197
     },
     {
       "source_id": "rfc3626",
       "uri": "https://www.rfc-editor.org/rfc/rfc3626.txt",
-      "retrieved_at": "2026-11-24T07:22:57.294008Z",
+      "retrieved_at": "2026-11-24T07:38:53.952395Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -536,12 +536,12 @@
       "text_chars": 136011,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 218
+      "elapsed_ms": 268
     },
     {
       "source_id": "rfc3977",
       "uri": "https://www.rfc-editor.org/rfc/rfc3977.txt",
-      "retrieved_at": "2026-11-24T07:22:58.294191Z",
+      "retrieved_at": "2026-11-24T07:38:54.952604Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -551,12 +551,12 @@
       "text_chars": 213490,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 261
+      "elapsed_ms": 223
     },
     {
       "source_id": "rfc3986",
       "uri": "https://www.rfc-editor.org/rfc/rfc3986.txt",
-      "retrieved_at": "2026-11-24T07:22:59.294322Z",
+      "retrieved_at": "2026-11-24T07:38:55.952856Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -566,12 +566,12 @@
       "text_chars": 123536,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 218
+      "elapsed_ms": 216
     },
     {
       "source_id": "rfc4266",
       "uri": "https://www.rfc-editor.org/rfc/rfc4266.txt",
-      "retrieved_at": "2026-11-24T07:23:00.294474Z",
+      "retrieved_at": "2026-11-24T07:38:56.953153Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -581,12 +581,12 @@
       "text_chars": 10704,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 172
+      "elapsed_ms": 160
     },
     {
       "source_id": "rfc4364",
       "uri": "https://www.rfc-editor.org/rfc/rfc4364.txt",
-      "retrieved_at": "2026-11-24T07:23:01.294650Z",
+      "retrieved_at": "2026-11-24T07:38:57.953352Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -596,12 +596,12 @@
       "text_chars": 103260,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 230
+      "elapsed_ms": 237
     },
     {
       "source_id": "rfc5321",
       "uri": "https://www.rfc-editor.org/rfc/rfc5321.txt",
-      "retrieved_at": "2026-11-24T07:23:02.294817Z",
+      "retrieved_at": "2026-11-24T07:38:58.953514Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -611,12 +611,12 @@
       "text_chars": 200765,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 239
+      "elapsed_ms": 230
     },
     {
       "source_id": "rfc5537",
       "uri": "https://www.rfc-editor.org/rfc/rfc5537.txt",
-      "retrieved_at": "2026-11-24T07:23:03.295013Z",
+      "retrieved_at": "2026-11-24T07:38:59.953731Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -626,12 +626,12 @@
       "text_chars": 106278,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 214
+      "elapsed_ms": 192
     },
     {
       "source_id": "rfc5694",
       "uri": "https://www.rfc-editor.org/rfc/rfc5694.txt",
-      "retrieved_at": "2026-11-24T07:23:04.295256Z",
+      "retrieved_at": "2026-11-24T07:39:00.953950Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -641,12 +641,12 @@
       "text_chars": 59848,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 192
+      "elapsed_ms": 272
     },
     {
       "source_id": "rfc6120",
       "uri": "https://www.rfc-editor.org/rfc/rfc6120.txt",
-      "retrieved_at": "2026-11-24T07:23:05.295440Z",
+      "retrieved_at": "2026-11-24T07:39:01.954191Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -656,12 +656,12 @@
       "text_chars": 381964,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 275
+      "elapsed_ms": 250
     },
     {
       "source_id": "rfc801",
       "uri": "https://www.rfc-editor.org/rfc/rfc801.txt",
-      "retrieved_at": "2026-11-24T07:23:06.295612Z",
+      "retrieved_at": "2026-11-24T07:39:02.954347Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -671,12 +671,12 @@
       "text_chars": 31037,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 212
+      "elapsed_ms": 191
     },
     {
       "source_id": "rfc850",
       "uri": "https://www.rfc-editor.org/rfc/rfc850.txt",
-      "retrieved_at": "2026-11-24T07:23:07.295840Z",
+      "retrieved_at": "2026-11-24T07:39:03.954569Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -686,12 +686,12 @@
       "text_chars": 39343,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 234
+      "elapsed_ms": 217
     },
     {
       "source_id": "rfc8966",
       "uri": "https://www.rfc-editor.org/rfc/rfc8966.txt",
-      "retrieved_at": "2026-11-24T07:23:08.296024Z",
+      "retrieved_at": "2026-11-24T07:39:04.954773Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -701,12 +701,12 @@
       "text_chars": 126527,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 289
+      "elapsed_ms": 218
     },
     {
       "source_id": "rfc9110",
       "uri": "https://www.rfc-editor.org/rfc/rfc9110.txt",
-      "retrieved_at": "2026-11-24T07:23:09.296223Z",
+      "retrieved_at": "2026-11-24T07:39:05.955049Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -716,12 +716,12 @@
       "text_chars": 457670,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 291
+      "elapsed_ms": 254
     },
     {
       "source_id": "rfc9498",
       "uri": "https://www.rfc-editor.org/rfc/rfc9498.txt",
-      "retrieved_at": "2026-11-24T07:23:10.296422Z",
+      "retrieved_at": "2026-11-24T07:39:06.955192Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -731,12 +731,12 @@
       "text_chars": 143426,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 212
+      "elapsed_ms": 189
     },
     {
       "source_id": "rfc977",
       "uri": "https://www.rfc-editor.org/rfc/rfc977.txt",
-      "retrieved_at": "2026-11-24T07:23:11.296613Z",
+      "retrieved_at": "2026-11-24T07:39:07.955446Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -746,12 +746,12 @@
       "text_chars": 46536,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 254
+      "elapsed_ms": 175
     },
     {
       "source_id": "scion_home",
       "uri": "https://www.scion.org/",
-      "retrieved_at": "2026-11-24T07:23:11.553644Z",
+      "retrieved_at": "2026-11-24T07:39:08.132447Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
@@ -761,12 +761,12 @@
       "text_chars": 5163,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 336
+      "elapsed_ms": 220
     },
     {
       "source_id": "tor_design_2004",
       "uri": "https://www.usenix.org/legacy/event/sec04/tech/dingledine.html",
-      "retrieved_at": "2026-11-24T07:23:11.899793Z",
+      "retrieved_at": "2026-11-24T07:39:08.359153Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -776,12 +776,12 @@
       "text_chars": 1767,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 176
+      "elapsed_ms": 181
     },
     {
       "source_id": "tor_history",
       "uri": "https://www.torproject.org/about/history/",
-      "retrieved_at": "2026-11-24T07:23:12.078391Z",
+      "retrieved_at": "2026-11-24T07:39:08.541943Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -791,12 +791,12 @@
       "text_chars": 5945,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 371
+      "elapsed_ms": 308
     },
     {
       "source_id": "tor_rend_spec_overview",
       "uri": "https://spec.torproject.org/rend-spec/overview.html",
-      "retrieved_at": "2026-11-24T07:23:12.453469Z",
+      "retrieved_at": "2026-11-24T07:39:08.854092Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -806,12 +806,12 @@
       "text_chars": 9002,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 348
+      "elapsed_ms": 656
     },
     {
       "source_id": "tor_spec_intro",
       "uri": "https://spec.torproject.org/intro/index.html",
-      "retrieved_at": "2026-11-24T07:23:13.453641Z",
+      "retrieved_at": "2026-11-24T07:39:09.854305Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -821,12 +821,12 @@
       "text_chars": 4885,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 358
+      "elapsed_ms": 436
     },
     {
       "source_id": "w3c_activitypub",
       "uri": "https://www.w3.org/TR/activitypub/",
-      "retrieved_at": "2026-11-24T07:23:13.813929Z",
+      "retrieved_at": "2026-11-24T07:39:10.293089Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -836,12 +836,12 @@
       "text_chars": 69117,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 207
+      "elapsed_ms": 150
     },
     {
       "source_id": "w3c_tbl_alt_hypertext_1991",
       "uri": "https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt",
-      "retrieved_at": "2026-11-24T07:23:14.814176Z",
+      "retrieved_at": "2026-11-24T07:39:11.293270Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain",
@@ -851,12 +851,12 @@
       "text_chars": 2715,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 193
+      "elapsed_ms": 144
     },
     {
       "source_id": "w3c_tbl_proposal_1989",
       "uri": "https://www.w3.org/History/1989/proposal.html",
-      "retrieved_at": "2026-11-24T07:23:15.814345Z",
+      "retrieved_at": "2026-11-24T07:39:12.293545Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=iso-8859-1",
@@ -866,12 +866,12 @@
       "text_chars": 29699,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 142
+      "elapsed_ms": 159
     },
     {
       "source_id": "wireguard_paper",
       "uri": "https://www.wireguard.com/papers/wireguard.pdf",
-      "retrieved_at": "2026-11-24T07:23:15.964167Z",
+      "retrieved_at": "2026-11-24T07:39:12.457394Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -881,12 +881,12 @@
       "text_chars": 79149,
       "extraction_method": "pdftotext",
       "error": null,
-      "elapsed_ms": 999
+      "elapsed_ms": 935
     },
     {
       "source_id": "yggdrasil_home",
       "uri": "https://yggdrasil-network.github.io/",
-      "retrieved_at": "2026-11-24T07:23:17.540017Z",
+      "retrieved_at": "2026-11-24T07:39:13.991850Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -896,12 +896,12 @@
       "text_chars": 1933,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 139
+      "elapsed_ms": 130
     },
     {
       "source_id": "zeronet_readme",
       "uri": "https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md",
-      "retrieved_at": "2026-11-24T07:23:17.680912Z",
+      "retrieved_at": "2026-11-24T07:39:14.123338Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain; charset=utf-8",
@@ -944,6 +944,14 @@
       "facet": "resource_identification",
       "ref": "bep3",
       "quote": "It identifies content by URL and is designed to integrate seamlessly with the web.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "origin",
+      "ref": "bep5",
+      "quote": "In Kademlia, the distance metric is XOR and the result is interpreted as an unsigned integer.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1021,6 +1029,14 @@
     },
     {
       "entry": "freenet",
+      "facet": "purpose",
+      "ref": "freenet_home",
+      "quote": "need no servers behind them",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
       "facet": "public_disclosure",
       "ref": "freenet_home",
       "quote": "River, group chat that feels like Signal or WhatsApp with nobody in the middle",
@@ -1040,6 +1056,22 @@
       "facet": "infrastructure_relationship",
       "ref": "freenet_home",
       "quote": "Your computer becomes part of a global network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "infrastructure_relationship",
+      "ref": "freenet_home",
+      "quote": "run peer-to-peer, not on the cloud",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "distinguishing_characteristics",
+      "ref": "freenet_home",
+      "quote": "Build apps with familiar tools (Rust, TypeScript)",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1125,6 +1157,14 @@
     },
     {
       "entry": "gnunet",
+      "facet": "origin",
+      "ref": "gnunet_about",
+      "quote": "The GNU Project",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
       "facet": "purpose",
       "ref": "gnunet_about",
       "quote": "We believe liberal societies need a network architecture that uses the anti-authoritarian decentralized peer-to-peer paradigm and privacy-preserving cryptographic protocols.",
@@ -1159,7 +1199,7 @@
       "entry": "hyphanet",
       "facet": "origin",
       "ref": "hyphanet_about",
-      "quote": "Ian started the Freenet Project around July of 1999",
+      "quote": "Ian Clarke Hyphanet is based on Ian's paper \"A Distributed Decentralised Information Storage and Retrieval System\"",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1167,7 +1207,15 @@
       "entry": "hyphanet",
       "facet": "origin",
       "ref": "hyphanet_about",
-      "quote": "Hyphanet is based on Ian's paper \"A Distributed Decentralised Information Storage and Retrieval System\"",
+      "quote": "Ian started the Freenet Project around July of 1999",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "public_disclosure",
+      "ref": "hyphanet_about",
+      "quote": "Hyphanet is based on Ian's paper",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1197,6 +1245,22 @@
     },
     {
       "entry": "hyphanet",
+      "facet": "distinguishing_characteristics",
+      "ref": "hyphanet_about",
+      "quote": "if used in \"darknet\" mode, where users only connect to their friends, is very difficult to detect",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "distinguishing_characteristics",
+      "ref": "hyphanet_about",
+      "quote": "not privacy related project to Freenet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
       "facet": "resource_identification",
       "ref": "hyphanet_docs",
       "quote": "Hyphanet has long-supported the concept of \"Content Hash Keys\" which guarantee the integrity of retrieved data.",
@@ -1213,6 +1277,14 @@
     },
     {
       "entry": "hyphanet",
+      "facet": "resource_identification",
+      "ref": "hyphanet_docs",
+      "quote": "is more flexible than CHKs",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
       "facet": "documentation",
       "ref": "hyphanet_docs",
       "quote": "Forward Error Correction",
@@ -1223,7 +1295,15 @@
       "entry": "hyphanet",
       "facet": "distinguishing_characteristics",
       "ref": "hyphanet_docs",
-      "quote": "Uniquely, Hyphanet also supports \"healing\"",
+      "quote": "which allows a file to be reconstructed even if some of the parts of that file can't be retrieved",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "distinguishing_characteristics",
+      "ref": "hyphanet_docs",
+      "quote": "Uniquely, Hyphanet also supports \"healing\", which involves the reconstruction and reinsertion of missing file components.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1239,13 +1319,21 @@
       "entry": "hyphanet",
       "facet": "origin",
       "ref": "hyphanet_rename_2023",
+      "quote": "In early 2023, the board of Freenet Project, Inc",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "origin",
+      "ref": "hyphanet_rename_2023",
       "quote": "decided to rename its new project Locutus to \"Freenet.\" This required that Freenet change its name.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
     {
       "entry": "hyphanet",
-      "facet": "public_disclosure",
+      "facet": "origin",
       "ref": "hyphanet_rename_2023",
       "quote": "Freenet renamed to Hyphanet",
       "outcome": "VERIFIED",
@@ -1260,10 +1348,42 @@
       "match_mode": "exact_normalized"
     },
     {
+      "entry": "hyphanet",
+      "facet": "public_disclosure",
+      "ref": "hyphanet_rename_2023",
+      "quote": "Mon 26 June 2023",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "origin",
+      "ref": "hyphanet_rename_2023",
+      "quote": "In early 2023, the board of Freenet Project, Inc",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "origin",
+      "ref": "hyphanet_rename_2023",
+      "quote": "decided to rename its new project Locutus to \"Freenet.\"",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
       "entry": "freenet",
       "facet": "origin",
       "ref": "hyphanet_rename_2023",
       "quote": "Locutus began development in 2019, and has different design priorities.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "public_disclosure",
+      "ref": "hyphanet_rename_2023",
+      "quote": "decided to rename its new project Locutus to \"Freenet.\"",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1293,9 +1413,33 @@
     },
     {
       "entry": "i2p",
+      "facet": "purpose",
+      "ref": "i2p_intro",
+      "quote": "Each of these applications may make their own anonymity, latency, and throughput tradeoffs",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
       "facet": "architecture",
       "ref": "i2p_intro",
       "quote": "I2P is an overlay network designed to be run on top of a functional packet switched network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "architecture",
+      "ref": "i2p_intro",
+      "quote": "unidirectional tunnel creation with a single message",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "architecture",
+      "ref": "i2p_intro",
+      "quote": "sets up an outbound tunnel, while the receiver",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1312,6 +1456,14 @@
       "facet": "architecture",
       "ref": "i2p_intro",
       "quote": "Those routers that do participate in the DHT and respond to leaseset lookups are called 'floodfills'.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "discovery",
+      "ref": "i2p_intro",
+      "quote": "The two types of metadata carried are \"routerInfo\" and \"leaseSets\"",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1367,6 +1519,14 @@
       "entry": "ipfs",
       "facet": "architecture",
       "ref": "ipfs_docs_dht",
+      "quote": "IPFS's take on Kademlia",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "architecture",
+      "ref": "ipfs_docs_dht",
       "quote": "In IPFS, the DHT is used as the fundamental component of the content routing system",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
@@ -1375,7 +1535,7 @@
       "entry": "ipfs",
       "facet": "protocols",
       "ref": "ipfs_docs_dht",
-      "quote": "Kademlia",
+      "quote": "IPFS's take on Kademlia",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1423,7 +1583,7 @@
       "entry": "ipfs",
       "facet": "origin",
       "ref": "ipfs_whitepaper_arxiv",
-      "quote": "IPFS - Content Addressed, Versioned, P2P File System",
+      "quote": "Versioned, P2P File System, by Juan Benet",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1471,7 +1631,7 @@
       "entry": "arpanet",
       "facet": "public_disclosure",
       "ref": "isoc_brief_history",
-      "quote": "Kahn organized a large, very successful demonstration of the ARPANET at the International Computer Communication Conference (ICCC)",
+      "quote": "In October 1972, Kahn organized a large, very successful demonstration of the ARPANET at the International Computer Communication Conference (ICCC)",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1480,6 +1640,30 @@
       "facet": "public_disclosure",
       "ref": "isoc_brief_history",
       "quote": "This was the first public demonstration of this new network technology to the public.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "public_disclosure",
+      "ref": "isoc_brief_history",
+      "quote": "These memos were intended to be an informal fast distribution way to share ideas with other network researchers.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "protocols",
+      "ref": "isoc_brief_history",
+      "quote": "the transition of the ARPANET host protocol from NCP to TCP/IP as of January 1, 1983",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "protocols",
+      "ref": "isoc_brief_history",
+      "quote": "style transition, requiring all hosts to convert simultaneously",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1496,6 +1680,30 @@
       "facet": "origin",
       "ref": "isoc_brief_history",
       "quote": "spawned USENET, based on UNIX' built-in UUCP communication protocols",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "infrastructure_relationship",
+      "ref": "isoc_brief_history",
+      "quote": "spawned USENET, based on UNIX' built-in UUCP communication protocols",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "origin",
+      "ref": "isoc_brief_history",
+      "quote": "It was also in 1972 that the initial",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "origin",
+      "ref": "isoc_brief_history",
+      "quote": "application, electronic mail, was introduced",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1623,7 +1831,15 @@
       "entry": "usenet",
       "facet": "resource_identification",
       "ref": "rfc1036",
-      "quote": "Message-ID",
+      "quote": "The \"Message-ID\" line gives the message a unique identifier.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "resource_identification",
+      "ref": "rfc1036",
+      "quote": "Newsgroups: news.announce",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1661,9 +1877,49 @@
     },
     {
       "entry": "gopher",
+      "facet": "architecture",
+      "ref": "rfc1436",
+      "quote": "Gopher client software presents users with a hierarchy of items and directories much like a file system",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "protocols",
+      "ref": "rfc1436",
+      "quote": "connecting to a server and sending the server a selector (a line of text, which may be empty)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "protocols",
+      "ref": "rfc1436",
+      "quote": "No state is retained by the server.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
       "facet": "protocols",
       "ref": "rfc1436",
       "quote": "Gopher servers should listen on port 70 (port 70 is assigned to Internet Gopher by IANA).",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "resource_identification",
+      "ref": "rfc1436",
+      "quote": "connecting to a server and sending the server a selector (a line of text, which may be empty)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "resource_identification",
+      "ref": "rfc1436",
+      "quote": "item types could be denoted by other text tags or by icons",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1708,10 +1964,34 @@
       "match_mode": "exact_normalized"
     },
     {
+      "entry": "private_intranet",
+      "facet": "resource_identification",
+      "ref": "rfc1918",
+      "quote": "172.16.0.0 - 172.31.255.255 (172.16/12 prefix)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "resource_identification",
+      "ref": "rfc1918",
+      "quote": "192.168.0.0 - 192.168.255.255 (192.168/16 prefix)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
       "entry": "mesh",
       "facet": "origin",
       "ref": "rfc2501",
-      "quote": "Mobile Ad hoc Networking (MANET): Routing Protocol Performance Issues and Evaluation Considerations",
+      "quote": "January 1999 Mobile Ad hoc Networking",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "origin",
+      "ref": "rfc3626",
+      "quote": "October 2003 Optimized Link State Routing Protocol (OLSR)",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1720,6 +2000,14 @@
       "facet": "origin",
       "ref": "rfc3626",
       "quote": "Category: Experimental",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "architecture",
+      "ref": "rfc3626",
+      "quote": "This document describes the Optimized Link State Routing (OLSR) protocol for mobile ad hoc networks.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1783,6 +2071,14 @@
       "entry": "usenet",
       "facet": "purpose",
       "ref": "rfc5537",
+      "quote": "will be able to see all articles posted to each newsgroup in which he participates",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "purpose",
+      "ref": "rfc5537",
       "quote": "These protocols most commonly use a flooding algorithm that propagates copies throughout a network of participating servers.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
@@ -1837,6 +2133,14 @@
     },
     {
       "entry": "p2p",
+      "facet": "architecture",
+      "ref": "rfc5694",
+      "quote": "using a P2P paradigm or a different model (e.g., a client-server paradigm)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
       "facet": "documentation",
       "ref": "rfc5694",
       "quote": "Peer-to-Peer (P2P) Architecture: Definition, Taxonomies, Examples, and Applicability",
@@ -1863,7 +2167,15 @@
       "entry": "usenet",
       "facet": "public_disclosure",
       "ref": "rfc850",
-      "quote": "Standard for Interchange of USENET Messages",
+      "quote": "June 1983 Standard for Interchange of USENET Messages",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "origin",
+      "ref": "rfc850",
+      "quote": "June 1983 Standard for Interchange of USENET Messages",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1909,9 +2221,33 @@
     },
     {
       "entry": "gnunet",
+      "facet": "public_disclosure",
+      "ref": "rfc9498",
+      "quote": "Category: Informational",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "public_disclosure",
+      "ref": "rfc9498",
+      "quote": "Independent Submission",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
       "facet": "protocols",
       "ref": "rfc9498",
       "quote": "GNS is a decentralized and censorship-resistant domain name resolution protocol that provides a privacy-enhancing alternative to the Domain Name System (DNS) protocols.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "resource_identification",
+      "ref": "rfc9498",
+      "quote": "A blinded zone key is a key derived from a zone key and a label.",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1925,9 +2261,25 @@
     },
     {
       "entry": "gnunet",
+      "facet": "resource_identification",
+      "ref": "rfc9498",
+      "quote": "5.1.1. PKEY 5.1.2. EDKEY",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
       "facet": "discovery",
       "ref": "rfc9498",
       "quote": "DHTs as Remote Storage",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "public_disclosure",
+      "ref": "rfc977",
+      "quote": "February 1986 Network News Transfer Protocol",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1940,10 +2292,26 @@
       "match_mode": "exact_normalized"
     },
     {
+      "entry": "usenet",
+      "facet": "infrastructure_relationship",
+      "ref": "rfc977",
+      "quote": "using a reliable stream-based transmission of news among the ARPA-Internet community",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
       "entry": "experimental_protocols",
       "facet": "architecture",
       "ref": "scion_home",
       "quote": "SCION, a more secure and reliable Internet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "public_disclosure",
+      "ref": "tor_design_2004",
+      "quote": "13th USENIX Security Symposium",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -1997,6 +2365,14 @@
     },
     {
       "entry": "tor",
+      "facet": "public_disclosure",
+      "ref": "tor_history",
+      "quote": "in October 2002 when the Tor network was initially deployed, its code was released under a free and open software license",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
       "facet": "protocols",
       "ref": "tor_rend_spec_overview",
       "quote": "Hidden services aim to provide responder anonymity for bidirectional stream-based communication on the Tor network.",
@@ -2007,7 +2383,15 @@
       "entry": "tor",
       "facet": "purpose",
       "ref": "tor_spec_intro",
-      "quote": "Tor is a distributed overlay network designed to anonymize low-latency TCP-based applications",
+      "quote": "Tor is a distributed overlay network designed to anonymize low-latency TCP-based applications such as web browsing, secure shell, and instant messaging.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "architecture",
+      "ref": "tor_spec_intro",
+      "quote": "The network is built of a number of servers, called relays",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -2021,9 +2405,33 @@
     },
     {
       "entry": "tor",
+      "facet": "architecture",
+      "ref": "tor_spec_intro",
+      "quote": "A circuit is built over a sequence of relays (typically three).",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "protocols",
+      "ref": "tor_spec_intro",
+      "quote": "Under the hood, a channel is just a TLS connection over TCP, with a specified encoding for cells.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
       "facet": "documentation",
       "ref": "tor_spec_intro",
       "quote": "A short introduction to Tor",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "origin",
+      "ref": "w3c_activitypub",
+      "quote": "W3C Recommendation 23 January 2018",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -2045,6 +2453,14 @@
     },
     {
       "entry": "federated",
+      "facet": "architecture",
+      "ref": "w3c_activitypub",
+      "quote": "A client to server protocol",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
       "facet": "protocols",
       "ref": "w3c_activitypub",
       "quote": "The ActivityPub protocol is a decentralized social networking protocol based upon the [ActivityStreams] 2.0 data format.",
@@ -2055,13 +2471,29 @@
       "entry": "www",
       "facet": "public_disclosure",
       "ref": "w3c_tbl_alt_hypertext_1991",
-      "quote": "Newsgroups: alt.hypertext",
+      "quote": "(Tim Berners-Lee) Newsgroups: alt.hypertext",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
     {
       "entry": "www",
       "facet": "public_disclosure",
+      "ref": "w3c_tbl_alt_hypertext_1991",
+      "quote": "Date: 6 Aug 91 14:56:20 GMT",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "public_disclosure",
+      "ref": "w3c_tbl_alt_hypertext_1991",
+      "quote": "The WorldWideWeb (WWW) project aims to allow links to be made to any information anywhere.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "architecture",
       "ref": "w3c_tbl_alt_hypertext_1991",
       "quote": "The WorldWideWeb (WWW) project aims to allow links to be made to any information anywhere.",
       "outcome": "VERIFIED",
@@ -2087,6 +2519,14 @@
       "entry": "www",
       "facet": "origin",
       "ref": "w3c_tbl_proposal_1989",
+      "quote": "Tim Berners-Lee, CERN",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "origin",
+      "ref": "w3c_tbl_proposal_1989",
       "quote": "written in March 1989 and later redistributed unchanged apart from the date added in May 1990",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
@@ -2096,6 +2536,22 @@
       "facet": "purpose",
       "ref": "w3c_tbl_proposal_1989",
       "quote": "This proposal concerns the management of general information about accelerators and experiments at CERN.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "purpose",
+      "ref": "w3c_tbl_proposal_1989",
+      "quote": "It discusses the problems of loss of information about complex evolving systems and derives a solution based on a distributed hypertext system.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "architecture",
+      "ref": "w3c_tbl_proposal_1989",
+      "quote": "derives a solution based on a distributed hypertext system",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },
@@ -2132,6 +2588,14 @@
       "match_mode": "exact_normalized"
     },
     {
+      "entry": "experimental_protocols",
+      "facet": "architecture",
+      "ref": "yggdrasil_home",
+      "quote": "End-to-end encrypted IPv6 networking",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
       "entry": "zeronet",
       "facet": "purpose",
       "ref": "zeronet_readme",
@@ -2157,6 +2621,14 @@
     },
     {
       "entry": "zeronet",
+      "facet": "architecture",
+      "ref": "zeronet_readme",
+      "quote": "the peers verify the `content.json` integrity (using the signature)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
       "facet": "protocols",
       "ref": "zeronet_readme",
       "quote": "it tries to find peers using the BitTorrent network so it can download the site files",
@@ -2175,7 +2647,23 @@
       "entry": "zeronet",
       "facet": "resource_identification",
       "ref": "zeronet_readme",
+      "quote": "who has the private key for the site address",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "resource_identification",
+      "ref": "zeronet_readme",
       "quote": "Namecoin .bit domains support",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "discovery",
+      "ref": "zeronet_readme",
+      "quote": "it tries to find peers using the BitTorrent network so it can download the site files",
       "outcome": "VERIFIED",
       "match_mode": "exact_normalized"
     },

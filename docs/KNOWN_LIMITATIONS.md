@@ -5,9 +5,9 @@
    verifier, specifications and benchmark definitions. Nothing has been discovered. No classifier, ingestion
    pipeline, knowledge graph, orchestrator or UI exists.
 2. **The taxonomy is a literature baseline, not research output.** It documents known systems from public sources.
-3. **14 of 216 facets are `unverified` and 83 are `analysis`.** Only `sourced` facets with VERIFIED citations count as evidence.
+3. **17 of 216 facets are `unverified` and 77 are `analysis`.** Only `sourced` facets with VERIFIED citations count as evidence.
 4. **Quote verification isn't fact verification.** It proves the quote is in the source at retrieval time, not
-   that the source is correct or that the surrounding paraphrase is faithful.
+   that the source is correct. Paraphrase faithfulness has had one fresh-context AI review (60 issues fixed), not yet a human review.
 5. **One citation can't be machine-checked** (Kademlia PDF: no extractable text).
 6. **The Freenet (formerly Locutus) entry is thin.** Its technical documentation hasn't been registered.
 

@@ -73,7 +73,7 @@ class Entry(_Strict):
     name: str
     kind: Literal["system", "pattern", "category"]
     aliases: list[str] = Field(default_factory=list)
-    lifecycle: Literal["historical", "operational", "experimental", "mixed", "renamed"]
+    lifecycle: Literal["historical", "operational", "experimental", "mixed", "renamed", "unknown"]
     layers: list[str] = Field(min_length=1)
     topology: list[str] = Field(min_length=1)
     resource_identification_types: list[str] = Field(min_length=1)

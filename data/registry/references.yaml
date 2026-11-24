@@ -244,7 +244,7 @@ sources:
     terms_uri: https://info.arxiv.org/help/api/tou.html
     published: "2014-07-14"
     reliability: primary
-    reliability_notes: Preprint, not peer-reviewed. The described design differs from current implementations.
+    reliability_notes: Preprint, not peer-reviewed. Whether current implementations still match the 2014 design was not checked.
     added: 2026-11-24
   - id: ipfs_docs_what
     kind: reference_document

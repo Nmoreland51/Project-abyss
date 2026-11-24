@@ -8,7 +8,7 @@ tests, without live proof of the capability), **contract** (types only), **speci
 
 | Area | Status | Evidence |
 |---|---|---|
-| Taxonomy v0.1.0 (18 entries × 12 facets = 216 facets: 119 sourced, 83 analysis, 14 unverified) | implemented; 160/161 citations **verified live** | `evidence/phase0/citation_report.json` |
+| Taxonomy v0.1.1 (18 entries × 12 facets = 216 facets: 122 sourced, 77 analysis, 17 unverified) | implemented; 221/222 citations **verified live**; wording reviewed (fresh-context AI review) | `evidence/phase0/citation_report.json` |
 | Source registry v0.1.0 (58 references, 36 candidate ingestion sources) | implemented; reachability probed live | `evidence/phase0/source_probe_report.json` |
 | Data contracts v0.1.0 | implemented (unit-tested; no persistence yet) | `tests/unit/test_contracts.py` |
 | Scope policy and hard limits | implemented (unit-tested) | `tests/unit/test_scope.py` |

@@ -8,7 +8,7 @@ not yet a working discovery system. See `docs/IMPLEMENTATION_STATUS.md` for exac
 
 | Item | Where |
 |---|---|
-| Versioned, machine-readable network taxonomy (18 entries × 12 facets; 161 quotes checked live) | `data/taxonomy/network_taxonomy.yaml` → `docs/NETWORK_TAXONOMY.md` |
+| Versioned, machine-readable network taxonomy (18 entries × 12 facets; 222 quotes checked live) | `data/taxonomy/network_taxonomy.yaml` → `docs/NETWORK_TAXONOMY.md` |
 | Source registry: 58 cited references + 36 candidate ingestion sources, with reachability probe | `data/registry/` → `docs/DATA_SOURCE_REGISTRY.md` |
 | Typed data contracts that enforce the rules of evidence | `abyss/core/contracts.py` |
 | Owner-controlled scope policy and hard limits | `config/scope.yaml`, `abyss/core/scope.py`, `docs/SCOPE_AND_RESTRICTIONS.md` |

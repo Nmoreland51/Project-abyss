@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 (2026-11-24): taxonomy wording review
+
+- A fresh-context review of all 216 facets found 60 issues: 44 sourced facets saying more than their quotes,
+  10 analysis facets stating checkable facts, 1 factual error (GNS described as "standardised"; RFC 9498 is
+  Informational) and 5 inconsistencies. All fixed: supporting quotes added (citations rose from 161 to 222),
+  unsupported wording removed, 3 analysis facets downgraded to `unverified`. Review record: `evidence/phase0/taxonomy_review.md`.
+- Taxonomy schema 0.1.1: `lifecycle` accepts `unknown` (ZeroNet's maintenance status is unverified).
+- ZeroNet: `dht_lookup` removed from discovery types (README mentions only the BitTorrent network).
+
 ## 0.1.0 (2026-11-24): Phase 0 scientific foundation
 
 Added

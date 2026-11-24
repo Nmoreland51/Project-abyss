@@ -9,7 +9,7 @@ unbenchmarked estimates.** Phase 1 records actual effort per work package so lat
 
 | Phase | Scope | Depends on | Owner decisions needed | Exit gate (evidence required) |
 |---|---|---|---|---|
-| 0: Scientific foundation | Taxonomy, sources, methodology, contracts, benchmark pre-registration, gap audit | — | Review and approve | Taxonomy citations live-verified (done: 160/161); **owner review of design and facet wording**; D-017 approved |
+| 0: Scientific foundation | Taxonomy, sources, methodology, contracts, benchmark pre-registration, gap audit | — | Review and approve | Taxonomy citations live-verified (done: 221/222); **owner review of design and facet wording**; D-017 approved |
 | 1: Foundation | Storage, migrations, adapters, evidence store, dedup, initial KG, CLI, frozen corpus | 0 | D-009, D-015, D-017 | Real sources ingested, queried, **restored after kill/restart** (T01, T02, T11 partial); T12/T14/T18 pass; **frozen corpus manifest** committed |
 | 2: Recognition | Signature extraction, labelled dataset, baselines, B01 | 1 | D-003, D-004 | B01 result with confusion matrix, CI and error analysis; T03, T17, T19 |
 | 3: Unknown recognition | Open-set, calibration, anomaly lab, hypotheses | 2 | D-007 | B02–B04 measured; no unsupported identities (wrong-identity rate reported); T04–T07, T24 |
@@ -26,8 +26,9 @@ objective before investing in complex novelty models.
 
 | Deliverable | Status |
 |---|---|
-| Versioned machine-readable taxonomy (18 entries × 12 facets, 161 citations) | Done: `data/taxonomy/network_taxonomy.yaml` |
-| Live citation verification | Done: 160 VERIFIED, 1 SOURCE_UNEXTRACTABLE, 0 QUOTE_NOT_FOUND (`evidence/phase0/citation_report.json`) |
+| Versioned machine-readable taxonomy v0.1.1 (18 entries × 12 facets, 222 citations) | Done: `data/taxonomy/network_taxonomy.yaml` |
+| Live citation verification | Done: 221 VERIFIED, 1 SOURCE_UNEXTRACTABLE, 0 QUOTE_NOT_FOUND (`evidence/phase0/citation_report.json`) |
+| Fresh-context wording review (paraphrase drift) | Done: 60 issues found and fixed (`evidence/phase0/taxonomy_review.md`) |
 | Source registry (58 references, 36 candidate ingestion sources) with reachability probe | Done |
 | Data contracts v0.1.0 with evidence rules | Done, unit-tested |
 | Research methodology, signature and discovery specifications | Done (design) |

@@ -20,8 +20,8 @@ reports that Abyss itself generates.
 
 | Measure | Value | Evidence |
 |---|---|---|
-| Citations checked live | 161 | `evidence/phase0/citation_report.json` |
-| VERIFIED | 160 (99.4%) | same |
+| Citations checked live (taxonomy v0.1.1) | 222 | `evidence/phase0/citation_report.json` |
+| VERIFIED | 221 (99.5%) | same |
 | QUOTE_NOT_FOUND | 0 | same |
 | SOURCE_UNEXTRACTABLE | 1 (Kademlia PDF, font-encoded text layer) | same |
 | Sources retrieved | 58 (57 ok, 1 text-unextractable) | same |
