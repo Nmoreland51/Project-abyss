@@ -1,0 +1,16 @@
+## 2026-11-24T08:17:09Z commit-to-be: Phase 1; LIVE_BASE_URL=http://localhost:8000 (docker compose stack)
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+    LIVE OK base=http://localhost:8000 post=176cfd45-3d21-4266-adc5-9614f56175cd community=live_f9aae1
+LiveServerTest > twoAccountsInteractOnTheSameServer PASSED
+ThreadhallApiTest > errorEnvelopeIsSurfaced PASSED
+ThreadhallApiTest > idempotencyKeyAndPathEncoding PASSED
+ThreadhallApiTest > loginStoresTokensAndSendsBearer PASSED
+ThreadhallApiTest > rejectedRefreshSignsOut PASSED
+ThreadhallApiTest > parsesServerUrls PASSED
+ThreadhallApiTest > offlineIsANetworkErrorAndKeepsTokens PASSED
+ThreadhallApiTest > expiredAccessTokenIsRefreshedOnceForConcurrentCalls PASSED
+ColdStartTest > containerRestoresAndDropsSessions PASSED
+LiveUiFlowTest > twoAccountsThroughTheAppUi PASSED
+ThreadModelTest > flattenIsDepthFirstAndRespectsCollapse PASSED
+ThreadModelTest > formatting PASSED
+BUILD SUCCESSFUL in 19s

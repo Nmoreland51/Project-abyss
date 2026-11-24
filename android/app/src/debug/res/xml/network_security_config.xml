@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pilot (debug) builds only: allows http:// to a self-hosted server on a private network.
+     Tokens sent over http:// can be read by anyone on that network; the app shows a warning.
+     See docs/OWNER_DECISIONS.md OD-03 for the alternative (HTTPS tunnel / reverse proxy). -->
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!-- Intentional for the pilot build only; disclosed in OWNER_DECISIONS OD-03. -->
+    <base-config cleartextTrafficPermitted="true" tools:ignore="InsecureBaseConfiguration">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

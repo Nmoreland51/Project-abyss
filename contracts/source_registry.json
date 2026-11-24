@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "policy": "Default for any unresolved source is NO publication of its content. Code licences and API availability do not grant a licence to republish user posts. Revalidate terms at implementation and launch.",
+  "reviewed_at": "2026-11-24",
+  "sources": [
+    {
+      "id": "reddit-archive-code",
+      "provider": "reddit-archive/reddit (GitHub, archived 2017)",
+      "url": "https://github.com/reddit-archive/reddit",
+      "terms_url": "https://github.com/reddit-archive/reddit/blob/master/LICENSE",
+      "content_types": ["source code"],
+      "access_method": "none (not cloned, not used)",
+      "license_version_date": "not re-verified in this session",
+      "permission_evidence": null,
+      "allowed_use": "none — behavioural reference only; no code copied",
+      "rate_limits": null,
+      "removal_contact": null,
+      "reviewer": "coding agent (not legal review)",
+      "decision": "not_used",
+      "decision_date": "2026-11-24",
+      "next_review": "before any code reuse",
+      "notes": "Implementation is original (FastAPI/Kotlin). Any future reuse needs licence compliance review and attribution."
+    },
+    {
+      "id": "arctic-shift",
+      "provider": "Arctic Shift",
+      "url": "https://github.com/ArthurHeitmann/arctic_shift",
+      "terms_url": "https://github.com/ArthurHeitmann/arctic_shift/blob/master/api/README.md",
+      "content_types": ["posts", "comments", "metadata"],
+      "access_method": "none (no requests made)",
+      "license_version_date": "not reviewed",
+      "permission_evidence": null,
+      "allowed_use": "none",
+      "rate_limits": "unknown",
+      "removal_contact": "unknown",
+      "reviewer": "unassigned",
+      "decision": "unresolved",
+      "decision_date": null,
+      "next_review": "Phase 3 entry",
+      "notes": "Archive availability is not republication permission. No live access tests performed."
+    },
+    {
+      "id": "wayback-cdx",
+      "provider": "Internet Archive Wayback CDX server",
+      "url": "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
+      "terms_url": "https://archive.org/about/terms.php",
+      "content_types": ["capture index", "archived pages"],
+      "access_method": "none (no requests made)",
+      "license_version_date": "not reviewed",
+      "permission_evidence": null,
+      "allowed_use": "none",
+      "rate_limits": "unknown",
+      "removal_contact": "unknown",
+      "reviewer": "unassigned",
+      "decision": "unresolved",
+      "decision_date": null,
+      "next_review": "Phase 3 entry",
+      "notes": "Respect archive controls and exclusions; never reconstruct removed content."
+    }
+  ]
+}

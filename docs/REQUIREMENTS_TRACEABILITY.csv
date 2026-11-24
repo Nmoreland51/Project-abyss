@@ -1,0 +1,20 @@
+requirement_id,description,phase,acceptance_tests,implementation_status,evidence
+R01,Public feeds and authenticated writes,1,"T04,T15,T26","Implemented; server+JVM verified; device pending","test_anonymous_write_endpoints_require_auth; test_home_is_subscriptions_and_all_is_everything; LiveUiFlowTest"
+R02,Independent identity and sessions,1,"T02,T20","Partial: register/login/refresh rotation/logout/session revoke done; recovery not started (OD-09); export/delete Phase 5","tests/test_auth.py (15 tests); ColdStartTest"
+R03,Community creation/subscriptions/roles,1,"T03,T15","Implemented (API); UI: create/join/leave; moderator management API only","tests/test_communities.py; test_role_checks"
+R04,Posts and links,1,"T04,T14","Implemented: text/link, title, author, timestamp, flair (API), permalink; media Phase 5","tests/test_posts_comments.py; LiveServerTest"
+R05,Threaded comments,1,"T04,T07","Implemented: nesting, collapse/expand, replies, delete, stable ordering, pagination, continue-thread; edit API only (no edit UI)","test_deep_thread_is_bounded_and_continuable; test_wrong_and_missing_parent_rejected; ThreadModelTest"
+R06,Voting and karma,1,T05,"Implemented; reconciler shows zero drift under concurrent retries","tests/test_votes.py"
+R07,Sorting and feed pagination,2,"T06,T26","Mostly implemented early: hot/new/top/controversial, windows, keyset cursors; pinned posts not started","tests/test_feeds.py; ADR-0003"
+R08,Full text search,2,T08,Planned,Not executed
+R09,Historical integration and provenance,3,"T09,T10,T12,T28","Schema invariants only (identity separation CHECK, source_records); no importer","ADR-0004"
+R10,"Bookmarks, inbox, prefs and block",2/5,"T18,T27",Planned,Not executed
+R11,Classic native UI and accessibility,2,"T23,T26","Partial: compact rows, threads, tabs, light/dark, content descriptions; no formal accessibility audit","LiveUiFlowTest; ADR-0005"
+R12,Offline cache and synchronization,4,"T13,T14","Planned (sign-out clears tokens; drafts carry idempotency keys)",Not executed
+R13,Permitted import and outage independence,3,"T09,T10,T11,T19,T28","Planned; no external source is contacted by server or app","contracts/source_registry.json"
+R14,Media lifecycle,5,"T17,T19",Planned,Not executed
+R15,Moderation and policy,5,"T15,T18","Partial: scoped moderator removal with audit row (API); reports/appeals/policy not started","test_edit_and_delete_permissions; test_moderation_is_scoped_to_own_community"
+R16,"Export, delete and restore",5/6,"T19,T20,T22","Planned; manual pg_dump documented only","docs/OPERATIONS.md"
+R17,Deployment and observability,6,"T01,T16,T21,T22","Partial: compose dev deployment, health live/ready, JSON access logs with request ids; T01 pass","raw/phase0-t01-clean-boot.txt"
+R18,Signed Android release,7,"T14,T24","Partial: pilot-signed debug APK + checksum; release build unsigned (needs owner key); no device install evidence","dist checksum in STATUS.md"
+R19,Optional Abyss integration,6,T25,Planned (deliberately not started),Not executed

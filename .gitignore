@@ -1,0 +1,25 @@
+# Python
+server/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Secrets / local config
+infra/.env
+*.env.local
+android/local.properties
+android/keystore/release*.jks
+android/keystore/release*.keystore
+android/keystore/*.properties
+
+# Android / Gradle
+android/.gradle/
+android/**/build/
+android/.kotlin/
+android/.idea/
+*.iml
+captures/
+
+# Release outputs are attached to releases, not committed
+dist/

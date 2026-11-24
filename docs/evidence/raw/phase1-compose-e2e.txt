@@ -1,0 +1,27 @@
+### seed 2026-11-24T07:40:18Z
+PASS idempotent retry returned the same post
+PASS Bob's post appears in Alice's home feed
+seeded state -> /tmp/claude-0/-home-user-Project-abyss/59031291-6816-5e14-ae51-1dfd1ea26d9d/scratchpad/e2e.json
+### full stack restart (docker compose down; up) 2026-11-24T07:40:19Z
+ Network threadhall_default Removed 
+ Container threadhall-api-1 Started 
+### verify after restart 2026-11-24T07:40:26Z
+PASS server ready: {'database': 'ok', 'schema': 'ok'}
+PASS Alice comment karma persisted (=1, got 1)
+PASS Bob post karma persisted (=1, got 1)
+PASS post score and Alice's vote persisted
+PASS comment count persisted
+PASS post author is Bob's local account
+PASS top-level comment persisted
+PASS nested reply persisted under the right parent
+PASS Bob's comment vote persisted
+PASS Bob's subscription persisted
+PASS anonymous All feed shows the post
+verify: all checks passed
+### api-only restart 2026-11-24T07:40:26Z
+ Container threadhall-api-1 Started 
+verify: all checks passed
+### re-run migrations on existing DB (idempotent) 2026-11-24T07:40:28Z
+ Container threadhall-migrate-run-0a4c6fb590cf Creating 
+ Container threadhall-migrate-run-0a4c6fb590cf Created 
+exit=0

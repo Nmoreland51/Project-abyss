@@ -1,0 +1,20 @@
+requirement_id,description,phase,acceptance_tests,implementation_status,evidence
+R01,Public feeds and authenticated writes,1,"T04,T15,T26",Planned,Not executed
+R02,Independent identity and sessions,1,"T02,T20",Planned,Not executed
+R03,Community creation/subscriptions/roles,1,"T03,T15",Planned,Not executed
+R04,Posts and links,1,"T04,T14",Planned,Not executed
+R05,Threaded comments,1,"T04,T07",Planned,Not executed
+R06,Voting and karma,1,T05,Planned,Not executed
+R07,Sorting and feed pagination,2,"T06,T26",Planned,Not executed
+R08,Full text search,2,T08,Planned,Not executed
+R09,Historical integration and provenance,3,"T09,T10,T12,T28",Planned,Not executed
+R10,"Bookmarks, inbox, prefs and block",2/5,"T18,T27",Planned,Not executed
+R11,Classic native UI and accessibility,2,"T23,T26",Planned,Not executed
+R12,Offline cache and synchronization,4,"T13,T14",Planned,Not executed
+R13,Permitted import and outage independence,3,"T09,T10,T11,T19,T28",Planned,Not executed
+R14,Media lifecycle,5,"T17,T19",Planned,Not executed
+R15,Moderation and policy,5,"T15,T18",Planned,Not executed
+R16,"Export, delete and restore",5/6,"T19,T20,T22",Planned,Not executed
+R17,Deployment and observability,6,"T01,T16,T21,T22",Planned,Not executed
+R18,Signed Android release,7,"T14,T24",Planned,Not executed
+R19,Optional Abyss integration,6,T25,Planned,Not executed

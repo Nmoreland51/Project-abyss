@@ -1,0 +1,17 @@
+### T01 clean boot: down -v (volume deleted), up 2026-11-24T08:18:12Z
+ Volume threadhall_dbdata Removed 
+ Network threadhall_default Removed 
+ Container threadhall-api-1 Started 
+ready after 6.1 s: {"status":"ok","checks":{"database":"ok","schema":"ok"},"api_version":"1.0.0"}
+api running Up 1 second (health: starting)
+db running Up 5 seconds (healthy)
+migrate exited Exited (0) 1 second ago
+### seed + full restart + verify
+PASS Bob's post appears in Alice's home feed
+seeded state -> /tmp/claude-0/-home-user-Project-abyss/59031291-6816-5e14-ae51-1dfd1ea26d9d/scratchpad/e2e2.json
+ Container threadhall-api-1 Started 
+PASS Bob's subscription persisted
+PASS anonymous All feed shows the post
+verify: all checks passed
+### runtime DB role privileges
+t|f|12

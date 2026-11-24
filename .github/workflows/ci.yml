@@ -1,0 +1,72 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:18.7-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5433:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 3s --health-timeout 3s --health-retries 30
+    env:
+      TEST_ADMIN_DATABASE_URL: postgresql+psycopg://postgres:postgres@localhost:5433/postgres
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check app tests migrations scripts && ruff format --check app tests migrations scripts
+      - run: pytest -p no:logging
+      - run: pip-audit -r requirements.txt
+
+  integration-android:
+    # Real stack (compose) + two-account HTTP e2e + Android unit/live/UI tests + APK build.
+    runs-on: ubuntu-24.04
+    needs: backend
+    steps:
+      - uses: actions/checkout@v5
+      - name: Start server stack
+        run: |
+          cp infra/.env.example infra/.env
+          sed -i "s/change-me-postgres/$(openssl rand -hex 16)/; s/change-me-migrator/$(openssl rand -hex 16)/; s/change-me-runtime/$(openssl rand -hex 16)/; s/API_BIND=0.0.0.0/API_BIND=127.0.0.1/" infra/.env
+          docker compose -f infra/docker-compose.yml --env-file infra/.env up -d --build
+          for i in $(seq 1 60); do curl -sf localhost:8000/health/ready && break; sleep 2; done
+      - name: Two-account e2e across a restart
+        run: |
+          python3 tests/e2e/two_accounts.py seed --state /tmp/e2e.json
+          docker compose -f infra/docker-compose.yml --env-file infra/.env restart db api
+          for i in $(seq 1 60); do curl -sf localhost:8000/health/ready && break; sleep 2; done
+          python3 tests/e2e/two_accounts.py verify --state /tmp/e2e.json
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Android SDK packages
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.2" "build-tools;37.0.0" > /dev/null
+      - name: Android tests (unit + live) and pilot APK
+        working-directory: android
+        env:
+          LIVE_BASE_URL: http://localhost:8000
+        run: ./gradlew :core:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug --console=plain
+      - run: sha256sum android/app/build/outputs/apk/debug/app-debug.apk
+      - uses: actions/upload-artifact@v5
+        with:
+          name: pilot-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+      - if: always()
+        run: docker compose -f infra/docker-compose.yml --env-file infra/.env logs api | tail -100
