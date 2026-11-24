@@ -44,7 +44,7 @@ and exploratory requests. They aren't project restrictions, and your own machine
 | ID | Observation | Impact | Alternative |
 |---|---|---|---|
 | E1 | GitHub API and HTML return 403 (session scoped to this repository); `raw.githubusercontent.com` works | Can't search GitHub or read repository metadata (stars, activity, licence) here | Run on your machine with a GitHub token; use Software Heritage, GitLab and Codeberg here |
-| E2 | Wikipedia/Wikidata return 429 | No mainstream-knowledge-base baseline here | Your machine; or an offline Wikidata dump |
+| E2 | Wikipedia API returns 429; Wikidata returned 429 in exploration and 200 in the recorded probe (intermittent) | Unreliable mainstream-knowledge-base baseline here | Your machine; or an offline Wikidata dump |
 | E3 | Semantic Scholar 429 without key; Codeberg 429 intermittently | Slower or blocked literature/forge queries | Free API key (you hold it); retries with backoff |
 | E4 | SourceHut 502; Wayback CDX connection reset; Common Crawl intermittent | Archive and forge coverage gaps here | Retry; your machine |
 | E5 | Outbound TCP 1965 (Gemini), 70 (Gopher) and 119 (NNTP) refused | Native Gemini/Gopher/Usenet adapters can't be live-tested here | Test on your machine; HTTPS mirrors where they exist (used for the Gemini spec) |

@@ -14,7 +14,7 @@
 ## Data and access
 7. **No source terms have been read** (`terms_verified: false` for all 94). Reading them is a Phase 1 gate before any adapter.
 8. **Reachability is environment-specific.** Results come from a cloud container behind an egress proxy: GitHub
-   API/HTML blocked, Wikimedia and Semantic Scholar rate-limited, native Gemini/Gopher/NNTP ports closed
+   API/HTML blocked, Wikipedia and Semantic Scholar rate-limited, Wikidata and Codeberg intermittent, native Gemini/Gopher/NNTP ports closed
    (SCOPE_AND_RESTRICTIONS s3).
 9. **Raw content isn't retained** in Phase 0 (hash only). Pages that change later can't be re-checked against the original bytes.
 10. **Contract v0 supports only http(s) URIs.**

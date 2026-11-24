@@ -1,14 +1,14 @@
 {
   "report_type": "citation_verification",
-  "started_at": "2026-11-24T07:06:54.086096+00:00",
-  "finished_at": "2026-11-24T07:07:40.907095+00:00",
+  "started_at": "2026-11-24T07:22:30.547882+00:00",
+  "finished_at": "2026-11-24T07:23:17.793970+00:00",
   "environment": {
     "python": "3.13.18",
     "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
     "abyss_version": "0.1.0",
     "contract_version": "0.1.0",
-    "git_commit": null,
-    "git_worktree_dirty": true
+    "git_commit": "321cc1267bbb0ee5183cd29375927bb5849c09bc",
+    "git_worktree_dirty": false
   },
   "inputs": {
     "taxonomy": {
@@ -24,7 +24,7 @@
       },
       {
         "path": "data/registry/ingestion_sources.yaml",
-        "sha256": "137cd89c9ffa1521957bf8fce63f413e012a9cff6887cdc245baa0f69d32073d",
+        "sha256": "534fb4ac5c3eac5293fe5d08894363c048e69d2632a8022bd331193108b5a4f3",
         "version": "0.1.0"
       }
     ]
@@ -46,22 +46,22 @@
     {
       "source_id": "batman_adv_docs",
       "uri": "https://www.open-mesh.org/projects/batman-adv/wiki",
-      "retrieved_at": "2026-11-24T07:06:54.086311Z",
+      "retrieved_at": "2026-11-24T07:22:30.547996Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 23560,
       "truncated": false,
-      "sha256": "c9aca14813aa95f2d0923a398c5deea069ef2979b4ef2293e5026597db270959",
+      "sha256": "0c350dc6540ab9e6b10afc8c852d075e40e704b9f86340480d0579d4df57f155",
       "text_chars": 6058,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 992
+      "elapsed_ms": 856
     },
     {
       "source_id": "bep3",
       "uri": "https://www.bittorrent.org/beps/bep_0003.html",
-      "retrieved_at": "2026-11-24T07:06:55.086742Z",
+      "retrieved_at": "2026-11-24T07:22:31.409078Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -71,12 +71,12 @@
       "text_chars": 15972,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 336
+      "elapsed_ms": 389
     },
     {
       "source_id": "bep5",
       "uri": "https://www.bittorrent.org/beps/bep_0005.html",
-      "retrieved_at": "2026-11-24T07:06:56.086961Z",
+      "retrieved_at": "2026-11-24T07:22:32.409388Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -86,12 +86,12 @@
       "text_chars": 17755,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 348
+      "elapsed_ms": 181
     },
     {
       "source_id": "bitcoin_whitepaper",
       "uri": "https://bitcoin.org/bitcoin.pdf",
-      "retrieved_at": "2026-11-24T07:06:56.438819Z",
+      "retrieved_at": "2026-11-24T07:22:32.592974Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -101,12 +101,12 @@
       "text_chars": 21214,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 460
+      "elapsed_ms": 227
     },
     {
       "source_id": "cern_info_first_website",
       "uri": "https://info.cern.ch/",
-      "retrieved_at": "2026-11-24T07:06:57.343600Z",
+      "retrieved_at": "2026-11-24T07:22:33.189542Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -116,12 +116,12 @@
       "text_chars": 271,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 814
+      "elapsed_ms": 660
     },
     {
       "source_id": "chord_sigcomm2001",
       "uri": "https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf",
-      "retrieved_at": "2026-11-24T07:06:58.158558Z",
+      "retrieved_at": "2026-11-24T07:22:33.849937Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -131,12 +131,12 @@
       "text_chars": 68320,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 532
+      "elapsed_ms": 269
     },
     {
       "source_id": "freenet_home",
       "uri": "https://freenet.org/",
-      "retrieved_at": "2026-11-24T07:06:59.272471Z",
+      "retrieved_at": "2026-11-24T07:22:34.658339Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -146,12 +146,12 @@
       "text_chars": 2146,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 290
+      "elapsed_ms": 184
     },
     {
       "source_id": "gemini_faq",
       "uri": "https://geminiprotocol.net/docs/faq.gmi",
-      "retrieved_at": "2026-11-24T07:06:59.564721Z",
+      "retrieved_at": "2026-11-24T07:22:34.844003Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -161,12 +161,12 @@
       "text_chars": 160376,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 757
+      "elapsed_ms": 743
     },
     {
       "source_id": "gemini_spec",
       "uri": "https://geminiprotocol.net/docs/protocol-specification.gmi",
-      "retrieved_at": "2026-11-24T07:07:00.564965Z",
+      "retrieved_at": "2026-11-24T07:22:35.844222Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -176,12 +176,12 @@
       "text_chars": 29577,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 528
+      "elapsed_ms": 542
     },
     {
       "source_id": "gnunet_about",
       "uri": "https://www.gnunet.org/en/about.html",
-      "retrieved_at": "2026-11-24T07:07:01.096306Z",
+      "retrieved_at": "2026-11-24T07:22:36.389677Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -191,12 +191,12 @@
       "text_chars": 3723,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 665
+      "elapsed_ms": 573
     },
     {
       "source_id": "gnunet_home",
       "uri": "https://www.gnunet.org/en/",
-      "retrieved_at": "2026-11-24T07:07:02.096476Z",
+      "retrieved_at": "2026-11-24T07:22:37.389859Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -206,12 +206,12 @@
       "text_chars": 5299,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 569
+      "elapsed_ms": 624
     },
     {
       "source_id": "hyphanet_about",
       "uri": "https://www.hyphanet.org/pages/about.html",
-      "retrieved_at": "2026-11-24T07:07:02.668923Z",
+      "retrieved_at": "2026-11-24T07:22:38.017000Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -221,12 +221,12 @@
       "text_chars": 13008,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 284
+      "elapsed_ms": 174
     },
     {
       "source_id": "hyphanet_docs",
       "uri": "https://www.hyphanet.org/pages/documentation.html",
-      "retrieved_at": "2026-11-24T07:07:03.669106Z",
+      "retrieved_at": "2026-11-24T07:22:39.017195Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -236,12 +236,12 @@
       "text_chars": 26150,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 235
+      "elapsed_ms": 186
     },
     {
       "source_id": "hyphanet_home",
       "uri": "https://www.hyphanet.org/",
-      "retrieved_at": "2026-11-24T07:07:04.669342Z",
+      "retrieved_at": "2026-11-24T07:22:40.017360Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -251,12 +251,12 @@
       "text_chars": 3107,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 334
+      "elapsed_ms": 306
     },
     {
       "source_id": "hyphanet_rename_2023",
       "uri": "https://www.hyphanet.org/freenet-renamed-to-hyphanet.html",
-      "retrieved_at": "2026-11-24T07:07:05.669541Z",
+      "retrieved_at": "2026-11-24T07:22:41.017589Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -266,12 +266,12 @@
       "text_chars": 1312,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 210
+      "elapsed_ms": 197
     },
     {
       "source_id": "i2p_intro",
       "uri": "https://geti2p.net/en/about/intro",
-      "retrieved_at": "2026-11-24T07:07:05.881028Z",
+      "retrieved_at": "2026-11-24T07:22:41.215755Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -281,12 +281,12 @@
       "text_chars": 52074,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 1213
+      "elapsed_ms": 1332
     },
     {
       "source_id": "ipfs_docs_cid",
       "uri": "https://docs.ipfs.tech/concepts/content-addressing/",
-      "retrieved_at": "2026-11-24T07:07:07.103643Z",
+      "retrieved_at": "2026-11-24T07:22:42.558300Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -296,12 +296,12 @@
       "text_chars": 15290,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 411
+      "elapsed_ms": 285
     },
     {
       "source_id": "ipfs_docs_dht",
       "uri": "https://docs.ipfs.tech/concepts/dht/",
-      "retrieved_at": "2026-11-24T07:07:08.104413Z",
+      "retrieved_at": "2026-11-24T07:22:43.558487Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -311,12 +311,12 @@
       "text_chars": 14120,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 300
+      "elapsed_ms": 252
     },
     {
       "source_id": "ipfs_docs_what",
       "uri": "https://docs.ipfs.tech/concepts/what-is-ipfs/",
-      "retrieved_at": "2026-11-24T07:07:09.104651Z",
+      "retrieved_at": "2026-11-24T07:22:44.558658Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -326,12 +326,12 @@
       "text_chars": 2379,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 167
+      "elapsed_ms": 292
     },
     {
       "source_id": "ipfs_whitepaper_arxiv",
       "uri": "https://arxiv.org/abs/1407.3561",
-      "retrieved_at": "2026-11-24T07:07:09.274966Z",
+      "retrieved_at": "2026-11-24T07:22:44.855035Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -346,22 +346,22 @@
     {
       "source_id": "isoc_brief_history",
       "uri": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
-      "retrieved_at": "2026-11-24T07:07:09.408737Z",
+      "retrieved_at": "2026-11-24T07:22:44.989505Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
-      "bytes": 249291,
+      "bytes": 249294,
       "truncated": false,
-      "sha256": "2d1272a530a3e5ab69f28f47178f0575cc80bd5e01b23005263ff80a8701d648",
-      "text_chars": 59711,
+      "sha256": "fdcd558dbaad25a84fc1b505d0347207b9fafef60d69499e481d1e4f167e7d87",
+      "text_chars": 59714,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 1003
+      "elapsed_ms": 927
     },
     {
       "source_id": "kademlia_iptps2002",
       "uri": "https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf",
-      "retrieved_at": "2026-11-24T07:07:10.432628Z",
+      "retrieved_at": "2026-11-24T07:22:45.935194Z",
       "outcome": "text_unextractable",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -371,18 +371,18 @@
       "text_chars": 0,
       "extraction_method": "none",
       "error": "no readable text extracted",
-      "elapsed_ms": 304
+      "elapsed_ms": 299
     },
     {
       "source_id": "matrix_spec",
       "uri": "https://spec.matrix.org/latest/",
-      "retrieved_at": "2026-11-24T07:07:11.032764Z",
+      "retrieved_at": "2026-11-24T07:22:46.600671Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
       "bytes": 59724,
       "truncated": false,
-      "sha256": "56c83d4503614704499ce9b7280a29a71ce60c081c2a4e6435d18306f4237ff1",
+      "sha256": "f3a378eefa9e6e7b1f92d6f4ec26dc5d69e160aeeb8f6ceec6fa1ae9069799eb",
       "text_chars": 21816,
       "extraction_method": "html",
       "error": null,
@@ -391,7 +391,7 @@
     {
       "source_id": "meshtastic_docs",
       "uri": "https://meshtastic.org/docs/",
-      "retrieved_at": "2026-11-24T07:07:11.247893Z",
+      "retrieved_at": "2026-11-24T07:22:46.811867Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -401,12 +401,12 @@
       "text_chars": 3382,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 359
+      "elapsed_ms": 363
     },
     {
       "source_id": "ndn_project",
       "uri": "https://named-data.net/project/",
-      "retrieved_at": "2026-11-24T07:07:11.611472Z",
+      "retrieved_at": "2026-11-24T07:22:47.179344Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
@@ -416,12 +416,12 @@
       "text_chars": 4008,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 463
+      "elapsed_ms": 2742
     },
     {
       "source_id": "nist_sp800_207",
       "uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
-      "retrieved_at": "2026-11-24T07:07:12.078851Z",
+      "retrieved_at": "2026-11-24T07:22:49.924687Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -431,12 +431,12 @@
       "text_chars": 154152,
       "extraction_method": "pypdf",
       "error": null,
-      "elapsed_ms": 628
+      "elapsed_ms": 738
     },
     {
       "source_id": "reticulum_home",
       "uri": "https://reticulum.network/",
-      "retrieved_at": "2026-11-24T07:07:14.484759Z",
+      "retrieved_at": "2026-11-24T07:22:52.136904Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -446,12 +446,12 @@
       "text_chars": 2809,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 179
+      "elapsed_ms": 154
     },
     {
       "source_id": "rfc1",
       "uri": "https://www.rfc-editor.org/rfc/rfc1.txt",
-      "retrieved_at": "2026-11-24T07:07:14.666123Z",
+      "retrieved_at": "2026-11-24T07:22:52.292962Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -461,12 +461,12 @@
       "text_chars": 15582,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 176
+      "elapsed_ms": 189
     },
     {
       "source_id": "rfc1036",
       "uri": "https://www.rfc-editor.org/rfc/rfc1036.txt",
-      "retrieved_at": "2026-11-24T07:07:15.666509Z",
+      "retrieved_at": "2026-11-24T07:22:53.293183Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -476,12 +476,12 @@
       "text_chars": 39750,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 207
+      "elapsed_ms": 206
     },
     {
       "source_id": "rfc1436",
       "uri": "https://www.rfc-editor.org/rfc/rfc1436.txt",
-      "retrieved_at": "2026-11-24T07:07:16.666694Z",
+      "retrieved_at": "2026-11-24T07:22:54.293442Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -491,12 +491,12 @@
       "text_chars": 32701,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 509
+      "elapsed_ms": 170
     },
     {
       "source_id": "rfc1918",
       "uri": "https://www.rfc-editor.org/rfc/rfc1918.txt",
-      "retrieved_at": "2026-11-24T07:07:17.666881Z",
+      "retrieved_at": "2026-11-24T07:22:55.293661Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -506,12 +506,12 @@
       "text_chars": 19804,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 195
+      "elapsed_ms": 197
     },
     {
       "source_id": "rfc2501",
       "uri": "https://www.rfc-editor.org/rfc/rfc2501.txt",
-      "retrieved_at": "2026-11-24T07:07:18.667086Z",
+      "retrieved_at": "2026-11-24T07:22:56.293808Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -521,12 +521,12 @@
       "text_chars": 25970,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 205
+      "elapsed_ms": 182
     },
     {
       "source_id": "rfc3626",
       "uri": "https://www.rfc-editor.org/rfc/rfc3626.txt",
-      "retrieved_at": "2026-11-24T07:07:19.667234Z",
+      "retrieved_at": "2026-11-24T07:22:57.294008Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -536,12 +536,12 @@
       "text_chars": 136011,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 234
+      "elapsed_ms": 218
     },
     {
       "source_id": "rfc3977",
       "uri": "https://www.rfc-editor.org/rfc/rfc3977.txt",
-      "retrieved_at": "2026-11-24T07:07:20.667455Z",
+      "retrieved_at": "2026-11-24T07:22:58.294191Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -551,12 +551,12 @@
       "text_chars": 213490,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 228
+      "elapsed_ms": 261
     },
     {
       "source_id": "rfc3986",
       "uri": "https://www.rfc-editor.org/rfc/rfc3986.txt",
-      "retrieved_at": "2026-11-24T07:07:21.667614Z",
+      "retrieved_at": "2026-11-24T07:22:59.294322Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -566,12 +566,12 @@
       "text_chars": 123536,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 206
+      "elapsed_ms": 218
     },
     {
       "source_id": "rfc4266",
       "uri": "https://www.rfc-editor.org/rfc/rfc4266.txt",
-      "retrieved_at": "2026-11-24T07:07:22.667801Z",
+      "retrieved_at": "2026-11-24T07:23:00.294474Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -581,12 +581,12 @@
       "text_chars": 10704,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 167
+      "elapsed_ms": 172
     },
     {
       "source_id": "rfc4364",
       "uri": "https://www.rfc-editor.org/rfc/rfc4364.txt",
-      "retrieved_at": "2026-11-24T07:07:23.667969Z",
+      "retrieved_at": "2026-11-24T07:23:01.294650Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -596,12 +596,12 @@
       "text_chars": 103260,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 219
+      "elapsed_ms": 230
     },
     {
       "source_id": "rfc5321",
       "uri": "https://www.rfc-editor.org/rfc/rfc5321.txt",
-      "retrieved_at": "2026-11-24T07:07:24.668151Z",
+      "retrieved_at": "2026-11-24T07:23:02.294817Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -611,12 +611,12 @@
       "text_chars": 200765,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 342
+      "elapsed_ms": 239
     },
     {
       "source_id": "rfc5537",
       "uri": "https://www.rfc-editor.org/rfc/rfc5537.txt",
-      "retrieved_at": "2026-11-24T07:07:25.668382Z",
+      "retrieved_at": "2026-11-24T07:23:03.295013Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -626,12 +626,12 @@
       "text_chars": 106278,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 233
+      "elapsed_ms": 214
     },
     {
       "source_id": "rfc5694",
       "uri": "https://www.rfc-editor.org/rfc/rfc5694.txt",
-      "retrieved_at": "2026-11-24T07:07:26.668652Z",
+      "retrieved_at": "2026-11-24T07:23:04.295256Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -641,12 +641,12 @@
       "text_chars": 59848,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 229
+      "elapsed_ms": 192
     },
     {
       "source_id": "rfc6120",
       "uri": "https://www.rfc-editor.org/rfc/rfc6120.txt",
-      "retrieved_at": "2026-11-24T07:07:27.668874Z",
+      "retrieved_at": "2026-11-24T07:23:05.295440Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -656,12 +656,12 @@
       "text_chars": 381964,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 276
+      "elapsed_ms": 275
     },
     {
       "source_id": "rfc801",
       "uri": "https://www.rfc-editor.org/rfc/rfc801.txt",
-      "retrieved_at": "2026-11-24T07:07:28.669056Z",
+      "retrieved_at": "2026-11-24T07:23:06.295612Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -671,12 +671,12 @@
       "text_chars": 31037,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 161
+      "elapsed_ms": 212
     },
     {
       "source_id": "rfc850",
       "uri": "https://www.rfc-editor.org/rfc/rfc850.txt",
-      "retrieved_at": "2026-11-24T07:07:29.669283Z",
+      "retrieved_at": "2026-11-24T07:23:07.295840Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -686,12 +686,12 @@
       "text_chars": 39343,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 217
+      "elapsed_ms": 234
     },
     {
       "source_id": "rfc8966",
       "uri": "https://www.rfc-editor.org/rfc/rfc8966.txt",
-      "retrieved_at": "2026-11-24T07:07:30.669468Z",
+      "retrieved_at": "2026-11-24T07:23:08.296024Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -701,12 +701,12 @@
       "text_chars": 126527,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 219
+      "elapsed_ms": 289
     },
     {
       "source_id": "rfc9110",
       "uri": "https://www.rfc-editor.org/rfc/rfc9110.txt",
-      "retrieved_at": "2026-11-24T07:07:31.669660Z",
+      "retrieved_at": "2026-11-24T07:23:09.296223Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -716,12 +716,12 @@
       "text_chars": 457670,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 281
+      "elapsed_ms": 291
     },
     {
       "source_id": "rfc9498",
       "uri": "https://www.rfc-editor.org/rfc/rfc9498.txt",
-      "retrieved_at": "2026-11-24T07:07:32.669921Z",
+      "retrieved_at": "2026-11-24T07:23:10.296422Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -736,7 +736,7 @@
     {
       "source_id": "rfc977",
       "uri": "https://www.rfc-editor.org/rfc/rfc977.txt",
-      "retrieved_at": "2026-11-24T07:07:33.670105Z",
+      "retrieved_at": "2026-11-24T07:23:11.296613Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain;charset=utf-8",
@@ -746,12 +746,12 @@
       "text_chars": 46536,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 196
+      "elapsed_ms": 254
     },
     {
       "source_id": "scion_home",
       "uri": "https://www.scion.org/",
-      "retrieved_at": "2026-11-24T07:07:33.867880Z",
+      "retrieved_at": "2026-11-24T07:23:11.553644Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=UTF-8",
@@ -761,12 +761,12 @@
       "text_chars": 5163,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 227
+      "elapsed_ms": 336
     },
     {
       "source_id": "tor_design_2004",
       "uri": "https://www.usenix.org/legacy/event/sec04/tech/dingledine.html",
-      "retrieved_at": "2026-11-24T07:07:34.102459Z",
+      "retrieved_at": "2026-11-24T07:23:11.899793Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -776,12 +776,12 @@
       "text_chars": 1767,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 292
+      "elapsed_ms": 176
     },
     {
       "source_id": "tor_history",
       "uri": "https://www.torproject.org/about/history/",
-      "retrieved_at": "2026-11-24T07:07:34.397043Z",
+      "retrieved_at": "2026-11-24T07:23:12.078391Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -791,12 +791,12 @@
       "text_chars": 5945,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 702
+      "elapsed_ms": 371
     },
     {
       "source_id": "tor_rend_spec_overview",
       "uri": "https://spec.torproject.org/rend-spec/overview.html",
-      "retrieved_at": "2026-11-24T07:07:35.104382Z",
+      "retrieved_at": "2026-11-24T07:23:12.453469Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -806,12 +806,12 @@
       "text_chars": 9002,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 645
+      "elapsed_ms": 348
     },
     {
       "source_id": "tor_spec_intro",
       "uri": "https://spec.torproject.org/intro/index.html",
-      "retrieved_at": "2026-11-24T07:07:36.104577Z",
+      "retrieved_at": "2026-11-24T07:23:13.453641Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html",
@@ -821,12 +821,12 @@
       "text_chars": 4885,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 676
+      "elapsed_ms": 358
     },
     {
       "source_id": "w3c_activitypub",
       "uri": "https://www.w3.org/TR/activitypub/",
-      "retrieved_at": "2026-11-24T07:07:36.783355Z",
+      "retrieved_at": "2026-11-24T07:23:13.813929Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -836,12 +836,12 @@
       "text_chars": 69117,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 158
+      "elapsed_ms": 207
     },
     {
       "source_id": "w3c_tbl_alt_hypertext_1991",
       "uri": "https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt",
-      "retrieved_at": "2026-11-24T07:07:37.783581Z",
+      "retrieved_at": "2026-11-24T07:23:14.814176Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain",
@@ -851,12 +851,12 @@
       "text_chars": 2715,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 199
+      "elapsed_ms": 193
     },
     {
       "source_id": "w3c_tbl_proposal_1989",
       "uri": "https://www.w3.org/History/1989/proposal.html",
-      "retrieved_at": "2026-11-24T07:07:38.783766Z",
+      "retrieved_at": "2026-11-24T07:23:15.814345Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=iso-8859-1",
@@ -866,12 +866,12 @@
       "text_chars": 29699,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 143
+      "elapsed_ms": 142
     },
     {
       "source_id": "wireguard_paper",
       "uri": "https://www.wireguard.com/papers/wireguard.pdf",
-      "retrieved_at": "2026-11-24T07:07:38.934092Z",
+      "retrieved_at": "2026-11-24T07:23:15.964167Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "application/pdf",
@@ -881,12 +881,12 @@
       "text_chars": 79149,
       "extraction_method": "pdftotext",
       "error": null,
-      "elapsed_ms": 956
+      "elapsed_ms": 999
     },
     {
       "source_id": "yggdrasil_home",
       "uri": "https://yggdrasil-network.github.io/",
-      "retrieved_at": "2026-11-24T07:07:40.477387Z",
+      "retrieved_at": "2026-11-24T07:23:17.540017Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/html; charset=utf-8",
@@ -896,12 +896,12 @@
       "text_chars": 1933,
       "extraction_method": "html",
       "error": null,
-      "elapsed_ms": 266
+      "elapsed_ms": 139
     },
     {
       "source_id": "zeronet_readme",
       "uri": "https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md",
-      "retrieved_at": "2026-11-24T07:07:40.744979Z",
+      "retrieved_at": "2026-11-24T07:23:17.680912Z",
       "outcome": "ok",
       "http_status": 200,
       "content_type": "text/plain; charset=utf-8",
@@ -911,7 +911,7 @@
       "text_chars": 6430,
       "extraction_method": "text",
       "error": null,
-      "elapsed_ms": 161
+      "elapsed_ms": 112
     }
   ],
   "citations": [

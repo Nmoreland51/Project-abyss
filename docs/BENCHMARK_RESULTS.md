@@ -26,7 +26,7 @@ reports that Abyss itself generates.
 | SOURCE_UNEXTRACTABLE | 1 (Kademlia PDF, font-encoded text layer) | same |
 | Sources retrieved | 58 (57 ok, 1 text-unextractable) | same |
 | Negative control (fabricated and off-by-one claims rejected) | see `evidence/phase0/test_results.txt` (live tier) | `tests/live/test_live_citations.py` |
-| Candidate ingestion sources reachable here | 29 of 36 ok; 4 rate-limited; 2 failed; 1 blocked | `evidence/phase0/source_probe_report.json` |
+| Candidate ingestion sources reachable here | 30 of 36 ok; 3 rate-limited; 2 failed; 1 blocked (varies between runs; see SCOPE_AND_RESTRICTIONS s3) | `evidence/phase0/source_probe_report.json` |
 
 Limitation: VERIFIED shows that the quote was present in the retrieved text. Whether each facet's paraphrase is
 faithful to its quotes hasn't been independently reviewed (GAP P0-3).

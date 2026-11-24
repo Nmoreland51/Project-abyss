@@ -1,13 +1,13 @@
 {
   "report_type": "source_reachability_probe",
-  "started_at": "2026-11-24T07:07:50.496926+00:00",
-  "finished_at": "2026-11-24T07:08:29.449769+00:00",
+  "started_at": "2026-11-24T07:23:18.104293+00:00",
+  "finished_at": "2026-11-24T07:24:17.672925+00:00",
   "environment": {
     "python": "3.13.18",
     "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
     "abyss_version": "0.1.0",
     "contract_version": "0.1.0",
-    "git_commit": null,
+    "git_commit": "321cc1267bbb0ee5183cd29375927bb5849c09bc",
     "git_worktree_dirty": true
   },
   "summary": {
@@ -15,8 +15,8 @@
     "by_outcome": {
       "blocked": 1,
       "fetch_failed": 2,
-      "ok": 29,
-      "rate_limited": 4
+      "ok": 30,
+      "rate_limited": 3
     }
   },
   "results": [
@@ -27,7 +27,7 @@
       "retrieval": {
         "source_id": "arxiv_api",
         "uri": "https://export.arxiv.org/api/query?search_query=all:peer-to-peer&max_results=1",
-        "retrieved_at": "2026-11-24T07:07:50.497045Z",
+        "retrieved_at": "2026-11-24T07:23:18.104411Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/atom+xml; charset=utf-8",
@@ -37,7 +37,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 347
+        "elapsed_ms": 118
       }
     },
     {
@@ -47,7 +47,7 @@
       "retrieval": {
         "source_id": "awesome_lists_seed",
         "uri": "https://raw.githubusercontent.com/sindresorhus/awesome/main/readme.md",
-        "retrieved_at": "2026-11-24T07:07:50.844854Z",
+        "retrieved_at": "2026-11-24T07:23:18.222710Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "text/plain; charset=utf-8",
@@ -57,7 +57,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 203
+        "elapsed_ms": 186
       }
     },
     {
@@ -67,7 +67,7 @@
       "retrieval": {
         "source_id": "caida_catalog",
         "uri": "https://www.caida.org/catalog/datasets/",
-        "retrieved_at": "2026-11-24T07:07:51.048433Z",
+        "retrieved_at": "2026-11-24T07:23:18.409901Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "text/html; charset=UTF-8",
@@ -77,7 +77,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 1125
+        "elapsed_ms": 1189
       }
     },
     {
@@ -87,7 +87,7 @@
       "retrieval": {
         "source_id": "codeberg_api",
         "uri": "https://codeberg.org/api/v1/repos/search?q=gemini&limit=1",
-        "retrieved_at": "2026-11-24T07:07:52.174594Z",
+        "retrieved_at": "2026-11-24T07:23:19.599620Z",
         "outcome": "rate_limited",
         "http_status": 429,
         "content_type": "text/plain",
@@ -97,7 +97,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "HTTP 429 Too Many Requests",
-        "elapsed_ms": 453
+        "elapsed_ms": 466
       }
     },
     {
@@ -107,7 +107,7 @@
       "retrieval": {
         "source_id": "common_crawl_index",
         "uri": "https://index.commoncrawl.org/collinfo.json",
-        "retrieved_at": "2026-11-24T07:07:52.628557Z",
+        "retrieved_at": "2026-11-24T07:23:20.066321Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -117,7 +117,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 154
+        "elapsed_ms": 156
       }
     },
     {
@@ -127,7 +127,7 @@
       "retrieval": {
         "source_id": "crates_io_api",
         "uri": "https://crates.io/api/v1/crates?q=gemini&per_page=1",
-        "retrieved_at": "2026-11-24T07:07:52.783226Z",
+        "retrieved_at": "2026-11-24T07:23:20.223514Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -137,7 +137,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 202
+        "elapsed_ms": 179
       }
     },
     {
@@ -147,17 +147,17 @@
       "retrieval": {
         "source_id": "crossref_api",
         "uri": "https://api.crossref.org/works?query=chord&rows=1",
-        "retrieved_at": "2026-11-24T07:07:52.986293Z",
+        "retrieved_at": "2026-11-24T07:23:20.403261Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
-        "bytes": 1249,
+        "bytes": 1248,
         "truncated": false,
-        "sha256": "6d356447a421d9a21bbad4abb078cc60ecf477240ec18f4e06ec56f518fe93e7",
+        "sha256": "1f5945cd316e5f29dc55b47f8007dddf3640fa7782786a912776e33ab4e446e7",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 2356
+        "elapsed_ms": 7890
       }
     },
     {
@@ -167,17 +167,17 @@
       "retrieval": {
         "source_id": "dblp_api",
         "uri": "https://dblp.org/search/publ/api?q=kademlia&format=json&h=1",
-        "retrieved_at": "2026-11-24T07:07:55.343111Z",
+        "retrieved_at": "2026-11-24T07:23:28.293966Z",
         "outcome": "ok",
         "http_status": 202,
         "content_type": "text/html; charset=utf-8",
-        "bytes": 2993,
+        "bytes": 2992,
         "truncated": false,
-        "sha256": "71f343431f25a8b227499a7863878eb13ddd444a0945ca6899042b0cc9643806",
+        "sha256": "fbb18d8c5e3abcb63807cf70b43e84efad12dd3198c8935308949cc8cafe1c50",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 498
+        "elapsed_ms": 615
       }
     },
     {
@@ -187,7 +187,7 @@
       "retrieval": {
         "source_id": "debian_sources_api",
         "uri": "https://sources.debian.org/api/ping/",
-        "retrieved_at": "2026-11-24T07:07:55.841927Z",
+        "retrieved_at": "2026-11-24T07:23:28.909508Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -197,7 +197,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 307
+        "elapsed_ms": 305
       }
     },
     {
@@ -207,7 +207,7 @@
       "retrieval": {
         "source_id": "fdroid_index",
         "uri": "https://f-droid.org/repo/index-v2.json",
-        "retrieved_at": "2026-11-24T07:07:56.149254Z",
+        "retrieved_at": "2026-11-24T07:23:29.215305Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -217,7 +217,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 890
+        "elapsed_ms": 870
       }
     },
     {
@@ -227,7 +227,7 @@
       "retrieval": {
         "source_id": "github_api",
         "uri": "https://api.github.com/repos/HelloZeroNet/ZeroNet",
-        "retrieved_at": "2026-11-24T07:07:57.040114Z",
+        "retrieved_at": "2026-11-24T07:23:30.086678Z",
         "outcome": "blocked",
         "http_status": 403,
         "content_type": "application/json; charset=utf-8",
@@ -237,7 +237,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "HTTP 403 Forbidden (origin or egress policy)",
-        "elapsed_ms": 246
+        "elapsed_ms": 248
       }
     },
     {
@@ -247,7 +247,7 @@
       "retrieval": {
         "source_id": "github_raw",
         "uri": "https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md",
-        "retrieved_at": "2026-11-24T07:07:57.287058Z",
+        "retrieved_at": "2026-11-24T07:23:30.335163Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "text/plain; charset=utf-8",
@@ -257,7 +257,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 310
+        "elapsed_ms": 317
       }
     },
     {
@@ -267,7 +267,7 @@
       "retrieval": {
         "source_id": "gitlab_api",
         "uri": "https://gitlab.com/api/v4/projects?search=gemini&per_page=1",
-        "retrieved_at": "2026-11-24T07:07:57.597385Z",
+        "retrieved_at": "2026-11-24T07:23:30.653145Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -277,7 +277,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 415
+        "elapsed_ms": 442
       }
     },
     {
@@ -287,17 +287,17 @@
       "retrieval": {
         "source_id": "hn_api",
         "uri": "https://hacker-news.firebaseio.com/v0/maxitem.json",
-        "retrieved_at": "2026-11-24T07:07:58.013551Z",
+        "retrieved_at": "2026-11-24T07:23:31.095925Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json; charset=utf-8",
         "bytes": 8,
         "truncated": false,
-        "sha256": "29889333d4c308a0037eb099f4a3020e9e7b407f1e2a866143835a3661fdac74",
+        "sha256": "bff023d0879c87eac5d1e0c50d9e79a9fe3619acf62b2745cd3814187e9d4190",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 134
+        "elapsed_ms": 140
       }
     },
     {
@@ -307,17 +307,17 @@
       "retrieval": {
         "source_id": "huggingface_api",
         "uri": "https://huggingface.co/api/models?search=agent&limit=1",
-        "retrieved_at": "2026-11-24T07:07:58.147859Z",
+        "retrieved_at": "2026-11-24T07:23:31.236607Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json; charset=utf-8",
         "bytes": 246,
         "truncated": false,
-        "sha256": "48b3b86d6bb348dec2c8497f0a1de76eef5c03c8f368456fdd0498d01e1a1cc4",
+        "sha256": "1af42318afdf3c8c133df6dfb41129a3879ba63213f18df8370f38e05712baa7",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 125
+        "elapsed_ms": 129
       }
     },
     {
@@ -327,7 +327,7 @@
       "retrieval": {
         "source_id": "ietf_datatracker_api",
         "uri": "https://datatracker.ietf.org/api/v1/",
-        "retrieved_at": "2026-11-24T07:07:58.273522Z",
+        "retrieved_at": "2026-11-24T07:23:31.366047Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -337,7 +337,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 152
+        "elapsed_ms": 171
       }
     },
     {
@@ -347,17 +347,17 @@
       "retrieval": {
         "source_id": "internet_archive_search",
         "uri": "https://archive.org/advancedsearch.php?q=gopher&fl[]=identifier&rows=1&output=json",
-        "retrieved_at": "2026-11-24T07:07:58.426473Z",
+        "retrieved_at": "2026-11-24T07:23:31.537910Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
-        "bytes": 265,
+        "bytes": 263,
         "truncated": false,
-        "sha256": "11bc9fdf0f23c6ce6fb5c7d565f2ea3e9899537e5db5c78525a97fb163a36b38",
+        "sha256": "2a52198bbb3ca69a8a36162ded57aa316b48be811ec55572ba0895994172ef15",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 439
+        "elapsed_ms": 481
       }
     },
     {
@@ -367,7 +367,7 @@
       "retrieval": {
         "source_id": "ipfs_gateway",
         "uri": "https://ipfs.io/",
-        "retrieved_at": "2026-11-24T07:07:58.866299Z",
+        "retrieved_at": "2026-11-24T07:23:32.019512Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "text/html; charset=utf-8",
@@ -377,7 +377,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 332
+        "elapsed_ms": 377
       }
     },
     {
@@ -387,17 +387,17 @@
       "retrieval": {
         "source_id": "lobsters_json",
         "uri": "https://lobste.rs/newest.json",
-        "retrieved_at": "2026-11-24T07:07:59.198616Z",
+        "retrieved_at": "2026-11-24T07:23:32.397515Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
         "bytes": 11380,
         "truncated": false,
-        "sha256": "784e549ac7fe2b8db0311f9237cab8cd29e2b84b3ce4e0bb9a9f3888f5b5a32d",
+        "sha256": "08cd5ac56477a804a706413b6a486844d1768c1e9a42f1931dfce3803a37565b",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 341
+        "elapsed_ms": 502
       }
     },
     {
@@ -407,17 +407,17 @@
       "retrieval": {
         "source_id": "npm_registry",
         "uri": "https://registry.npmjs.org/-/v1/search?text=gemini&size=1",
-        "retrieved_at": "2026-11-24T07:07:59.540427Z",
+        "retrieved_at": "2026-11-24T07:23:32.900606Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
         "bytes": 1441,
         "truncated": false,
-        "sha256": "bbd500b73fc5fdf00e83f11a5ba863cbd6765b03969ebbd893172ff4350a1cce",
+        "sha256": "ac37c3e444dd63f55028de6723cab9f5d2104e5b5a1d2f7409e28929ef4f2407",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 151
+        "elapsed_ms": 158
       }
     },
     {
@@ -427,17 +427,17 @@
       "retrieval": {
         "source_id": "ooni_api",
         "uri": "https://api.ooni.io/api/v1/measurements?limit=1",
-        "retrieved_at": "2026-11-24T07:07:59.692193Z",
+        "retrieved_at": "2026-11-24T07:23:33.059174Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
-        "bytes": 1034,
+        "bytes": 1035,
         "truncated": false,
-        "sha256": "405c3b989abf1ab8c78f07a421167676aaecf20b0790d1404215cdcbd1963fc4",
+        "sha256": "981a8677b9797f95f7087470829decf5022a2ffb6489e669d9d47806ae76202c",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 2779
+        "elapsed_ms": 1104
       }
     },
     {
@@ -447,17 +447,17 @@
       "retrieval": {
         "source_id": "openalex_api",
         "uri": "https://api.openalex.org/works?search=kademlia&per-page=1",
-        "retrieved_at": "2026-11-24T07:08:02.472351Z",
+        "retrieved_at": "2026-11-24T07:23:34.163476Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
         "bytes": 13494,
         "truncated": false,
-        "sha256": "96c54ad2a4a53f18cd48149ebc8fc2611895ee403c3e65132f71988dfe19bf6e",
+        "sha256": "ac79cdc4d17a1a449bd776c9e00fe0dba08da446c1feffacecd12a36c7fd3123",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 214
+        "elapsed_ms": 252
       }
     },
     {
@@ -467,7 +467,7 @@
       "retrieval": {
         "source_id": "peeringdb_api",
         "uri": "https://www.peeringdb.com/api/net?limit=1",
-        "retrieved_at": "2026-11-24T07:08:02.687053Z",
+        "retrieved_at": "2026-11-24T07:23:34.416406Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json; charset=utf-8",
@@ -477,7 +477,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 200
+        "elapsed_ms": 191
       }
     },
     {
@@ -487,7 +487,7 @@
       "retrieval": {
         "source_id": "pypi_json",
         "uri": "https://pypi.org/pypi/requests/json",
-        "retrieved_at": "2026-11-24T07:08:02.887483Z",
+        "retrieved_at": "2026-11-24T07:23:34.608085Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -497,7 +497,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 112
+        "elapsed_ms": 124
       }
     },
     {
@@ -507,7 +507,7 @@
       "retrieval": {
         "source_id": "rfc_index_xml",
         "uri": "https://www.rfc-editor.org/rfc-index.xml",
-        "retrieved_at": "2026-11-24T07:08:03.000562Z",
+        "retrieved_at": "2026-11-24T07:23:34.733023Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/xml;charset=utf-8",
@@ -517,7 +517,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 307
+        "elapsed_ms": 286
       }
     },
     {
@@ -527,7 +527,7 @@
       "retrieval": {
         "source_id": "ripe_ris",
         "uri": "https://ris.ripe.net/",
-        "retrieved_at": "2026-11-24T07:08:03.308215Z",
+        "retrieved_at": "2026-11-24T07:23:35.019417Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "text/html; charset=utf-8",
@@ -537,7 +537,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 2696
+        "elapsed_ms": 2604
       }
     },
     {
@@ -547,17 +547,17 @@
       "retrieval": {
         "source_id": "ripestat_api",
         "uri": "https://stat.ripe.net/data/as-overview/data.json?resource=3333",
-        "retrieved_at": "2026-11-24T07:08:06.005424Z",
+        "retrieved_at": "2026-11-24T07:23:37.624495Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json; charset=utf-8",
-        "bytes": 708,
+        "bytes": 710,
         "truncated": false,
-        "sha256": "616f59dd796d9fa8dd685939259ba55193caf9529b577e3e4ec9afca74cd291d",
+        "sha256": "6969440eb08e3dc2ce710d3271ca35d31cfa62f647fbb418d54b87bbcca8ea20",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 412
+        "elapsed_ms": 464
       }
     },
     {
@@ -567,7 +567,7 @@
       "retrieval": {
         "source_id": "semantic_scholar_api",
         "uri": "https://api.semanticscholar.org/graph/v1/paper/search?query=kademlia&limit=1",
-        "retrieved_at": "2026-11-24T07:08:06.418670Z",
+        "retrieved_at": "2026-11-24T07:23:38.089451Z",
         "outcome": "rate_limited",
         "http_status": 429,
         "content_type": "application/json",
@@ -577,7 +577,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "HTTP 429 ",
-        "elapsed_ms": 189
+        "elapsed_ms": 233
       }
     },
     {
@@ -587,7 +587,7 @@
       "retrieval": {
         "source_id": "software_heritage_api",
         "uri": "https://archive.softwareheritage.org/api/1/origin/search/gemini/?limit=2",
-        "retrieved_at": "2026-11-24T07:08:06.608692Z",
+        "retrieved_at": "2026-11-24T07:23:38.323116Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
@@ -597,7 +597,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 5520
+        "elapsed_ms": 24591
       }
     },
     {
@@ -607,7 +607,7 @@
       "retrieval": {
         "source_id": "sourcehut_git",
         "uri": "https://git.sr.ht/",
-        "retrieved_at": "2026-11-24T07:08:12.129901Z",
+        "retrieved_at": "2026-11-24T07:24:02.914786Z",
         "outcome": "fetch_failed",
         "http_status": 502,
         "content_type": "text/html",
@@ -617,7 +617,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "HTTP 502 Bad Gateway",
-        "elapsed_ms": 453
+        "elapsed_ms": 560
       }
     },
     {
@@ -627,17 +627,17 @@
       "retrieval": {
         "source_id": "tor_onionoo",
         "uri": "https://onionoo.torproject.org/summary?limit=1",
-        "retrieved_at": "2026-11-24T07:08:12.583337Z",
+        "retrieved_at": "2026-11-24T07:24:03.475486Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json;charset=utf-8",
         "bytes": 357,
         "truncated": false,
-        "sha256": "3b6888aca9de1656eb1f345b0b8019996685eae255adea967a403c8a04a35995",
+        "sha256": "3b3d4a36ab6d7087f3811768d7476ddbcbcfa447f0594babe7b50f56f0294c20",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 447
+        "elapsed_ms": 514
       }
     },
     {
@@ -647,17 +647,17 @@
       "retrieval": {
         "source_id": "wayback_availability",
         "uri": "https://archive.org/wayback/available?url=info.cern.ch",
-        "retrieved_at": "2026-11-24T07:08:13.031314Z",
+        "retrieved_at": "2026-11-24T07:24:03.989727Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
-        "bytes": 123,
+        "bytes": 201,
         "truncated": false,
-        "sha256": "a6477a25b4535783e92e536ca1885d9f59920d272fcb85e7690abee91735176f",
+        "sha256": "be70d90bcc243ff340937e9c964145dd2a52ce7bbbee016e88bcf138b2cf0049",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 5302
+        "elapsed_ms": 1076
       }
     },
     {
@@ -667,7 +667,7 @@
       "retrieval": {
         "source_id": "wayback_cdx",
         "uri": "https://web.archive.org/cdx/search/cdx?url=info.cern.ch&limit=1",
-        "retrieved_at": "2026-11-24T07:08:18.334388Z",
+        "retrieved_at": "2026-11-24T07:24:05.065947Z",
         "outcome": "fetch_failed",
         "http_status": null,
         "content_type": null,
@@ -677,7 +677,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "URLError: [Errno 104] Connection reset by peer",
-        "elapsed_ms": 10066
+        "elapsed_ms": 10061
       }
     },
     {
@@ -687,17 +687,17 @@
       "retrieval": {
         "source_id": "wikidata_api",
         "uri": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=IPFS&language=en&format=json",
-        "retrieved_at": "2026-11-24T07:08:28.401573Z",
-        "outcome": "rate_limited",
-        "http_status": 429,
-        "content_type": "text/plain",
-        "bytes": 0,
+        "retrieved_at": "2026-11-24T07:24:15.127501Z",
+        "outcome": "ok",
+        "http_status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "bytes": 3112,
         "truncated": false,
-        "sha256": null,
+        "sha256": "64b456fccd5b63994fafd6b303e37e50facc6a5c8e953f130033f7113db68da7",
         "text_chars": 0,
         "extraction_method": null,
-        "error": "HTTP 429 Too Many Requests",
-        "elapsed_ms": 320
+        "error": null,
+        "elapsed_ms": 451
       }
     },
     {
@@ -707,7 +707,7 @@
       "retrieval": {
         "source_id": "wikipedia_api",
         "uri": "https://en.wikipedia.org/w/api.php?action=query&titles=Gopher_(protocol)&format=json",
-        "retrieved_at": "2026-11-24T07:08:28.722805Z",
+        "retrieved_at": "2026-11-24T07:24:15.579320Z",
         "outcome": "rate_limited",
         "http_status": 429,
         "content_type": "text/plain",
@@ -717,7 +717,7 @@
         "text_chars": 0,
         "extraction_method": null,
         "error": "HTTP 429 Too Many Requests",
-        "elapsed_ms": 112
+        "elapsed_ms": 109
       }
     },
     {
@@ -727,17 +727,17 @@
       "retrieval": {
         "source_id": "zenodo_api",
         "uri": "https://zenodo.org/api/records?q=mesh%20network&size=1",
-        "retrieved_at": "2026-11-24T07:08:28.835956Z",
+        "retrieved_at": "2026-11-24T07:24:15.689366Z",
         "outcome": "ok",
         "http_status": 200,
         "content_type": "application/json",
-        "bytes": 12414,
+        "bytes": 13156,
         "truncated": false,
-        "sha256": "9c5e1bb91204d9172cb3fe1de8fdcdf373e43876b2ad32ecfa9e5edc92713857",
+        "sha256": "f54494f365be5588287cfe079ce4e91f276b54981c076b705b0bcc3ff645de6e",
         "text_chars": 0,
         "extraction_method": null,
         "error": null,
-        "elapsed_ms": 613
+        "elapsed_ms": 1983
       }
     }
   ],

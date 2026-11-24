@@ -1,0 +1,70 @@
+## Phase 0 verification run
+commit: 321cc1267bbb0ee5183cd29375927bb5849c09bc  worktree_clean_at_start: yes
+started: 2026-11-24T07:21:33Z
+python: Python 3.13.18  pydantic: 2.13.5  pyyaml: 6.0.3  pytest: pytest 9.1.1  pypdf: 6.17.0
+
+$ python -m abyss validate
+taxonomy v0.1.0: 18 entries, 161 citations
+registry: 94 sources in 2 files
+benchmarks v0.1.0: 6 pre-registered definitions
+scope policy: ['lab_owned', 'owner_authorized', 'public_api_key', 'public_api_terms', 'public_open', 'synthetic']
+traceability: 25 requirements
+OK: offline validation passed (this does NOT verify citations; run verify-citations)
+exit=0
+
+$ python -m pytest -p no:cacheprovider   (unit tier; live tests skipped by design)
+tests/unit/test_scope.py ........                                        [ 85%]
+tests/unit/test_taxonomy_registry.py ...............                     [100%]
+
+=========================== short test summary info ============================
+SKIPPED [2] tests/live/test_live_citations.py: live network test: set ABYSS_LIVE=1 to run (a skip is NOT a pass)
+======================== 99 passed, 2 skipped in 1.64s =========================
+exit=0
+
+$ ABYSS_LIVE=1 python -m pytest -p no:cacheprovider tests/live -v -s
+tests/live/test_live_citations.py::test_negative_control_fabricated_quote_is_not_found PASSED
+live citation outcomes: {'SOURCE_UNEXTRACTABLE': 1, 'VERIFIED': 160}; unavailable: {'SOURCE_UNEXTRACTABLE': 1}
+PASSED
+============================== 2 passed in 45.94s ==============================
+exit=0
+
+$ python -m abyss verify-citations
+{
+  "citations_total": 161,
+  "citations_by_outcome": {
+    "SOURCE_UNEXTRACTABLE": 1,
+    "VERIFIED": 160
+  },
+  "citations_verified_fraction": 0.9938,
+  "sources_total": 58,
+  "sources_by_outcome": {
+    "ok": 57,
+    "text_unextractable": 1
+  }
+}
+report: /home/user/Project-abyss/evidence/phase0/citation_report.json
+  SOURCE_UNEXTRACTABLE   dht.origin <- kademlia_iptps2002: 'Kademlia: A Peer-to-peer Information System Based on the XOR Metric'
+exit=4  (0=all verified; 3=a quote missing; 4=only source-availability problems)
+
+$ python -m abyss probe-sources
+{
+  "probed": 36,
+  "by_outcome": {
+    "blocked": 1,
+    "fetch_failed": 2,
+    "ok": 30,
+    "rate_limited": 3
+  }
+}
+  arxiv_api                    ok            HTTP 200
+  awesome_lists_seed           ok            HTTP 200
+  caida_catalog                ok            HTTP 200
+exit=0
+finished: 2026-11-24T07:24:17Z
+
+## Pre-commit regression on the evidence-commit working tree (after render-docs)
+$ python -m pytest -p no:cacheprovider
+=========================== short test summary info ============================
+SKIPPED [2] tests/live/test_live_citations.py: live network test: set ABYSS_LIVE=1 to run (a skip is NOT a pass)
+======================== 99 passed, 2 skipped in 1.78s =========================
+exit=0

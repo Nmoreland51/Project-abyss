@@ -50,7 +50,7 @@ Status words: **implemented** (code exists and is tested), **partial**, **specif
 | Open-set recognition | specified | B02/B03 pre-registered | Everything (R04) | No |
 | Anomaly analysis | specified | B04 pre-registered; ordinary-explanation-first rule | Everything (R05) | No |
 | Hypothesis engine | partial | `Hypothesis` contract requires alternatives and falsifiers; REFUTED needs contradiction | Engine and persistence (R06) | Contract unit tests |
-| Source adapters | partial | Registry of 36 candidate sources with probe results; bounded fetcher | Adapters, terms review (R01) | Reachability probed live: 29 ok, 4 rate-limited, 2 failed, 1 blocked |
+| Source adapters | partial | Registry of 36 candidate sources with probe results; bounded fetcher | Adapters, terms review (R01) | Reachability probed live at commit 321cc12: 30 ok, 3 rate-limited, 2 failed, 1 blocked (an earlier run got 29 ok, because Wikidata was rate-limited) |
 | Hidden-value engine | specified | DISCOVERY_ENGINE_SPECIFICATION; B05 | Everything (R07) | No |
 | Evidence engine | partial | `RetrievalRecord` with hash/time/outcome; citation verifier; `ClaimBasis`/`RecordScope` | Persistent evidence store (R16) | Live: 161 citations checked |
 | Knowledge graph | missing | Taxonomy `related` edges (seed) | Store, history, contradiction tracking (R15) | No |

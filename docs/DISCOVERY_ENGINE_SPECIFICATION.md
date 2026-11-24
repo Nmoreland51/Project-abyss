@@ -66,7 +66,7 @@ evaluated on frozen evaluation needs.
 
 Mapped to the unknown vocabulary (RESEARCH_METHODOLOGY s2): baseline-search rank, forge stars and download
 percentiles, Wikidata presence, Common Crawl hits, and whether the item is in the frozen initial corpus. Each signal
-records its lookup date and whether the lookup was BLOCKED (e.g. Wikidata 429 in this environment). A blocked
+records its lookup date and whether the lookup was BLOCKED (e.g. Wikipedia 429 in this environment). A blocked
 lookup is not a negative result.
 
 ## 7. Output: discovery feed item

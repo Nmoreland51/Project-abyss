@@ -6,8 +6,8 @@ Machine-readable source of truth: `data/registry/references.yaml` (documents cit
 
 - `data/registry/references.yaml`: version 0.1.0, 58 sources, SHA-256 `8ae982b95065b926…`
 - `data/registry/ingestion_sources.yaml`: version 0.1.0, 36 sources, SHA-256 `534fb4ac5c3eac52…`
-- Citation retrievals from run 2026-11-24T07:06:54Z
-- Reachability probe run 2026-11-24T07:07:50Z: blocked=1, fetch_failed=2, ok=29, rate_limited=4
+- Citation retrievals from run 2026-11-24T07:22:30Z
+- Reachability probe run 2026-11-24T07:23:18Z: blocked=1, fetch_failed=2, ok=30, rate_limited=3
 
 ## Reference documents (58)
 
@@ -111,7 +111,7 @@ None of these has been ingested yet. Phase 1 adapters will be built only for sou
 | `tor_onionoo` | [Tor Metrics Onionoo API (public relay data)](https://onionoo.torproject.org/) | ingestion_endpoint | public_api_terms | no | ok (HTTP 200) |
 | `wayback_availability` | [Wayback Machine availability API](https://archive.org/wayback/available) | ingestion_endpoint | public_api_terms | no | ok (HTTP 200) |
 | `wayback_cdx` | [Wayback Machine CDX server / snapshots](https://web.archive.org/cdx/search/cdx) | ingestion_endpoint | public_api_terms | no | fetch_failed: URLError: [Errno 104] Connection reset by peer |
-| `wikidata_api` | [Wikidata API](https://www.wikidata.org/w/api.php) | ingestion_endpoint | public_api_terms | no | rate_limited (HTTP 429): HTTP 429 Too Many Requests |
+| `wikidata_api` | [Wikidata API](https://www.wikidata.org/w/api.php) | ingestion_endpoint | public_api_terms | no | ok (HTTP 200) |
 | `wikipedia_api` | [English Wikipedia API](https://en.wikipedia.org/w/api.php) | ingestion_endpoint | public_api_terms | no | rate_limited (HTTP 429): HTTP 429 Too Many Requests |
 | `zenodo_api` | [Zenodo records API](https://zenodo.org/api/records) | ingestion_endpoint | public_api_terms | no | ok (HTTP 200) |
 
