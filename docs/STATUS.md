@@ -13,10 +13,15 @@ Android emulator**), Docker 29.9.3, PostgreSQL 18.7 (container), Python 3.13.18,
 | Threat model | Done for Phase 1 scope | `docs/THREAT_MODEL.md` |
 | Dependency versions | Latest stable checked 2026-11-24; exact pins; `pip-audit`: no known vulnerabilities | ADR-0001, `raw/phase1-backend-tests.txt` |
 | Reproducible backend startup (T01) | **Pass.** Clean volume → healthy in 6.1 s; migrations applied by owner role; API connects as DML-only role; repeated boot idempotent | `raw/phase0-t01-clean-boot.txt`, `raw/phase1-compose-e2e.txt` |
-| Reproducible APK build | **Pass in this environment** (Gradle wrapper 9.9.2 with pinned SHA-256). CI workflow written; **first CI run not yet observed** | `android/`, `.github/workflows/ci.yml` |
+| Reproducible APK build | **Pass in two independent environments**: this container and GitHub Actions (ubuntu-24.04, Temurin 21) | `android/`, `.github/workflows/ci.yml` |
+| CI (independent re-run) | **Pass — run 45355378246 on commit 388cea8, 2026-11-24.** Job `backend`: ruff, 57 pytest on PostgreSQL 18.7 service, pip-audit clean. Job `integration-android`: compose stack up, two-account e2e across a DB+API restart, `LiveServerTest` PASSED (`LIVE OK`), `LiveUiFlowTest` PASSED, `ColdStartTest` PASSED, lint, pilot APK built and uploaded as artifact `pilot-apk` (CI build SHA-256 `46569fec…59bf1de`; differs from the locally built file because debug builds are not bit-reproducible — both are signed with the same pilot key) | GitHub Actions run 45355378246 |
 | Requirements map | Done | `docs/REQUIREMENTS_TRACEABILITY.csv` |
 
-**Phase 0 verdict: complete**, except that CI has not run yet on GitHub (it starts on push).
+**Phase 0 verdict: complete.**
+
+CI follow-ups (non-blocking): `actions/upload-artifact@v5` runs on a deprecated Node 20 runtime
+(GitHub forces Node 24; works); `createAndroidComposeRule` v1 and `PasswordVisualTransformation`
+are deprecated APIs to migrate in Phase 2.
 
 ## Phase 1 — Live vertical slice
 Implemented: migrations; registration/login/refresh rotation/logout/session list+revoke; communities
