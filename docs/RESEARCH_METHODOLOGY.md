@@ -48,7 +48,7 @@ SOURCE_BLOCKED, SOURCE_RATE_LIMITED, SOURCE_FAILED, SOURCE_UNEXTRACTABLE. Only V
 Limits of the method:
 - It shows that the quote was in the document at retrieval time. It doesn't show that the facet's paraphrase is
   faithful (human review is needed) or that the source is right.
-- `whitespace_insensitive` matches (1 of 160 in the Phase 0 run) tolerate HTML/PDF extraction artefacts. They're
+- `whitespace_insensitive` matches (1 of 221 verified quotes in the v0.1.1 run) tolerate HTML/PDF extraction artefacts. They're
   recorded so they can be audited.
 - Pages change. A later QUOTE_NOT_FOUND may mean the page changed, so Phase 1 adds archived copies (D-009).
 - The negative control (`tests/live`) checks that fabricated and off-by-one claims are rejected.

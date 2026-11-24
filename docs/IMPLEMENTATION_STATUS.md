@@ -28,10 +28,11 @@ tests, without live proof of the capability), **contract** (types only), **speci
 |---|---|---|
 | Baseline | repository inspection | Empty repository, no commits, 0 tests |
 | Offline validation | `python -m abyss validate` | OK (exit 0) |
-| Unit tier | `python -m pytest` | **99 passed, 2 skipped** (the 2 skips are the live tests, run separately below) |
-| Live tier | `ABYSS_LIVE=1 python -m pytest tests/live` | **2 passed** (negative control; full taxonomy check with 0 QUOTE_NOT_FOUND) |
-| Citation evidence | `python -m abyss verify-citations` at commit `321cc12` (clean tree) | 161 citations: 160 VERIFIED, 1 SOURCE_UNEXTRACTABLE; 58 sources (57 ok, 1 unextractable). Exit 4 = only source-availability problems |
-| Reachability | `python -m abyss probe-sources` at `321cc12` | 36 probed: 30 ok, 3 rate-limited (Codeberg, Semantic Scholar, Wikipedia), 2 failed (SourceHut 502, Wayback CDX reset), 1 blocked (GitHub API 403) |
+| Unit tier | `python -m pytest` at `7df6576` | **99 passed, 2 skipped** (the 2 skips are the live tests, run separately below) |
+| Live tier | `ABYSS_LIVE=1 python -m pytest tests/live` at `7df6576` | **2 passed** (negative control; full taxonomy check with 0 QUOTE_NOT_FOUND) |
+| Citation evidence | `python -m abyss verify-citations` at commit `7df6576` (clean tree), taxonomy v0.1.1 | 222 citations: 221 VERIFIED (220 exact, 1 whitespace-insensitive), 1 SOURCE_UNEXTRACTABLE, 0 QUOTE_NOT_FOUND; 58 sources (57 ok, 1 unextractable). The v0.1.0 run at `321cc12` gave 160/161 |
+| Wording review | Fresh-context AI review of all 216 facets | 60 issues found and fixed in v0.1.1 (`evidence/phase0/taxonomy_review.md`) |
+| Reachability | `python -m abyss probe-sources` at `321cc12` (ingestion registry unchanged since) | 36 probed: 30 ok, 3 rate-limited (Codeberg, Semantic Scholar, Wikipedia), 2 failed (SourceHut 502, Wayback CDX reset), 1 blocked (GitHub API 403) |
 
 Full console output: `evidence/phase0/test_results.txt`. The JSON reports record the commit, the dirty flag
 (false), the environment and the SHA-256 of every input file.

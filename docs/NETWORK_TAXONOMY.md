@@ -6,7 +6,7 @@ Phase 0 taxonomy of information networks and architectural patterns named in the
 
 - Schema version: `0.1.1`; taxonomy released: 2026-11-24
 - Taxonomy file SHA-256: `6a0553820bd922a5e6438a47ba6ffcc2ec384678bb111cecbd9d82f5084426fe`
-- Citation check: run 2026-11-24T07:38:29Z: 221 of 222 citations verified against live retrievals
+- Citation check: run 2026-11-24T07:40:15Z: 221 of 222 citations verified against live retrievals
   - outcomes: SOURCE_UNEXTRACTABLE=1, VERIFIED=221
 
 **How to read this.** Each facet is labelled with its epistemic basis: **sourced** (stated by the cited source; each citation carries a verbatim quote that is machine-checked against the live document), **analysis** (synthesis or comparison by the Abyss authors; not a sourced fact), or **unverified** (commonly stated but not yet checked against a retrieved source). A ✔ means only that the quoted text was present in the retrieved document at check time.

@@ -6,7 +6,7 @@ Machine-readable source of truth: `data/registry/references.yaml` (documents cit
 
 - `data/registry/references.yaml`: version 0.1.0, 58 sources, SHA-256 `1fb596e92057e689…`
 - `data/registry/ingestion_sources.yaml`: version 0.1.0, 36 sources, SHA-256 `534fb4ac5c3eac52…`
-- Citation retrievals from run 2026-11-24T07:38:29Z
+- Citation retrievals from run 2026-11-24T07:40:15Z
 - Reachability probe run 2026-11-24T07:23:18Z: blocked=1, fetch_failed=2, ok=30, rate_limited=3
 
 ## Reference documents (58)
