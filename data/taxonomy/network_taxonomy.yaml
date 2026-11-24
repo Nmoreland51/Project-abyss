@@ -1,0 +1,1690 @@
+# Project Abyss network taxonomy: machine-readable source of truth.
+# Schema: abyss/foundation/taxonomy.py. Human-readable rendering: docs/NETWORK_TAXONOMY.md (generated).
+# Rules: every 'sourced' facet carries verbatim quotes that `python -m abyss verify-citations` checks
+# against live retrievals. 'analysis' = synthesis by the Abyss authors. 'unverified' = commonly stated,
+# but not checked against a retrieved source in this version; it must not be used as evidence.
+schema_version: 0.1.0
+taxonomy_version: 0.1.0
+released: 2026-11-24
+description: >-
+  Phase 0 taxonomy of information networks and architectural patterns named in the owner's directive
+  (section 3). Systems (concrete networks) and patterns/categories (architectural families) are kept as
+  different kinds, because mixing them in one flat label set would make classification targets ambiguous
+  (IPFS is both a system and an instance of the DHT and P2P patterns). Layers separate physical
+  infrastructure, transport, overlay, application and information ecosystem, as MASTER_AUDIT section 2 requires.
+
+vocabulary:
+  layers:
+    physical: Physical media and radio links (fibre, copper, Wi-Fi radio, LoRa).
+    link: Link-layer framing and local delivery, including layer-2 mesh routing.
+    network: Internetworking, addressing and routing (IP, BGP, early ARPANET host-IMP networking).
+    transport: End-to-end transport (TCP, UDP, QUIC).
+    overlay: A logical network formed by end hosts on top of an existing network (onion routing, DHTs, overlay IPv6).
+    application: Application protocol and data formats (HTTP, Gopher, Gemini, NNTP, SMTP, ActivityPub).
+    information_ecosystem: The content, naming conventions, communities and discovery practices that grow around a system.
+  topology:
+    centralized: A single operator or server is required for core function.
+    client_server: Clients request resources from servers that hold them.
+    hierarchical: Tree-structured delegation (e.g. naming or newsgroup hierarchies).
+    decentralized: Many independent operators, with no single point of control for the whole.
+    distributed: Function spread across many nodes that cooperate algorithmically.
+    federated: Independent servers interoperate through a common server-to-server protocol.
+    peer_to_peer: Participants act as both clients and servers.
+    friend_to_friend: Peers connect only to explicitly trusted peers.
+    hybrid: Combines a central component with distributed operation (e.g. a tracker plus a P2P swarm).
+  resource_identification:
+    location_url: A URL naming a host and a path; identifies where, not what.
+    host_selector: Host, port and an opaque selector string (Gopher).
+    content_hash: Identifier derived from a cryptographic hash of the content.
+    public_key: Identifier derived from a public key (self-certifying address or name).
+    network_address: Numeric network address (ARPANET host numbers, IPv4/IPv6 addresses).
+    message_id: A globally unique message identifier.
+    topic_hierarchy: Hierarchical topic names (e.g. newsgroup names).
+    user_at_domain: Account identifiers scoped to a server's domain (user@host).
+    name_prefix: Hierarchical names for data, routed by prefix.
+    human_name_registry: Human-readable names resolved through a naming system or registry.
+  discovery:
+    hyperlinks: Following links embedded in documents.
+    search_engine: Crawler-built indexes queried by users.
+    directory_listing: Curated directories or menus.
+    consensus_directory: A signed directory of network nodes distributed to clients.
+    dht_lookup: Iterative lookup in a distributed hash table.
+    flooding: Propagating copies of items to all participating peers or servers.
+    tracker: A central coordinator that introduces peers to each other.
+    out_of_band: Addresses or keys shared outside the system (word of mouth, other websites).
+    manual_peering: Operators configure peer links by hand.
+    routing_announcements: Routing protocol advertisements between nodes.
+    federation_protocol: Server-to-server delivery and subscription.
+    naming_resolution: Resolving names through a naming system.
+  patterns:
+    packet_switching: Data split into independently routed packets.
+    client_server: Request/response between clients and servers.
+    hypertext: Documents with embedded links to other documents.
+    menu_hierarchy: Navigation through hierarchical menus of items.
+    onion_routing: Layered encryption over a multi-hop circuit; each relay removes one layer.
+    garlic_routing: Bundling several encrypted messages into one layered message over unidirectional tunnels.
+    distributed_hash_table: Key-to-node mapping spread across participants.
+    content_addressing: Retrieval by identifier derived from the content itself.
+    self_certifying_names: Names that embed or derive from a key, so possession of the name authenticates the holder.
+    store_and_forward_flooding: Servers store items and forward copies to neighbours.
+    federation: Interoperation of independently operated servers.
+    swarming: Many downloaders exchange pieces of the same content with each other.
+    mesh_routing: Nodes route for each other over multi-hop links without fixed infrastructure.
+    small_world_routing: Greedy routing that exploits a small-world graph of peer connections.
+    blockchain_naming: Names registered on a blockchain (e.g. Namecoin .bit).
+    trust_on_first_use: Accept and pin a peer's key or certificate on first contact.
+    private_addressing: Address space reserved for networks not routed on the public Internet.
+    tunneling: Encapsulating one network's traffic inside another's.
+    zero_trust: No implicit trust based on network location.
+    information_centric_networking: The network routes requests for named data rather than to host addresses.
+    path_aware_networking: End hosts can see and choose inter-domain paths.
+
+entries:
+  # =====================================================================================
+  - id: arpanet
+    name: ARPANET
+    kind: system
+    lifecycle: historical
+    layers: [physical, network, transport, application]
+    topology: [distributed]
+    resource_identification_types: [network_address]
+    discovery_types: [out_of_band, directory_listing]
+    patterns: [packet_switching]
+    related: [www, usenet, private_intranet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          The first Interface Message Processor (IMP) was installed by BBN at UCLA in September 1969, and four
+          hosts were connected by the end of 1969. RFC 1, the first memo of the RFC series, is dated 7 April 1969.
+        citations:
+          - ref: isoc_brief_history
+            quote: "in September 1969 when BBN installed the first IMP at UCLA and the first host computer was connected"
+          - ref: isoc_brief_history
+            quote: "by the end of 1969, four host computers were connected together into the initial ARPANET"
+          - ref: rfc1
+            quote: "Date: 7 April 1969"
+      purpose:
+        basis: sourced
+        text: >-
+          Resource sharing: giving users access to expensive remote computing resources instead of duplicating them.
+        citations:
+          - ref: isoc_brief_history
+            quote: "A major initial motivation for both the ARPANET and the Internet was resource sharing"
+      public_disclosure:
+        basis: sourced
+        text: >-
+          A large public demonstration at the International Computer Communication Conference (ICCC) in 1972,
+          described by participants as the first public demonstration. The RFC series also made the design visible
+          as it was being built.
+        citations:
+          - ref: isoc_brief_history
+            quote: "Kahn organized a large, very successful demonstration of the ARPANET at the International Computer Communication Conference (ICCC)"
+          - ref: isoc_brief_history
+            quote: "This was the first public demonstration of this new network technology to the public."
+      architecture:
+        basis: sourced
+        text: >-
+          A packet-switched network of IMPs specified by BBN, with host computers attached to the IMPs. Host-to-host
+          software was each host group's responsibility, coordinated through the RFC process.
+        citations:
+          - ref: rfc1
+            quote: "The software for the ARPA Network exists partly in the IMPs and partly in the respective HOSTs."
+          - ref: rfc1
+            quote: "BB&N has specified the software of the IMPs and it is the responsibility of the HOST groups to agree on HOST software."
+      protocols:
+        basis: sourced
+        text: >-
+          The host-to-host Network Control Program (NCP), later replaced by IP/TCP. RFC 801 set out the plan for a complete
+          switch from NCP to IP/TCP by 1 January 1983. It is a plan document, not a record of execution.
+        citations:
+          - ref: rfc801
+            quote: "The goal is to make a complete switch over from the NCP to IP/TCP by 1 January 1983."
+      resource_identification:
+        basis: unverified
+        text: >-
+          Hosts were identified by numeric host/IMP addresses, and names were mapped through centrally maintained host
+          tables before DNS. Commonly stated, but no primary source for the naming mechanism was retrieved in this version.
+      discovery:
+        basis: unverified
+        text: >-
+          There was no search mechanism. Resources were learned through RFCs, network information centre directories
+          and personal contact. Not checked against a retrieved source in this version.
+      documentation:
+        basis: sourced
+        text: The Request for Comments (RFC) series, begun in 1969, is the primary public documentation.
+        citations:
+          - ref: isoc_brief_history
+            quote: "In 1969 a key step was taken by S. Crocker (then at UCLA) in establishing the Request for Comments (or RFC) series of notes."
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          ARPANET was itself infrastructure (dedicated switching nodes). It is the ancestor of the Internet layer that
+          later overlays (Tor, I2P, IPFS) run on, rather than an overlay itself.
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          For Abyss, ARPANET is the reference case of a network whose existence and design became public through
+          incremental, openly circulated specifications plus a staged public demonstration. That disclosure pattern
+          (specs, then demo, then papers) can be used as a template when assessing how other networks became known.
+      limitations:
+        basis: analysis
+        text: >-
+          Historical system: there is no live observation, and all evidence is documentary. Participant
+          retrospectives (isoc_brief_history) are authoritative but not contemporaneous, so they need corroboration
+          with period documents (RFCs).
+      comparison:
+        basis: analysis
+        text: >-
+          Shares packet switching with all later Internet systems. Unlike the overlays in this taxonomy it owned its
+          switching layer. Unlike private intranets it was a multi-institution research network documented in public.
+    open_questions:
+      - "Register a primary source for host naming (e.g. RFCs on host tables) to upgrade resource_identification."
+
+  # =====================================================================================
+  - id: www
+    name: World Wide Web
+    kind: system
+    aliases: [WWW, the Web]
+    lifecycle: operational
+    layers: [application, information_ecosystem]
+    topology: [client_server, decentralized]
+    resource_identification_types: [location_url, human_name_registry]
+    discovery_types: [hyperlinks, search_engine, directory_listing]
+    patterns: [client_server, hypertext]
+    related: [gopher, gemini, arpanet, usenet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Proposed by Tim Berners-Lee at CERN in "Information Management: A Proposal", written in March 1989 and
+          redistributed in May 1990. CERN hosts the first website at info.cern.ch.
+        citations:
+          - ref: w3c_tbl_proposal_1989
+            quote: "Information Management: A Proposal"
+          - ref: w3c_tbl_proposal_1989
+            quote: "written in March 1989 and later redistributed unchanged apart from the date added in May 1990"
+          - ref: cern_info_first_website
+            quote: "home of the first website"
+      purpose:
+        basis: sourced
+        text: To manage general information about accelerators and experiments at CERN and to prevent its loss.
+        citations:
+          - ref: w3c_tbl_proposal_1989
+            quote: "This proposal concerns the management of general information about accelerators and experiments at CERN."
+      public_disclosure:
+        basis: sourced
+        text: >-
+          Among the early public descriptions is Berners-Lee's August 1991 Usenet post to alt.hypertext describing the
+          WorldWideWeb project. This version doesn't establish whether it was the first public announcement.
+        citations:
+          - ref: w3c_tbl_alt_hypertext_1991
+            quote: "Newsgroups: alt.hypertext"
+          - ref: w3c_tbl_alt_hypertext_1991
+            quote: "The WorldWideWeb (WWW) project aims to allow links to be made to any information anywhere."
+      architecture:
+        basis: sourced
+        text: >-
+          A client-server hypertext system. Documents on independently operated servers link to each other by URI, and
+          HTTP is the transfer protocol.
+        citations:
+          - ref: rfc9110
+            quote: "for distributed, collaborative, hypertext information systems"
+      protocols:
+        basis: sourced
+        text: HTTP (semantics in RFC 9110) and the URI generic syntax (RFC 3986). HTML is not cited in this version.
+        citations:
+          - ref: rfc9110
+            quote: "HTTP Semantics"
+          - ref: rfc3986
+            quote: "This specification defines the generic URI syntax"
+      resource_identification:
+        basis: sourced
+        text: >-
+          Uniform Resource Identifiers. Web URLs combine an access method (scheme), a host and a path, so they identify
+          a location rather than the content itself.
+        citations:
+          - ref: rfc3986
+            quote: "A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource."
+          - ref: w3c_tbl_alt_hypertext_1991
+            quote: "The address format includes an access method (=namespace), and for most name spaces a hostname and some sort of path."
+      discovery:
+        basis: analysis
+        text: >-
+          Following hyperlinks, curated directories and, mainly, crawler-based search engines. Content that isn't
+          linked or indexed is effectively undiscoverable to most users. That gap is the premise of the Abyss
+          hidden-value engine.
+      documentation:
+        basis: sourced
+        text: IETF RFCs (HTTP, URI) plus W3C and WHATWG specifications (the latter are not registered in this version).
+        citations:
+          - ref: rfc9110
+            quote: "HTTP Semantics"
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          An application-layer system running over the Internet's transport and naming (TCP/QUIC, DNS). It is not the
+          Internet itself, which is the distinction MASTER_AUDIT section 1 draws.
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          One address format spanning many access methods, so the Web could link into pre-existing systems (Gopher,
+          news) instead of replacing them. Publication needs only a server, not anyone's permission.
+      limitations:
+        basis: analysis
+        text: >-
+          Location addressing means links break when content moves (no built-in integrity or persistence). Discovery is
+          concentrated in a small number of commercial search indexes, which define what counts as "findable".
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with Gopher: free-form hypertext instead of menus. Compared with Gemini: richer and extensible, where
+          Gemini deliberately constrains features. Compared with IPFS: location-addressed, where IPFS is content-addressed.
+
+  # =====================================================================================
+  - id: tor
+    name: Tor
+    aliases: [The Onion Router, onion services]
+    kind: system
+    lifecycle: operational
+    layers: [overlay, information_ecosystem]
+    topology: [decentralized, client_server]
+    resource_identification_types: [location_url, public_key]
+    discovery_types: [consensus_directory, out_of_band]
+    patterns: [onion_routing, self_certifying_names]
+    related: [i2p, hyphanet, gnunet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Onion routing began in 1995 with Goldschlag, Reed and Syverson at the U.S. Naval Research Lab. The Tor
+          network was first deployed in October 2002, and the Tor Project, Inc. was founded as a nonprofit in 2006.
+        citations:
+          - ref: tor_history
+            quote: "in 1995, David Goldschlag, Michael G. Reed, and Paul Syverson at the U.S. Naval Research Lab (NRL)"
+          - ref: tor_history
+            quote: "in October 2002 when the Tor network was initially deployed, its code was released under a free and open software license"
+          - ref: tor_history
+            quote: "In 2006, the Tor Project, Inc., a 501(c)(3) nonprofit organization, was founded"
+      purpose:
+        basis: sourced
+        text: To anonymize low-latency TCP-based applications such as web browsing, SSH and instant messaging.
+        citations:
+          - ref: tor_spec_intro
+            quote: "Tor is a distributed overlay network designed to anonymize low-latency TCP-based applications"
+      public_disclosure:
+        basis: sourced
+        text: >-
+          The code was released under a free licence at deployment in 2002, and the design was published at USENIX
+          Security 2004 ("Tor: The Second-Generation Onion Router").
+        citations:
+          - ref: tor_design_2004
+            quote: "Tor: The Second-Generation Onion Router"
+          - ref: tor_design_2004
+            quote: "We present Tor, a circuit-based low-latency anonymous communication service."
+      architecture:
+        basis: sourced
+        text: >-
+          A circuit-based overlay of volunteer relays. Clients download a signed directory of relays and build multi-hop
+          circuits. The second-generation design added perfect forward secrecy, congestion control, directory servers
+          and location-hidden services through rendezvous points.
+        citations:
+          - ref: tor_spec_intro
+            quote: "To connect to the network, a client needs to download an up-to-date signed directory of the relays on the network."
+          - ref: tor_design_2004
+            quote: "adding perfect forward secrecy, congestion control, directory servers, integrity checking, configurable exit policies, and a practical design for location-hidden services via rendezvous points"
+      protocols:
+        basis: sourced
+        text: >-
+          The Tor protocol (cells over TLS between relays) and the onion-service (rendezvous) protocol, both specified at
+          spec.torproject.org. Cell and TLS details are cited only at the level of the specification index in this version.
+        citations:
+          - ref: tor_rend_spec_overview
+            quote: "Hidden services aim to provide responder anonymity for bidirectional stream-based communication on the Tor network."
+      resource_identification:
+        basis: unverified
+        text: >-
+          Ordinary web resources are reached by URL through exit relays. Onion services use .onion addresses derived from
+          the service's public key (self-certifying). The key-derivation details were not quoted from the specification
+          in this version.
+      discovery:
+        basis: analysis
+        text: >-
+          Relays are discovered through the signed consensus directory. Onion services aren't globally enumerable by
+          design: their addresses spread out of band (links, lists). Abyss must not attempt to enumerate them.
+      documentation:
+        basis: sourced
+        text: Public specifications at spec.torproject.org and peer-reviewed design papers.
+        citations:
+          - ref: tor_spec_intro
+            quote: "A short introduction to Tor"
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          An overlay on the public Internet. Relays are ordinary Internet hosts, and exit relays connect to ordinary
+          Internet services. It depends on TCP/IP and, for bootstrapping, on reachable directory authorities.
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          Client anonymity for low-latency streams through a directory-coordinated relay set. Responder anonymity comes
+          through onion services. Directory authorities are a semi-centralized trust anchor in an otherwise distributed system.
+      limitations:
+        basis: analysis
+        text: >-
+          Low-latency design trades resistance to global traffic analysis for usability. The directory authority set is
+          a centralization point. For Abyss, onion-service content is out of scope in Phase 0 (see SCOPE_AND_RESTRICTIONS.md).
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with I2P: bidirectional circuits and an exit-to-Internet focus, where I2P uses unidirectional tunnels
+          and an internal-services focus. Compared with Hyphanet: real-time streams, where Hyphanet is store-and-retrieve publication.
+
+  # =====================================================================================
+  - id: i2p
+    name: I2P
+    aliases: [Invisible Internet Project]
+    kind: system
+    lifecycle: operational
+    layers: [overlay, information_ecosystem]
+    topology: [distributed, peer_to_peer]
+    resource_identification_types: [public_key, human_name_registry]
+    discovery_types: [dht_lookup, out_of_band]
+    patterns: [garlic_routing, distributed_hash_table, self_certifying_names]
+    related: [tor, hyphanet, gnunet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          In active development since early 2003. The project's technical introduction was originally written by
+          jrandom in 2003.
+        citations:
+          - ref: i2p_intro
+            quote: "It has been in active development since early 2003"
+          - ref: i2p_intro
+            quote: "This document was originally written by jrandom in 2003."
+      purpose:
+        basis: sourced
+        text: >-
+          To provide an anonymous network layer on which anonymity- or security-conscious applications can run with
+          their own latency and throughput trade-offs.
+        citations:
+          - ref: i2p_intro
+            quote: "I2P is a scalable, self organizing, resilient packet switched anonymous network layer, upon which any number of different anonymity or security conscious applications can operate."
+      public_disclosure:
+        basis: unverified
+        text: >-
+          Open-source development with public documentation from the start. The project's own history page wasn't
+          retrieved in this version, so details of the early announcement are unverified.
+      architecture:
+        basis: sourced
+        text: >-
+          A packet-switched overlay of peer routers using unidirectional tunnels. Garlic encryption bundles multiple
+          messages, and a network database (netDb) DHT is served by "floodfill" routers.
+        citations:
+          - ref: i2p_intro
+            quote: "I2P is an overlay network designed to be run on top of a functional packet switched network"
+          - ref: i2p_intro
+            quote: "lets Alice's router wrap up multiple messages into a single \"garlic message\""
+          - ref: i2p_intro
+            quote: "Those routers that do participate in the DHT and respond to leaseset lookups are called 'floodfills'."
+      protocols:
+        basis: unverified
+        text: >-
+          Router-to-router transports (NTCP2 and SSU2 at the time of writing) carry tunnel messages. The specific
+          transport names were not quoted in this version.
+      resource_identification:
+        basis: unverified
+        text: >-
+          Services are identified by cryptographic destinations (public-key based), with human-readable names through a
+          local address book. The page's "Naming Library and Address Book" appendix exists, but its claims weren't quoted.
+      discovery:
+        basis: sourced
+        text: >-
+          Leasesets (how to reach a destination) and router information are found through the netDb DHT, served by
+          floodfill routers. Service addresses spread out of band.
+        citations:
+          - ref: i2p_intro
+            quote: "Those routers that do participate in the DHT and respond to leaseset lookups are called 'floodfills'."
+      documentation:
+        basis: sourced
+        text: Public documentation and specifications at geti2p.net. The intro page warns that parts may be obsolete.
+        citations:
+          - ref: i2p_intro
+            quote: "some information may be obsolete or incomplete"
+      infrastructure_relationship:
+        basis: sourced
+        text: An overlay on an existing packet-switched network (the Internet).
+        citations:
+          - ref: i2p_intro
+            quote: "I2P is an overlay network designed to be run on top of a functional packet switched network"
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          Every participant is a router, and inbound and outbound paths are separate unidirectional tunnels. Garlic
+          bundling is used, and the design favours services hosted inside the network over exit to the public Internet.
+      limitations:
+        basis: analysis
+        text: >-
+          Documentation self-describes as partly obsolete, so claims need current specifications. Floodfill routers are
+          a concentration point for netDb.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with Tor: fully distributed netDb, where Tor has directory authorities, and packet tunnels, where Tor
+          has TCP circuits. Compared with GNUnet: both are full-stack privacy-oriented P2P frameworks with their own naming.
+
+  # =====================================================================================
+  - id: hyphanet
+    name: Hyphanet
+    aliases: [Freenet (1999-2023 name), Fred]
+    kind: system
+    lifecycle: renamed
+    layers: [overlay, application, information_ecosystem]
+    topology: [peer_to_peer, friend_to_friend, distributed]
+    resource_identification_types: [content_hash, public_key]
+    discovery_types: [out_of_band, hyperlinks]
+    patterns: [content_addressing, self_certifying_names, small_world_routing]
+    related: [freenet, gnunet, i2p, ipfs]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Started as the Freenet Project by Ian Clarke around July 1999, based on his paper "A Distributed Decentralised
+          Information Storage and Retrieval System". In 2023 the original Freenet was renamed Hyphanet after the Freenet
+          Project, Inc. board gave the "Freenet" name to its new project, Locutus.
+        citations:
+          - ref: hyphanet_about
+            quote: "Ian started the Freenet Project around July of 1999"
+          - ref: hyphanet_about
+            quote: "Hyphanet is based on Ian's paper \"A Distributed Decentralised Information Storage and Retrieval System\""
+          - ref: hyphanet_rename_2023
+            quote: "decided to rename its new project Locutus to \"Freenet.\" This required that Freenet change its name."
+      purpose:
+        basis: sourced
+        text: Censorship-resistant and privacy-respecting publishing and communication.
+        citations:
+          - ref: hyphanet_home
+            quote: "Hyphanet is peer-to-peer network for censorship-resistant and privacy-respecting publishing and communication."
+      public_disclosure:
+        basis: sourced
+        text: >-
+          Disclosed through Clarke's paper and open development from 1999. The rename was announced publicly on
+          26 June 2023.
+        citations:
+          - ref: hyphanet_rename_2023
+            quote: "Freenet renamed to Hyphanet"
+          - ref: hyphanet_rename_2023
+            quote: "Freenet began development in 1999."
+      architecture:
+        basis: sourced
+        text: >-
+          A decentralized peer-to-peer data store. Nodes contribute bandwidth and disk ("data store") for encrypted
+          chunks, and traffic is routed through other nodes. In "darknet" mode nodes connect only to friends.
+        citations:
+          - ref: hyphanet_about
+            quote: "Communications by Hyphanet nodes are encrypted and routed through other nodes"
+          - ref: hyphanet_about
+            quote: "Users contribute to the network by giving bandwidth and a portion of their hard drive (called the \"data store\") for storing encrypted chunks of data."
+          - ref: hyphanet_about
+            quote: "if used in \"darknet\" mode, where users only connect to their friends, is very difficult to detect"
+      protocols:
+        basis: unverified
+        text: >-
+          Hyphanet's own node-to-node protocol (the "Fred" reference implementation). Routing is commonly described as
+          small-world greedy routing. Not verified against a protocol specification in this version.
+      resource_identification:
+        basis: sourced
+        text: >-
+          Content Hash Keys (CHKs) guarantee integrity of retrieved data, and Signed Subspace Keys (SSKs) allow signed,
+          updatable content.
+        citations:
+          - ref: hyphanet_docs
+            quote: "Hyphanet has long-supported the concept of \"Content Hash Keys\" which guarantee the integrity of retrieved data."
+          - ref: hyphanet_docs
+            quote: "Hyphanet also supports \"Signed Subspace Keys\" which allow content to be digitally signed."
+      discovery:
+        basis: analysis
+        text: >-
+          No global search. Keys and freesite links spread out of band and through index sites inside the network.
+          Content persists according to popularity, not by publisher guarantee.
+      documentation:
+        basis: sourced
+        text: Project documentation at hyphanet.org, plus the founding paper.
+        citations:
+          - ref: hyphanet_docs
+            quote: "Forward Error Correction"
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          An overlay running on Internet hosts. It needs no servers, but bootstrapping in opennet mode depends on
+          reachable seed nodes (not verified in this version).
+      distinguishing_characteristics:
+        basis: sourced
+        text: >-
+          Content-hash integrity, signed subspaces, forward error correction and "healing" of popular content. The
+          darknet (friend-to-friend) mode is hard to detect.
+        citations:
+          - ref: hyphanet_docs
+            quote: "Uniquely, Hyphanet also supports \"healing\""
+      limitations:
+        basis: analysis
+        text: >-
+          Unpopular content can disappear, so persistence isn't guaranteed. Naming history is confusing: sources
+          before 2023 that say "Freenet" mean Hyphanet, and later ones may mean the new Freenet. Abyss entity resolution
+          must handle this explicitly.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with IPFS: both are content-addressed, but Hyphanet adds anonymity and popularity-driven storage, while
+          IPFS has no anonymity and pinning-based persistence. Compared with Tor and I2P: storage-centric rather than streams.
+    open_questions:
+      - "Register Clarke 1999/2001 papers and the Fred protocol docs to upgrade 'protocols' and 'public_disclosure'."
+      - "Compare the rename account with the new Freenet project's account (only one side registered)."
+
+  # =====================================================================================
+  - id: freenet
+    name: Freenet (formerly Locutus)
+    kind: system
+    lifecycle: experimental
+    layers: [overlay, application]
+    topology: [peer_to_peer, decentralized]
+    resource_identification_types: [public_key]
+    discovery_types: [out_of_band]
+    patterns: []
+    related: [hyphanet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Developed under the name Locutus from 2019, and renamed "Freenet" in early 2023 by the board of Freenet
+          Project, Inc. According to the Hyphanet account it has different design priorities from the original Freenet.
+        citations:
+          - ref: hyphanet_rename_2023
+            quote: "Locutus began development in 2019, and has different design priorities."
+      purpose:
+        basis: sourced
+        text: A peer-to-peer platform for applications that no company controls and that need no servers.
+        citations:
+          - ref: freenet_home
+            quote: "Freenet is a peer-to-peer platform for apps that no company controls."
+      public_disclosure:
+        basis: sourced
+        text: >-
+          Publicly identified by name at the 2023 rename. The project site now promotes end-user apps (e.g. "River" group chat).
+        citations:
+          - ref: freenet_home
+            quote: "River, group chat that feels like Signal or WhatsApp with nobody in the middle"
+      architecture:
+        basis: unverified
+        text: >-
+          Described by the project as apps that run on users' peers in a global network. Its contract and state model
+          and its routing weren't checked against the project's whitepaper in this version.
+      protocols:
+        basis: unverified
+        text: Not documented in this version; the project's whitepaper and manual need registering.
+      resource_identification:
+        basis: unverified
+        text: Not documented in this version.
+      discovery:
+        basis: unverified
+        text: Not documented in this version.
+      documentation:
+        basis: sourced
+        text: The project site links a whitepaper, a manual and a tutorial (titles seen on the landing page; contents not read).
+        citations:
+          - ref: freenet_home
+            quote: "Whitepaper"
+      infrastructure_relationship:
+        basis: sourced
+        text: Runs on users' own computers rather than on cloud servers, according to the project.
+        citations:
+          - ref: freenet_home
+            quote: "Your computer becomes part of a global network"
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          An application platform (developers build apps in Rust or TypeScript) rather than an anonymous publication
+          store. Hyphanet's account describes it as "not privacy related", a claim from one side that needs corroboration.
+      limitations:
+        basis: analysis
+        text: >-
+          Young system with little independent documentation registered. The landing page is promotional. The name
+          collides with 1999-2023 sources about Hyphanet.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with Hyphanet: shares organisational lineage and name, but differs in goals and design. A
+          classifier must not merge the two entities on name alone.
+    open_questions:
+      - "Register the Freenet whitepaper and manual; fill architecture/protocols/resource_identification/discovery."
+
+  # =====================================================================================
+  - id: gnunet
+    name: GNUnet
+    kind: system
+    lifecycle: operational
+    layers: [overlay, application]
+    topology: [peer_to_peer, decentralized]
+    resource_identification_types: [public_key, human_name_registry]
+    discovery_types: [dht_lookup, naming_resolution]
+    patterns: [distributed_hash_table, self_certifying_names]
+    related: [i2p, tor, hyphanet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          A GNU project, maintained by GNUnet e.V. The site's copyright notice runs from 2001, which is weak evidence of
+          the start date. The founding history wasn't retrieved in this version.
+        citations:
+          - ref: gnunet_home
+            quote: "Copyright © GNUnet e.V. 2001"
+      purpose:
+        basis: sourced
+        text: >-
+          A Free Software network architecture following a decentralized peer-to-peer paradigm with privacy-preserving
+          cryptographic protocols.
+        citations:
+          - ref: gnunet_about
+            quote: "We believe liberal societies need a network architecture that uses the anti-authoritarian decentralized peer-to-peer paradigm and privacy-preserving cryptographic protocols."
+          - ref: gnunet_about
+            quote: "The goal of the GNUnet project is to provide a Free Software realization of this ideal."
+      public_disclosure:
+        basis: sourced
+        text: >-
+          Open development and academic publications. The GNU Name System was published as RFC 9498 (Informational,
+          Independent Submission) in November 2023.
+        citations:
+          - ref: rfc9498
+            quote: "November 2023 The GNU Name System"
+      architecture:
+        basis: unverified
+        text: >-
+          A layered P2P framework (transport, core, DHT, applications). The DHT is commonly identified as R5N. Not
+          quoted from a retrieved source in this version.
+      protocols:
+        basis: sourced
+        text: GNS is specified as a decentralized, censorship-resistant name resolution protocol.
+        citations:
+          - ref: rfc9498
+            quote: "GNS is a decentralized and censorship-resistant domain name resolution protocol that provides a privacy-enhancing alternative to the Domain Name System (DNS) protocols."
+      resource_identification:
+        basis: sourced
+        text: Zones identified by keys (zone top-level domains, zTLD), with delegation records (PKEY, EDKEY).
+        citations:
+          - ref: rfc9498
+            quote: "Zone Top-Level Domain (zTLD)"
+      discovery:
+        basis: sourced
+        text: Name resolution through GNS, with DHTs used as remote storage for records.
+        citations:
+          - ref: rfc9498
+            quote: "DHTs as Remote Storage"
+      documentation:
+        basis: sourced
+        text: Project handbook and an RFC-published specification for GNS. The GNU Name System is called its most mature component.
+        citations:
+          - ref: gnunet_about
+            quote: "start with its most mature component, the GNU Name System"
+      infrastructure_relationship:
+        basis: analysis
+        text: Runs on Internet hosts. GNS is positioned as an alternative to DNS, not a replacement for IP.
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          A whole privacy-oriented networking stack in one framework, with a standardised-as-RFC decentralized naming
+          system that other projects could adopt independently.
+      limitations:
+        basis: analysis
+        text: >-
+          The project itself names GNS as its most mature component, which implies other components are less mature.
+          The start date rests only on a copyright notice.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with I2P: both are full-stack privacy P2P with their own naming, but GNUnet's naming is formally
+          specified in an RFC. Compared with DNS: key-based delegation without a root authority.
+    open_questions:
+      - "Register GNUnet handbook and the R5N paper to upgrade 'architecture'."
+
+  # =====================================================================================
+  - id: ipfs
+    name: IPFS
+    aliases: [InterPlanetary File System]
+    kind: system
+    lifecycle: operational
+    layers: [overlay, application, information_ecosystem]
+    topology: [peer_to_peer, distributed]
+    resource_identification_types: [content_hash, public_key]
+    discovery_types: [dht_lookup, out_of_band]
+    patterns: [content_addressing, distributed_hash_table, swarming]
+    related: [dht, p2p, hyphanet, zeronet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: Described in Juan Benet's arXiv preprint, submitted 14 July 2014.
+        citations:
+          - ref: ipfs_whitepaper_arxiv
+            quote: "Submitted on 14 Jul 2014"
+          - ref: ipfs_whitepaper_arxiv
+            quote: "IPFS - Content Addressed, Versioned, P2P File System"
+      purpose:
+        basis: sourced
+        text: A peer-to-peer distributed file system intended to connect all computing devices with the same system of files.
+        citations:
+          - ref: ipfs_whitepaper_arxiv
+            quote: "The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files."
+      public_disclosure:
+        basis: sourced
+        text: Disclosed by public preprint (2014) and open-source implementations with public documentation.
+        citations:
+          - ref: ipfs_whitepaper_arxiv
+            quote: "Submitted on 14 Jul 2014"
+      architecture:
+        basis: sourced
+        text: >-
+          A set of open protocols for addressing, routing and transferring content-addressed data. A Kademlia-based DHT
+          is used for content routing, mapping identifiers to providing peers.
+        citations:
+          - ref: ipfs_docs_what
+            quote: "IPFS is a set of open protocols for addressing, routing, and transferring"
+          - ref: ipfs_docs_dht
+            quote: "In IPFS, the DHT is used as the fundamental component of the content routing system"
+      protocols:
+        basis: sourced
+        text: >-
+          The Kademlia DHT and IPNS (mutable naming) are quoted here. Bitswap (block exchange), IPLD (data model) and
+          libp2p (networking) are named in the documentation navigation but not quoted in this version.
+        citations:
+          - ref: ipfs_docs_dht
+            quote: "Kademlia"
+          - ref: ipfs_docs_dht
+            quote: "IPNS (InterPlanetary Name System)"
+      resource_identification:
+        basis: sourced
+        text: Content Identifiers (CIDs) derived from the content's cryptographic hash (sha-256 by default).
+        citations:
+          - ref: ipfs_docs_cid
+            quote: "CIDs are based on the content's cryptographic hash."
+          - ref: ipfs_docs_cid
+            quote: "IPFS uses the sha-256 hashing algorithm by default"
+      discovery:
+        basis: sourced
+        text: Provider records in the DHT map a content identifier to peers that advertise they have it.
+        citations:
+          - ref: ipfs_docs_dht
+            quote: "It maps what the user is looking for to the peer that is storing the matching content."
+      documentation:
+        basis: sourced
+        text: Public documentation at docs.ipfs.tech, plus the 2014 preprint (which differs from current implementations).
+        citations:
+          - ref: ipfs_docs_what
+            quote: "What is IPFS"
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          An overlay on the Internet. HTTP gateways bridge IPFS content into the Web, so much IPFS content is reached
+          through Web infrastructure rather than native peers.
+      distinguishing_characteristics:
+        basis: sourced
+        text: Content addressing gives verifiability, since any change in content produces a different CID.
+        citations:
+          - ref: ipfs_docs_cid
+            quote: "Any difference in the content will produce a different CID."
+      limitations:
+        basis: analysis
+        text: >-
+          Content addressing doesn't guarantee availability: content persists only while someone provides it. There's
+          no anonymity, because providers are visible in the DHT. Gateway use re-centralizes access.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with BitTorrent: similar swarming and DHT ideas, generalised to a file system and linked data.
+          Compared with Hyphanet: content-addressed without anonymity. Compared with the Web: what, not where.
+
+  # =====================================================================================
+  - id: zeronet
+    name: ZeroNet
+    kind: system
+    lifecycle: operational
+    layers: [overlay, application, information_ecosystem]
+    topology: [peer_to_peer, hybrid]
+    resource_identification_types: [public_key, human_name_registry]
+    discovery_types: [tracker, dht_lookup, out_of_band]
+    patterns: [self_certifying_names, swarming, blockchain_naming]
+    related: [ipfs, p2p, hyphanet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: unverified
+        text: >-
+          Commonly dated to 2015 and to a single original author. Neither is stated in the retrieved README, and the
+          GitHub repository history couldn't be queried from this environment.
+      purpose:
+        basis: sourced
+        text: Decentralized websites using Bitcoin cryptography and the BitTorrent network.
+        citations:
+          - ref: zeronet_readme
+            quote: "Decentralized websites using Bitcoin crypto and the BitTorrent network"
+      public_disclosure:
+        basis: analysis
+        text: Open-source repository and project website. Not investigated further in this version.
+      architecture:
+        basis: sourced
+        text: >-
+          Each visitor of a site also serves it. A site's files are listed in a content.json manifest, which is hashed
+          and signed with the site's private key and verified by peers before they accept updates.
+        citations:
+          - ref: zeronet_readme
+            quote: "Each visited site is also served by you."
+          - ref: zeronet_readme
+            quote: "Every site contains a `content.json` file which holds all other files in a sha512 hash and a signature generated using the site's private key."
+      protocols:
+        basis: sourced
+        text: Peer discovery through the BitTorrent network, with its own file exchange and TLS-encrypted connections.
+        citations:
+          - ref: zeronet_readme
+            quote: "it tries to find peers using the BitTorrent network so it can download the site files"
+          - ref: zeronet_readme
+            quote: "TLS encrypted connections"
+      resource_identification:
+        basis: sourced
+        text: >-
+          Sites are addressed by a key-derived address (Bitcoin-style). Namecoin .bit names give human-readable aliases.
+        citations:
+          - ref: zeronet_readme
+            quote: "Namecoin .bit domains support"
+      discovery:
+        basis: analysis
+        text: >-
+          Peers are discovered through BitTorrent trackers and DHT. Site addresses spread out of band and through
+          in-network index sites.
+      documentation:
+        basis: sourced
+        text: The repository README and the project website.
+        citations:
+          - ref: zeronet_readme
+            quote: "How does it work?"
+      infrastructure_relationship:
+        basis: sourced
+        text: >-
+          Runs a local HTTP server, which users browse with an ordinary browser (127.0.0.1:43110). It reuses Bitcoin
+          cryptography and BitTorrent peer discovery.
+        citations:
+          - ref: zeronet_readme
+            quote: "http://127.0.0.1:43110/{zeronet_address}"
+      distinguishing_characteristics:
+        basis: sourced
+        text: Real-time updated, signed, peer-served websites.
+        citations:
+          - ref: zeronet_readme
+            quote: "Real-time updated sites"
+      limitations:
+        basis: unverified
+        text: >-
+          Maintenance status is unknown. Reports that the original repository is inactive and that forks exist couldn't
+          be checked here (GitHub API blocked from this environment).
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with IPFS: per-site signed manifests and BitTorrent-based discovery, where IPFS has a general
+          content-addressed file system. Compared with Hyphanet: anonymity isn't part of the core design described in
+          the README (its README links an .onion address, but Tor support wasn't verified).
+    open_questions:
+      - "Check maintenance status and forks from an environment with GitHub API access."
+
+  # =====================================================================================
+  - id: gopher
+    name: Gopher
+    kind: system
+    lifecycle: operational
+    layers: [application, information_ecosystem]
+    topology: [client_server, decentralized]
+    resource_identification_types: [host_selector, location_url]
+    discovery_types: [directory_listing, search_engine]
+    patterns: [client_server, menu_hierarchy]
+    related: [www, gemini]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: Developed at the University of Minnesota. The protocol was documented as RFC 1436 in March 1993.
+        citations:
+          - ref: rfc1436
+            quote: "University of Minnesota March 1993"
+      purpose:
+        basis: sourced
+        text: A distributed document search and retrieval protocol.
+        citations:
+          - ref: rfc1436
+            quote: "The Internet Gopher Protocol (a distributed document search and retrieval protocol)"
+      public_disclosure:
+        basis: sourced
+        text: >-
+          Published as an Informational RFC (not an Internet standard). The 1991 origin date is commonly cited but not
+          verified in this version.
+        citations:
+          - ref: rfc1436
+            quote: "This memo provides information for the Internet community. It does not specify an Internet standard."
+      architecture:
+        basis: sourced
+        text: Client-server, with documents residing on many autonomous servers and accessed by hierarchical menus.
+        citations:
+          - ref: rfc1436
+            quote: "Documents reside on many autonomous servers on the Internet."
+      protocols:
+        basis: sourced
+        text: >-
+          A simple request/response over TCP. The client sends a selector string and the server returns a menu or a
+          document. The IANA-assigned port is 70.
+        citations:
+          - ref: rfc1436
+            quote: "Gopher servers should listen on port 70 (port 70 is assigned to Internet Gopher by IANA)."
+      resource_identification:
+        basis: sourced
+        text: A host, a port and a selector string, with item types. Later given a URI scheme (RFC 4266).
+        citations:
+          - ref: rfc4266
+            quote: "The gopher URI Scheme"
+      discovery:
+        basis: analysis
+        text: >-
+          Browsing menus and links between servers. Gopher-specific search services existed (commonly cited: Veronica),
+          but they're not verified in this version.
+      documentation:
+        basis: sourced
+        text: RFC 1436 and RFC 4266.
+        citations:
+          - ref: rfc1436
+            quote: "The Internet Gopher Protocol"
+      infrastructure_relationship:
+        basis: sourced
+        text: An application protocol over TCP on the Internet.
+        citations:
+          - ref: rfc1436
+            quote: "This protocol assumes a reliable data stream; TCP is assumed."
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          Strict menu-and-document model with typed items. Easy to implement and to index, but it lacks inline
+          hypertext. Whether a Gopherspace community is still active, and how large it is, is not measured in this version.
+      limitations:
+        basis: analysis
+        text: >-
+          No encryption in the base protocol and no inline links. Abyss can't reach native Gopher (port 70) from the
+          current cloud environment (outbound port closed), so live Gopher ingestion is BLOCKED here.
+      comparison:
+        basis: sourced
+        text: Gemini explicitly positions itself as an incremental improvement over Gopher rather than a stripped-down HTTP.
+        citations:
+          - ref: gemini_spec
+            quote: "It can be thought of as an incremental improvement over Gopher [RFC1436] rather than a stripped down HTTP"
+
+  # =====================================================================================
+  - id: gemini
+    name: Gemini
+    aliases: [Project Gemini, Geminispace]
+    kind: system
+    lifecycle: operational
+    layers: [application, information_ecosystem]
+    topology: [client_server, decentralized]
+    resource_identification_types: [location_url]
+    discovery_types: [hyperlinks, search_engine, out_of_band]
+    patterns: [client_server, hypertext, trust_on_first_use]
+    related: [gopher, www]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: Project Gemini started in June 2019 (the FAQ names Solderpunk as maintainer of the Gemini version of the site).
+        citations:
+          - ref: gemini_faq
+            quote: "Project Gemini started in June 2019."
+      purpose:
+        basis: sourced
+        text: To coexist alongside Gopher and the Web as one more option, explicitly not to replace them.
+        citations:
+          - ref: gemini_faq
+            quote: "Gemini is not intended to replace either Gopher or the web, but to co-exist peacefully alongside them"
+      public_disclosure:
+        basis: analysis
+        text: Developed in public, with its specification and FAQ published by the project.
+      architecture:
+        basis: sourced
+        text: A single request, single response client-server protocol over TLS.
+        citations:
+          - ref: gemini_spec
+            quote: "with a simple request and response transaction"
+      protocols:
+        basis: sourced
+        text: >-
+          The Gemini protocol on TCP port 1965 with mandatory TLS. Clients are strongly recommended to use
+          Trust-On-First-Use certificate pinning.
+        citations:
+          - ref: gemini_spec
+            quote: "It runs over TCP [STD7] port 1965 with encryption provided by TLS [RFC8446]"
+          - ref: gemini_spec
+            quote: "Clients are strongly RECOMMENDED to use a Trust on First Use or \"TOFU\" certificate-pinning system"
+      resource_identification:
+        basis: sourced
+        text: gemini:// URIs (location-based).
+        citations:
+          - ref: gemini_spec
+            quote: "gemini://example.net/search?hello"
+      discovery:
+        basis: analysis
+        text: >-
+          Links in gemtext documents, community aggregators and Gemini-native search engines. Total size is
+          unmeasured by Abyss.
+      documentation:
+        basis: sourced
+        text: Specification and FAQ at geminiprotocol.net (also served natively over Gemini).
+        citations:
+          - ref: gemini_spec
+            quote: "This document specifies the Gemini protocol for file transfer."
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          An application protocol over TCP/TLS on the Internet. It uses DNS hostnames, and TOFU avoids dependence on
+          the CA system.
+      distinguishing_characteristics:
+        basis: sourced
+        text: '"Geminispace" names the total collection of content served over Gemini, by analogy with Gopherspace.'
+        citations:
+          - ref: gemini_faq
+            quote: "\"Geminispace\" is simply the total collection of every single file that is served via the Gemini protocol."
+      limitations:
+        basis: analysis
+        text: >-
+          Deliberately minimal (no inline media or scripting). Native port 1965 is closed in the current cloud
+          environment, so the Phase 0 citations came from the project's HTTPS mirror and native ingestion is BLOCKED here.
+      comparison:
+        basis: sourced
+        text: Positioned between Gopher and the Web, as an improvement over Gopher rather than a stripped-down HTTP.
+        citations:
+          - ref: gemini_spec
+            quote: "It can be thought of as an incremental improvement over Gopher [RFC1436] rather than a stripped down HTTP"
+
+  # =====================================================================================
+  - id: usenet
+    name: Usenet
+    aliases: [Netnews]
+    kind: system
+    lifecycle: operational
+    layers: [application, information_ecosystem]
+    topology: [federated, decentralized]
+    resource_identification_types: [message_id, topic_hierarchy]
+    discovery_types: [flooding, directory_listing]
+    patterns: [store_and_forward_flooding, federation]
+    related: [federated, arpanet, www]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Grew out of the UNIX ecosystem, built on UNIX's built-in UUCP communication. The commonly cited 1979-1980
+          Duke University origin is unverified in this version.
+        citations:
+          - ref: isoc_brief_history
+            quote: "spawned USENET, based on UNIX' built-in UUCP communication protocols"
+      purpose:
+        basis: sourced
+        text: >-
+          Distributing news articles so that each reader can see all articles in the newsgroups they take part in.
+        citations:
+          - ref: rfc5537
+            quote: "These protocols most commonly use a flooding algorithm that propagates copies throughout a network of participating servers."
+      public_disclosure:
+        basis: sourced
+        text: >-
+          The message format was published as RFC 850 (1983) and RFC 1036 (1987), and NNTP as RFC 977 (1986).
+        citations:
+          - ref: rfc850
+            quote: "Standard for Interchange of USENET Messages"
+          - ref: rfc1036
+            quote: "December 1987 Standard for Interchange of USENET Messages"
+      architecture:
+        basis: sourced
+        text: >-
+          A federation of news servers. Articles flood between peered servers, usually with one stored copy per server
+          served to local readers. Usenet is one particular public network built on the Netnews protocols.
+        citations:
+          - ref: rfc5537
+            quote: "Typically, only one copy is stored per server"
+          - ref: rfc5537
+            quote: "\"Usenet\" is a particular worldwide, publicly accessible network based on the Netnews protocols."
+      protocols:
+        basis: sourced
+        text: UUCP historically, then NNTP (RFC 977, superseded by RFC 3977).
+        citations:
+          - ref: rfc977
+            quote: "NNTP specifies a protocol for the distribution, inquiry, retrieval, and posting of news articles"
+          - ref: rfc3977
+            quote: "Network News Transfer Protocol (NNTP)"
+      resource_identification:
+        basis: sourced
+        text: >-
+          Articles have globally unique Message-IDs, and newsgroups form a topic hierarchy. The RFC 1036 format defines both.
+        citations:
+          - ref: rfc1036
+            quote: "Message-ID"
+      discovery:
+        basis: analysis
+        text: >-
+          Subscribing to newsgroups in the hierarchy, with articles arriving by flooding. Archives (third-party) provide
+          search over historical posts.
+      documentation:
+        basis: sourced
+        text: RFCs 850, 1036, 977, 3977 and 5537.
+        citations:
+          - ref: rfc5537
+            quote: "Netnews Architecture and Protocols"
+      infrastructure_relationship:
+        basis: sourced
+        text: >-
+          Originally over UUCP dial-up links, then over the Internet through NNTP. Netnews protocols are also used inside
+          private deployments separate from Usenet.
+        citations:
+          - ref: rfc5537
+            quote: "there are deployments of the Netnews protocols other than Usenet"
+      distinguishing_characteristics:
+        basis: analysis
+        text: >-
+          An early large-scale federated information ecosystem with no central server. Content is replicated by
+          flooding, and a "Path" header records propagation.
+      limitations:
+        basis: analysis
+        text: >-
+          Server retention limits mean history is lost unless archived. Spam and abuse controls rely on operator
+          cooperation. Native NNTP (port 119) is closed in the current cloud environment.
+      comparison:
+        basis: analysis
+        text: >-
+          A federation pattern later reused by email-like and social systems (ActivityPub, Matrix), where Usenet
+          floods while ActivityPub delivers to subscribers. Berners-Lee's 1991 WWW description was posted to a
+          Usenet group (alt.hypertext), so Usenet was one channel through which the Web became known.
+
+  # =====================================================================================
+  - id: dht
+    name: Distributed hash tables
+    kind: pattern
+    lifecycle: mixed
+    layers: [overlay]
+    topology: [distributed, peer_to_peer]
+    resource_identification_types: [content_hash, public_key]
+    discovery_types: [dht_lookup]
+    patterns: [distributed_hash_table]
+    related: [p2p, ipfs, i2p, gnunet]
+    examples: [Chord, Kademlia, BitTorrent Mainline DHT (BEP 5), IPFS DHT, I2P netDb]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          Structured lookup overlays were published in 2001 (Chord at SIGCOMM 2001, among others). Kademlia (IPTPS 2002)
+          introduced the XOR distance metric. Its PDF couldn't be machine-checked.
+        citations:
+          - ref: chord_sigcomm2001
+            quote: "SIGCOMM'01, August 27-31, 2001, San Diego, California, USA."
+          - ref: kademlia_iptps2002
+            quote: "Kademlia: A Peer-to-peer Information System Based on the XOR Metric"
+      purpose:
+        basis: sourced
+        text: To efficiently locate the node that stores a particular data item in a peer-to-peer system.
+        citations:
+          - ref: chord_sigcomm2001
+            quote: "A fundamental problem that confronts peer-to-peer applications is to efficiently locate the node that stores a particular data item."
+      public_disclosure:
+        basis: sourced
+        text: Disclosed through peer-reviewed research papers.
+        citations:
+          - ref: chord_sigcomm2001
+            quote: "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications"
+      architecture:
+        basis: sourced
+        text: >-
+          Nodes and keys share an identifier space, and each key maps onto a responsible node. Chord supports exactly
+          that one operation.
+        citations:
+          - ref: chord_sigcomm2001
+            quote: "Chord provides support for just one operation: given a key, it maps the key onto a node."
+      protocols:
+        basis: sourced
+        text: Instance-specific. BitTorrent's Mainline DHT (BEP 5) uses Kademlia with XOR distance.
+        citations:
+          - ref: bep5
+            quote: "In Kademlia, the distance metric is XOR and the result is interpreted as an unsigned integer."
+      resource_identification:
+        basis: analysis
+        text: Keys are fixed-length identifiers, typically hashes of content or of public keys.
+      discovery:
+        basis: analysis
+        text: Iterative or recursive lookup converging on the nodes closest to a key in the identifier metric.
+      documentation:
+        basis: sourced
+        text: Research papers plus protocol specifications of deployed instances (e.g. BEP 5).
+        citations:
+          - ref: bep5
+            quote: "DHT Protocol"
+      infrastructure_relationship:
+        basis: analysis
+        text: An overlay pattern used as a component by many systems, not a standalone information ecosystem.
+      distinguishing_characteristics:
+        basis: analysis
+        text: Logarithmic lookup without central index, using an identifier-space metric and routing tables.
+      limitations:
+        basis: analysis
+        text: >-
+          Vulnerable to Sybil and eclipse attacks without countermeasures, and churn costs maintenance traffic. For
+          recognition, a DHT is a component signature and doesn't identify a single system.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with flooding (Usenet): targeted lookup rather than full replication. Compared with a central tracker:
+          no single point of failure.
+
+  # =====================================================================================
+  - id: p2p
+    name: Peer-to-peer architectures
+    kind: pattern
+    lifecycle: mixed
+    layers: [overlay, application]
+    topology: [peer_to_peer, hybrid, distributed]
+    resource_identification_types: [content_hash, location_url]
+    discovery_types: [tracker, dht_lookup, out_of_band]
+    patterns: [swarming, distributed_hash_table]
+    related: [dht, ipfs, zeronet, hyphanet]
+    examples: [BitTorrent, Bitcoin, IPFS, Hyphanet]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: analysis
+        text: >-
+          A design paradigm rather than a single invention. RFC 5694 (IAB, 2009) surveys its definition and taxonomies.
+          Historical first instances aren't asserted in this version.
+      purpose:
+        basis: sourced
+        text: To share resources directly between participants instead of through a central server or intermediary.
+        citations:
+          - ref: bep3
+            quote: "when multiple downloads of the same file happen concurrently, the downloaders upload to each other"
+          - ref: bitcoin_whitepaper
+            quote: "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution."
+      public_disclosure:
+        basis: sourced
+        text: Through specifications, whitepapers and IAB/IETF surveys.
+        citations:
+          - ref: rfc5694
+            quote: "In this document, we provide a survey of P2P (Peer-to-Peer) systems."
+      architecture:
+        basis: sourced
+        text: >-
+          RFC 5694 provides a definition and several taxonomies of P2P systems and discusses when P2P is preferable to
+          client-server.
+        citations:
+          - ref: rfc5694
+            quote: "The survey includes a definition and several taxonomies of P2P systems."
+      protocols:
+        basis: sourced
+        text: >-
+          Instance-specific. BitTorrent combines a tracker (central coordinator) with peer swarming, which makes it a
+          hybrid design.
+        citations:
+          - ref: bep3
+            quote: "A BitTorrent tracker"
+      resource_identification:
+        basis: sourced
+        text: >-
+          Instance-specific. BitTorrent identifies content through a metainfo file published on the web (the info-hash
+          details aren't quoted here).
+        citations:
+          - ref: bep3
+            quote: "It identifies content by URL and is designed to integrate seamlessly with the web."
+      discovery:
+        basis: analysis
+        text: Trackers, DHTs, peer exchange, or out-of-band sharing of identifiers.
+      documentation:
+        basis: sourced
+        text: RFC 5694 plus instance specifications (BEPs, whitepapers).
+        citations:
+          - ref: rfc5694
+            quote: "Peer-to-Peer (P2P) Architecture: Definition, Taxonomies, Examples, and Applicability"
+      infrastructure_relationship:
+        basis: analysis
+        text: Usually an overlay on the Internet. Some instances bootstrap through web servers (trackers, metainfo files).
+      distinguishing_characteristics:
+        basis: analysis
+        text: Participants are both consumers and providers, so capacity scales with participation.
+      limitations:
+        basis: analysis
+        text: >-
+          NAT traversal, free-riding, Sybil attacks and legal misuse. "P2P" is too broad to be a useful recognition label
+          alone, so it should be a parent family with sub-families.
+      comparison:
+        basis: analysis
+        text: The parent pattern of the DHT, swarming and friend-to-friend designs in this taxonomy. Federation differs in that servers stay distinct from clients.
+
+  # =====================================================================================
+  - id: mesh
+    name: Mesh networks
+    kind: pattern
+    lifecycle: mixed
+    layers: [physical, link, network]
+    topology: [distributed, decentralized, peer_to_peer]
+    resource_identification_types: [network_address, public_key]
+    discovery_types: [routing_announcements, manual_peering]
+    patterns: [mesh_routing]
+    related: [experimental_protocols, private_intranet]
+    examples: [OLSR, Babel, B.A.T.M.A.N. (batman-adv), Meshtastic, Reticulum]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          The IETF MANET work documented routing for mobile ad hoc networks in RFC 2501 (January 1999), and OLSR was
+          published as an Experimental RFC in October 2003.
+        citations:
+          - ref: rfc2501
+            quote: "Mobile Ad hoc Networking (MANET): Routing Protocol Performance Issues and Evaluation Considerations"
+          - ref: rfc3626
+            quote: "Category: Experimental"
+      purpose:
+        basis: sourced
+        text: Multi-hop communication without fixed infrastructure, for example long-range off-grid messaging with inexpensive LoRa radios.
+        citations:
+          - ref: meshtastic_docs
+            quote: "radios as a long range off-grid communication platform in areas without existing or reliable communications infrastructure"
+      public_disclosure:
+        basis: analysis
+        text: Through IETF RFCs and open-source community projects.
+      architecture:
+        basis: sourced
+        text: >-
+          Nodes route for each other. Implementations exist at layer 2 (batman-adv as a Linux kernel module) and
+          layer 3 (OLSR, Babel).
+        citations:
+          - ref: batman_adv_docs
+            quote: "is an implementation of the B.A.T.M.A.N. routing protocol in form of a Linux kernel module operating on layer 2"
+      protocols:
+        basis: sourced
+        text: >-
+          OLSR (link-state with multipoint relays), Babel (loop-avoiding distance-vector, for wired and wireless mesh),
+          B.A.T.M.A.N., and LoRa-based protocols (Meshtastic).
+        citations:
+          - ref: rfc3626
+            quote: "The key concept used in the protocol is that of multipoint relays (MPRs)."
+          - ref: rfc8966
+            quote: "Babel is a loop-avoiding, distance-vector routing protocol that is robust and efficient both in ordinary wired networks and in wireless mesh networks."
+      resource_identification:
+        basis: analysis
+        text: Usually IP addresses. Some stacks (Reticulum, Yggdrasil) derive addresses from public keys.
+      discovery:
+        basis: analysis
+        text: Neighbour discovery and routing announcements; community maps for physical nodes.
+      documentation:
+        basis: sourced
+        text: RFCs for routing protocols and project documentation for community stacks.
+        citations:
+          - ref: reticulum_home
+            quote: "Reticulum is the cryptography-based networking stack for building local and wide-area networks with readily available hardware."
+      infrastructure_relationship:
+        basis: analysis
+        text: >-
+          Can be fully independent of the Internet (own radios) or bridge to it. It is the one family in this
+          taxonomy that can include its own physical layer.
+      distinguishing_characteristics:
+        basis: sourced
+        text: Designed to keep working in adverse, high-latency, low-bandwidth conditions.
+        citations:
+          - ref: reticulum_home
+            quote: "Reticulum can continue to operate even in adverse conditions with very high latency and extremely low bandwidth."
+      limitations:
+        basis: analysis
+        text: >-
+          Observable only locally (radio range) or through published maps. Remote discovery of a radio mesh without any
+          Internet presence is not possible for Abyss, which is a fundamental observability limit.
+      comparison:
+        basis: analysis
+        text: >-
+          Compared with overlays (Tor, Yggdrasil): a mesh can own the physical and link layers, where overlays reuse the
+          Internet. Yggdrasil targets both.
+
+  # =====================================================================================
+  - id: federated
+    name: Federated information systems
+    kind: pattern
+    lifecycle: mixed
+    layers: [application, information_ecosystem]
+    topology: [federated, decentralized]
+    resource_identification_types: [user_at_domain, location_url, message_id]
+    discovery_types: [federation_protocol, naming_resolution, hyperlinks]
+    patterns: [federation]
+    related: [usenet, www]
+    examples: [Email (SMTP), XMPP, Usenet, Matrix, ActivityPub (fediverse)]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: analysis
+        text: >-
+          Federation predates the Web (email, Usenet). Recent standards include ActivityPub (W3C Recommendation,
+          23 January 2018) and Matrix.
+      purpose:
+        basis: sourced
+        text: Decentralized communication across independently operated servers with no single point of control.
+        citations:
+          - ref: matrix_spec
+            quote: "over a global open federation of servers with no single point of control"
+      public_disclosure:
+        basis: sourced
+        text: Through open standards bodies (IETF, W3C) and public specifications.
+        citations:
+          - ref: w3c_activitypub
+            quote: "W3C Recommendation 23 January 2018"
+      architecture:
+        basis: sourced
+        text: >-
+          Two layers in ActivityPub: server-to-server federation and client-to-server access. Each user belongs to a
+          home server.
+        citations:
+          - ref: w3c_activitypub
+            quote: "A server to server federation protocol (so decentralized websites can share information)"
+      protocols:
+        basis: sourced
+        text: SMTP (email transport), XMPP (XML streams), ActivityPub (ActivityStreams 2.0) and the Matrix APIs.
+        citations:
+          - ref: rfc5321
+            quote: "This document is a specification of the basic protocol for Internet electronic mail transport."
+          - ref: rfc6120
+            quote: "The Extensible Messaging and Presence Protocol (XMPP) is an application profile of the Extensible Markup Language (XML)"
+          - ref: w3c_activitypub
+            quote: "The ActivityPub protocol is a decentralized social networking protocol based upon the [ActivityStreams] 2.0 data format."
+      resource_identification:
+        basis: analysis
+        text: user@domain identifiers (email, XMPP JIDs, fediverse handles) and HTTP URIs for objects (ActivityPub).
+      discovery:
+        basis: analysis
+        text: >-
+          Following and subscriptions, server-to-server delivery, DNS for server location, and per-server or
+          relay-based search. No global index exists by design.
+      documentation:
+        basis: sourced
+        text: IETF RFCs, W3C Recommendations and the Matrix specification.
+        citations:
+          - ref: matrix_spec
+            quote: "Matrix defines a set of open APIs for decentralised communication"
+      infrastructure_relationship:
+        basis: analysis
+        text: An application layer over the Internet and DNS. Each server is an ordinary Internet host.
+      distinguishing_characteristics:
+        basis: analysis
+        text: Servers are distinct from clients (unlike P2P), but no single server controls the network (unlike centralized services).
+      limitations:
+        basis: analysis
+        text: >-
+          Content visibility depends on which servers federate with which. There's no complete public view, so
+          "absent from search" is common and is not evidence of hiddenness.
+      comparison:
+        basis: analysis
+        text: Usenet floods everything to all peers, while ActivityPub and Matrix deliver to subscribers. Email is the oldest widely deployed instance.
+
+  # =====================================================================================
+  - id: experimental_protocols
+    name: Experimental networking architectures
+    kind: category
+    lifecycle: experimental
+    layers: [network, overlay]
+    topology: [distributed, decentralized]
+    resource_identification_types: [name_prefix, public_key, network_address]
+    discovery_types: [routing_announcements, manual_peering]
+    patterns: [information_centric_networking, path_aware_networking, self_certifying_names]
+    related: [mesh, ipfs]
+    examples: [Named Data Networking (NDN), SCION, Yggdrasil, Reticulum]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: >-
+          A heterogeneous category. Example: the NDN project launched with NSF funding in September 2010 under the NSF
+          Future Internet Architecture Program.
+        citations:
+          - ref: ndn_project
+            quote: "The NDN project was launched with National Science Foundation funding in September 2010 as one of the four projects under NSF's Future Internet Architecture Program."
+      purpose:
+        basis: sourced
+        text: >-
+          To explore alternatives to current Internet routing and addressing. Example: Yggdrasil aims to be a
+          decentralised alternative to structured routing protocols.
+        citations:
+          - ref: yggdrasil_home
+            quote: "It is designed to be a future-proof and decentralised alternative to the structured routing protocols commonly used today on the Internet"
+      public_disclosure:
+        basis: analysis
+        text: Research programmes, papers, IETF drafts and open-source repositories.
+      architecture:
+        basis: sourced
+        text: >-
+          Varies. NDN routes named data instead of host addresses, Yggdrasil is a compact routing scheme carrying
+          end-to-end encrypted IPv6, and SCION is a path-aware inter-domain architecture.
+        citations:
+          - ref: yggdrasil_home
+            quote: "Yggdrasil is a new experimental compact routing scheme."
+          - ref: scion_home
+            quote: "SCION, a more secure and reliable Internet"
+      protocols:
+        basis: analysis
+        text: Instance-specific (NDN Interest/Data packets, SCION path construction, Yggdrasil's spanning-tree routing). Not quoted in this version.
+      resource_identification:
+        basis: analysis
+        text: Named data prefixes (NDN), key-derived IPv6 addresses (Yggdrasil), conventional addresses with path information (SCION).
+      discovery:
+        basis: analysis
+        text: Routing announcements and manual peering. Public peer lists exist for some overlays.
+      documentation:
+        basis: sourced
+        text: Project sites and research publications.
+        citations:
+          - ref: ndn_project
+            quote: "Named Data Networking"
+      infrastructure_relationship:
+        basis: analysis
+        text: Mostly deployed as overlays or testbeds on the Internet, although some target eventual replacement of current layers.
+      distinguishing_characteristics:
+        basis: analysis
+        text: The category exists because these systems redefine the network layer's identity or routing model, which makes them prime test cases for "unknown architecture" recognition.
+      limitations:
+        basis: analysis
+        text: >-
+          The category is defined by being non-mainstream, which isn't an architectural property. For recognition
+          benchmarks, each instance should be its own family or held-out family, not lumped together.
+      comparison:
+        basis: analysis
+        text: NDN and IPFS both name data rather than hosts, NDN at the network layer and IPFS as an overlay. Yggdrasil shares goals with mesh networks.
+
+  # =====================================================================================
+  - id: private_intranet
+    name: Private intranet architectures
+    kind: pattern
+    lifecycle: mixed
+    layers: [network, transport, application]
+    topology: [centralized, hierarchical, client_server]
+    resource_identification_types: [network_address, location_url, human_name_registry]
+    discovery_types: [directory_listing, naming_resolution]
+    patterns: [private_addressing, tunneling, zero_trust]
+    related: [arpanet, mesh, federated]
+    examples: [RFC 1918 private addressing, BGP/MPLS VPNs, WireGuard tunnels, zero-trust architectures]
+    last_reviewed: 2026-11-24
+    facets:
+      origin:
+        basis: sourced
+        text: Private address space was formalised by RFC 1918 (BCP, February 1996).
+        citations:
+          - ref: rfc1918
+            quote: "February 1996 Address Allocation for Private Internets"
+      purpose:
+        basis: sourced
+        text: To build networks for an organisation's own hosts that aren't routed on the public Internet.
+        citations:
+          - ref: rfc1918
+            quote: "has reserved the following three blocks of the IP address space for private internets"
+      public_disclosure:
+        basis: analysis
+        text: >-
+          The architecture is public (RFCs, NIST). Specific intranets are private by definition, and Abyss must not
+          attempt to discover them without authorisation.
+      architecture:
+        basis: sourced
+        text: >-
+          Private addressing behind gateways. Provider VPNs (BGP/MPLS) and encrypted tunnels (WireGuard) extend private
+          networks across public infrastructure. Zero-trust architectures remove implicit trust based on location.
+        citations:
+          - ref: rfc4364
+            quote: "This document describes a method by which a Service Provider may use an IP backbone to provide IP Virtual Private Networks (VPNs) for its customers."
+          - ref: wireguard_paper
+            quote: "WireGuard is a secure network tunnel, operating at layer 3"
+          - ref: nist_sp800_207
+            quote: "Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location"
+      protocols:
+        basis: sourced
+        text: Standard IP stacks plus tunnelling protocols. WireGuard's key exchange is based on Noise IK.
+        citations:
+          - ref: wireguard_paper
+            quote: "It uses a single round trip key exchange, based on NoiseIK"
+      resource_identification:
+        basis: sourced
+        text: RFC 1918 ranges (10/8, 172.16/12, 192.168/16), internal DNS and internal URLs.
+        citations:
+          - ref: rfc1918
+            quote: "10.0.0.0 - 10.255.255.255 (10/8 prefix)"
+      discovery:
+        basis: analysis
+        text: Internal directories, internal DNS and search. They aren't visible from outside, which is why they're out of scope without authorisation.
+      documentation:
+        basis: sourced
+        text: RFCs and NIST guidance.
+        citations:
+          - ref: nist_sp800_207
+            quote: "NIST Special Publication 800-207 Zero Trust Architecture"
+      infrastructure_relationship:
+        basis: sourced
+        text: Overlaid on or carved out of public infrastructure. Zero trust moves defences from network perimeters to resources.
+        citations:
+          - ref: nist_sp800_207
+            quote: "move defenses from static, network-based perimeters to focus on users, assets, and resources"
+      distinguishing_characteristics:
+        basis: analysis
+        text: Defined by access control and non-routability, not by a novel information model.
+      limitations:
+        basis: analysis
+        text: >-
+          Only owner-authorised intranets (OWNER_AUTHORIZED sources) or lab networks (LAB_OWNED) may be studied. Absence
+          from public view is the designed behaviour, not an anomaly.
+      comparison:
+        basis: analysis
+        text: The architectural opposite of public federated and P2P ecosystems, because membership is closed. It shares tunnelling with overlays like Tor and Yggdrasil.

@@ -1,0 +1,2212 @@
+{
+  "report_type": "citation_verification",
+  "started_at": "2026-11-24T07:06:54.086096+00:00",
+  "finished_at": "2026-11-24T07:07:40.907095+00:00",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
+    "abyss_version": "0.1.0",
+    "contract_version": "0.1.0",
+    "git_commit": null,
+    "git_worktree_dirty": true
+  },
+  "inputs": {
+    "taxonomy": {
+      "path": "data/taxonomy/network_taxonomy.yaml",
+      "sha256": "e799af9f12890d12f4c6bac06bbd137cb1c52f6229f05c843b4f9d1c534987e2",
+      "version": "0.1.0"
+    },
+    "registry": [
+      {
+        "path": "data/registry/references.yaml",
+        "sha256": "8ae982b95065b92662badd7f3bfbbf3c5499a48e2bfa3b59198541ae37b3310d",
+        "version": "0.1.0"
+      },
+      {
+        "path": "data/registry/ingestion_sources.yaml",
+        "sha256": "137cd89c9ffa1521957bf8fce63f413e012a9cff6887cdc245baa0f69d32073d",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "summary": {
+    "citations_total": 161,
+    "citations_by_outcome": {
+      "SOURCE_UNEXTRACTABLE": 1,
+      "VERIFIED": 160
+    },
+    "citations_verified_fraction": 0.9938,
+    "sources_total": 58,
+    "sources_by_outcome": {
+      "ok": 57,
+      "text_unextractable": 1
+    }
+  },
+  "retrievals": [
+    {
+      "source_id": "batman_adv_docs",
+      "uri": "https://www.open-mesh.org/projects/batman-adv/wiki",
+      "retrieved_at": "2026-11-24T07:06:54.086311Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 23560,
+      "truncated": false,
+      "sha256": "c9aca14813aa95f2d0923a398c5deea069ef2979b4ef2293e5026597db270959",
+      "text_chars": 6058,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 992
+    },
+    {
+      "source_id": "bep3",
+      "uri": "https://www.bittorrent.org/beps/bep_0003.html",
+      "retrieved_at": "2026-11-24T07:06:55.086742Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 21993,
+      "truncated": false,
+      "sha256": "b24556b2a6881a407908013437bbc8cb3715885ba25fc326b9e7b1b502c24ced",
+      "text_chars": 15972,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 336
+    },
+    {
+      "source_id": "bep5",
+      "uri": "https://www.bittorrent.org/beps/bep_0005.html",
+      "retrieved_at": "2026-11-24T07:06:56.086961Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 25458,
+      "truncated": false,
+      "sha256": "103f7501c56d8e17a87066af30419bd5199a904ae84f3962fecfc37b7bfc45ca",
+      "text_chars": 17755,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 348
+    },
+    {
+      "source_id": "bitcoin_whitepaper",
+      "uri": "https://bitcoin.org/bitcoin.pdf",
+      "retrieved_at": "2026-11-24T07:06:56.438819Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 184292,
+      "truncated": false,
+      "sha256": "b1674191a88ec5cdd733e4240a81803105dc412d6c6708d53ab94fc248f4f553",
+      "text_chars": 21214,
+      "extraction_method": "pypdf",
+      "error": null,
+      "elapsed_ms": 460
+    },
+    {
+      "source_id": "cern_info_first_website",
+      "uri": "https://info.cern.ch/",
+      "retrieved_at": "2026-11-24T07:06:57.343600Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 646,
+      "truncated": false,
+      "sha256": "bc11566aa5572b5a79aba58917d78dad416d64041a82d7b5d0ff7e52c37a4540",
+      "text_chars": 271,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 814
+    },
+    {
+      "source_id": "chord_sigcomm2001",
+      "uri": "https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf",
+      "retrieved_at": "2026-11-24T07:06:58.158558Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 194676,
+      "truncated": false,
+      "sha256": "cca4ae7873ac128b7b9034b2c3fbf32f7d84541a88b5e70d0c7c1ce1d6381fe8",
+      "text_chars": 68320,
+      "extraction_method": "pypdf",
+      "error": null,
+      "elapsed_ms": 532
+    },
+    {
+      "source_id": "freenet_home",
+      "uri": "https://freenet.org/",
+      "retrieved_at": "2026-11-24T07:06:59.272471Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 14937,
+      "truncated": false,
+      "sha256": "4790df94f7de82a7f91ebb68dd3befc63d7db3a67ccffd42d8619eb32835ee6a",
+      "text_chars": 2146,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 290
+    },
+    {
+      "source_id": "gemini_faq",
+      "uri": "https://geminiprotocol.net/docs/faq.gmi",
+      "retrieved_at": "2026-11-24T07:06:59.564721Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 186984,
+      "truncated": false,
+      "sha256": "04df6bbcf7aa283313425b70f66f91a0913a165156db1f7f99cde9ea1014a5a5",
+      "text_chars": 160376,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 757
+    },
+    {
+      "source_id": "gemini_spec",
+      "uri": "https://geminiprotocol.net/docs/protocol-specification.gmi",
+      "retrieved_at": "2026-11-24T07:07:00.564965Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 38411,
+      "truncated": false,
+      "sha256": "f28adc9e746b4fca0075e2392fa63e7dc2d5ca50151aba15d9eecc098d3fb687",
+      "text_chars": 29577,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 528
+    },
+    {
+      "source_id": "gnunet_about",
+      "uri": "https://www.gnunet.org/en/about.html",
+      "retrieved_at": "2026-11-24T07:07:01.096306Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 15514,
+      "truncated": false,
+      "sha256": "27765e7f8cf2c43c5d20e840bf251352c362e31904f3bb4cbc4df22629aaedce",
+      "text_chars": 3723,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 665
+    },
+    {
+      "source_id": "gnunet_home",
+      "uri": "https://www.gnunet.org/en/",
+      "retrieved_at": "2026-11-24T07:07:02.096476Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 23242,
+      "truncated": false,
+      "sha256": "f8f8d03f3dac3e5663f905e5271d47c4f53b48125e01bee35b2ece66d264ce87",
+      "text_chars": 5299,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 569
+    },
+    {
+      "source_id": "hyphanet_about",
+      "uri": "https://www.hyphanet.org/pages/about.html",
+      "retrieved_at": "2026-11-24T07:07:02.668923Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 21691,
+      "truncated": false,
+      "sha256": "cda8e035b2d2c41f1792432d66e8f0096ad03e6049f9f34f8e6b4651ba59c773",
+      "text_chars": 13008,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 284
+    },
+    {
+      "source_id": "hyphanet_docs",
+      "uri": "https://www.hyphanet.org/pages/documentation.html",
+      "retrieved_at": "2026-11-24T07:07:03.669106Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 36758,
+      "truncated": false,
+      "sha256": "a08d3020d0d94d8e39197eb06577dfa4d76d50070f5c7c20ae110c95974580b1",
+      "text_chars": 26150,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 235
+    },
+    {
+      "source_id": "hyphanet_home",
+      "uri": "https://www.hyphanet.org/",
+      "retrieved_at": "2026-11-24T07:07:04.669342Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8621,
+      "truncated": false,
+      "sha256": "a90cae0fc62d7f57679aba8f6aa763de2b6920ec8a763a941d2fa38c823318ec",
+      "text_chars": 3107,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 334
+    },
+    {
+      "source_id": "hyphanet_rename_2023",
+      "uri": "https://www.hyphanet.org/freenet-renamed-to-hyphanet.html",
+      "retrieved_at": "2026-11-24T07:07:05.669541Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 6451,
+      "truncated": false,
+      "sha256": "77ee7a3c8d4aa005cc59466a5b613b78446dfa860981236b695094f228fbc4a8",
+      "text_chars": 1312,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 210
+    },
+    {
+      "source_id": "i2p_intro",
+      "uri": "https://geti2p.net/en/about/intro",
+      "retrieved_at": "2026-11-24T07:07:05.881028Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 77546,
+      "truncated": false,
+      "sha256": "c189b257908f09b180177061f553ac690e8de5521676468779354c3184cd7616",
+      "text_chars": 52074,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 1213
+    },
+    {
+      "source_id": "ipfs_docs_cid",
+      "uri": "https://docs.ipfs.tech/concepts/content-addressing/",
+      "retrieved_at": "2026-11-24T07:07:07.103643Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 61727,
+      "truncated": false,
+      "sha256": "6b5f2f1fd6e1e2605f34ee5e63618a2239ed27666148d82a4931a6959cd0fc5d",
+      "text_chars": 15290,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 411
+    },
+    {
+      "source_id": "ipfs_docs_dht",
+      "uri": "https://docs.ipfs.tech/concepts/dht/",
+      "retrieved_at": "2026-11-24T07:07:08.104413Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 38612,
+      "truncated": false,
+      "sha256": "5e61ae3d57cd3989e6808f815452ca02cf1f83670f87a061ab5f1019d42d4823",
+      "text_chars": 14120,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 300
+    },
+    {
+      "source_id": "ipfs_docs_what",
+      "uri": "https://docs.ipfs.tech/concepts/what-is-ipfs/",
+      "retrieved_at": "2026-11-24T07:07:09.104651Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 22043,
+      "truncated": false,
+      "sha256": "55428fb23a3044619d5270ab0eeba8125e583f97f20d135eb2b072e9b06edf85",
+      "text_chars": 2379,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 167
+    },
+    {
+      "source_id": "ipfs_whitepaper_arxiv",
+      "uri": "https://arxiv.org/abs/1407.3561",
+      "retrieved_at": "2026-11-24T07:07:09.274966Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39781,
+      "truncated": false,
+      "sha256": "0bbffc6df7bb6b21f1fe1180ad81ed07cd8f1e9d20b85b405c83f6abbf31ee7c",
+      "text_chars": 4014,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 128
+    },
+    {
+      "source_id": "isoc_brief_history",
+      "uri": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+      "retrieved_at": "2026-11-24T07:07:09.408737Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 249291,
+      "truncated": false,
+      "sha256": "2d1272a530a3e5ab69f28f47178f0575cc80bd5e01b23005263ff80a8701d648",
+      "text_chars": 59711,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 1003
+    },
+    {
+      "source_id": "kademlia_iptps2002",
+      "uri": "https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf",
+      "retrieved_at": "2026-11-24T07:07:10.432628Z",
+      "outcome": "text_unextractable",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 215911,
+      "truncated": false,
+      "sha256": "dcc31a690754248c053f0ceb32e1892303618ffc5171a63add3c46348ad15e9a",
+      "text_chars": 0,
+      "extraction_method": "none",
+      "error": "no readable text extracted",
+      "elapsed_ms": 304
+    },
+    {
+      "source_id": "matrix_spec",
+      "uri": "https://spec.matrix.org/latest/",
+      "retrieved_at": "2026-11-24T07:07:11.032764Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 59724,
+      "truncated": false,
+      "sha256": "56c83d4503614704499ce9b7280a29a71ce60c081c2a4e6435d18306f4237ff1",
+      "text_chars": 21816,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 205
+    },
+    {
+      "source_id": "meshtastic_docs",
+      "uri": "https://meshtastic.org/docs/",
+      "retrieved_at": "2026-11-24T07:07:11.247893Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 46657,
+      "truncated": false,
+      "sha256": "3c823270a39a1779db2537db330f84ea0303edfd521c02ff1aed3c21a32e1298",
+      "text_chars": 3382,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 359
+    },
+    {
+      "source_id": "ndn_project",
+      "uri": "https://named-data.net/project/",
+      "retrieved_at": "2026-11-24T07:07:11.611472Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 33307,
+      "truncated": false,
+      "sha256": "42ecd99da912aa4ad3c206718ef96a6f1192449c13c1b021102a90eb4175e009",
+      "text_chars": 4008,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 463
+    },
+    {
+      "source_id": "nist_sp800_207",
+      "uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "retrieved_at": "2026-11-24T07:07:12.078851Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 966908,
+      "truncated": false,
+      "sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d",
+      "text_chars": 154152,
+      "extraction_method": "pypdf",
+      "error": null,
+      "elapsed_ms": 628
+    },
+    {
+      "source_id": "reticulum_home",
+      "uri": "https://reticulum.network/",
+      "retrieved_at": "2026-11-24T07:07:14.484759Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4058,
+      "truncated": false,
+      "sha256": "86dd3cef8c551eff5bb2f4c71b2a4092431ff657bf1360d5003cd7354f49d408",
+      "text_chars": 2809,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 179
+    },
+    {
+      "source_id": "rfc1",
+      "uri": "https://www.rfc-editor.org/rfc/rfc1.txt",
+      "retrieved_at": "2026-11-24T07:07:14.666123Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 21088,
+      "truncated": false,
+      "sha256": "a61eb4ac9d40ac189b17214417ae6d29d4edabd86cadd31f44728faed3e600c0",
+      "text_chars": 15582,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 176
+    },
+    {
+      "source_id": "rfc1036",
+      "uri": "https://www.rfc-editor.org/rfc/rfc1036.txt",
+      "retrieved_at": "2026-11-24T07:07:15.666509Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 45825,
+      "truncated": false,
+      "sha256": "712c774b227d9f7d1f9fe8a49e7af58efdc77a68fbd5b9ecd51c574de933d3f6",
+      "text_chars": 39750,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 207
+    },
+    {
+      "source_id": "rfc1436",
+      "uri": "https://www.rfc-editor.org/rfc/rfc1436.txt",
+      "retrieved_at": "2026-11-24T07:07:16.666694Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 36493,
+      "truncated": false,
+      "sha256": "906717c4fc9df322b95be80093aa66b877961743a5ed857d45f63c6de0e39587",
+      "text_chars": 32701,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 509
+    },
+    {
+      "source_id": "rfc1918",
+      "uri": "https://www.rfc-editor.org/rfc/rfc1918.txt",
+      "retrieved_at": "2026-11-24T07:07:17.666881Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 22271,
+      "truncated": false,
+      "sha256": "56c43465298772bc4d899923f1785b7b7bf8dd2c9f2f9a53422800ddc5cf9337",
+      "text_chars": 19804,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 195
+    },
+    {
+      "source_id": "rfc2501",
+      "uri": "https://www.rfc-editor.org/rfc/rfc2501.txt",
+      "retrieved_at": "2026-11-24T07:07:18.667086Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 28912,
+      "truncated": false,
+      "sha256": "9cf287c75dcfb3d9e0ce7dcb10a7e5cd5455c22af008d6a80e23119a864a306c",
+      "text_chars": 25970,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 205
+    },
+    {
+      "source_id": "rfc3626",
+      "uri": "https://www.rfc-editor.org/rfc/rfc3626.txt",
+      "retrieved_at": "2026-11-24T07:07:19.667234Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 161265,
+      "truncated": false,
+      "sha256": "722a7b5838ac29fe71aa48fa91ae619ab1ef8c128a754a84a98d705cefe17580",
+      "text_chars": 136011,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 234
+    },
+    {
+      "source_id": "rfc3977",
+      "uri": "https://www.rfc-editor.org/rfc/rfc3977.txt",
+      "retrieved_at": "2026-11-24T07:07:20.667455Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 247440,
+      "truncated": false,
+      "sha256": "e9bafe47d8c9b1136f11546162599ee67c233f33955c2972b57a91ecaff1f5f5",
+      "text_chars": 213490,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 228
+    },
+    {
+      "source_id": "rfc3986",
+      "uri": "https://www.rfc-editor.org/rfc/rfc3986.txt",
+      "retrieved_at": "2026-11-24T07:07:21.667614Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 141811,
+      "truncated": false,
+      "sha256": "3102dae4b68cebe40337730312fcb612297b8928547267e8b3d1ee6002b2d683",
+      "text_chars": 123536,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 206
+    },
+    {
+      "source_id": "rfc4266",
+      "uri": "https://www.rfc-editor.org/rfc/rfc4266.txt",
+      "retrieved_at": "2026-11-24T07:07:22.667801Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 12083,
+      "truncated": false,
+      "sha256": "4f41578406434e1f99960a746d564bb7dd927bf18414eaab2a34edd9f7802ef8",
+      "text_chars": 10704,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 167
+    },
+    {
+      "source_id": "rfc4364",
+      "uri": "https://www.rfc-editor.org/rfc/rfc4364.txt",
+      "retrieved_at": "2026-11-24T07:07:23.667969Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 116446,
+      "truncated": false,
+      "sha256": "33ad683b28ec97c72d3698ee0855ac8d5ec6472008bddb97b3cb8b30be1d8017",
+      "text_chars": 103260,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 219
+    },
+    {
+      "source_id": "rfc5321",
+      "uri": "https://www.rfc-editor.org/rfc/rfc5321.txt",
+      "retrieved_at": "2026-11-24T07:07:24.668151Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 225929,
+      "truncated": false,
+      "sha256": "7d560eddff1b213c17d4e1e5f95005728b2f05bc2b3947f0fcc91717c6707634",
+      "text_chars": 200765,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 342
+    },
+    {
+      "source_id": "rfc5537",
+      "uri": "https://www.rfc-editor.org/rfc/rfc5537.txt",
+      "retrieved_at": "2026-11-24T07:07:25.668382Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 120366,
+      "truncated": false,
+      "sha256": "d729e7a4e84006d1ada9945e7fa011e3c8f6600700217b7b3230e8d78116683b",
+      "text_chars": 106278,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 233
+    },
+    {
+      "source_id": "rfc5694",
+      "uri": "https://www.rfc-editor.org/rfc/rfc5694.txt",
+      "retrieved_at": "2026-11-24T07:07:26.668652Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 68446,
+      "truncated": false,
+      "sha256": "bfc3887aac2c28b877a06e8ee257181388ddb35834287f8d608a100d54b5bcc6",
+      "text_chars": 59848,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 229
+    },
+    {
+      "source_id": "rfc6120",
+      "uri": "https://www.rfc-editor.org/rfc/rfc6120.txt",
+      "retrieved_at": "2026-11-24T07:07:27.668874Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 451942,
+      "truncated": false,
+      "sha256": "a64e922cba1b4b69bfc96192e59692efdb296c828800870ffb35c1fb7aad2ee8",
+      "text_chars": 381964,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 276
+    },
+    {
+      "source_id": "rfc801",
+      "uri": "https://www.rfc-editor.org/rfc/rfc801.txt",
+      "retrieved_at": "2026-11-24T07:07:28.669056Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 40824,
+      "truncated": false,
+      "sha256": "a7cbc0348ceb9f0f3b93f31a012286e157fc001034f6877ffdab274e92167dcc",
+      "text_chars": 31037,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 161
+    },
+    {
+      "source_id": "rfc850",
+      "uri": "https://www.rfc-editor.org/rfc/rfc850.txt",
+      "retrieved_at": "2026-11-24T07:07:29.669283Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 42812,
+      "truncated": false,
+      "sha256": "660c5d88cb473d80ebd768e43cb554386ed96ea4c427099c1c5efb551534bd19",
+      "text_chars": 39343,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 217
+    },
+    {
+      "source_id": "rfc8966",
+      "uri": "https://www.rfc-editor.org/rfc/rfc8966.txt",
+      "retrieved_at": "2026-11-24T07:07:30.669468Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 141512,
+      "truncated": false,
+      "sha256": "592fe69e208f6c3f1ac5d8e673eb309a9f6323a4c471de9284385c0005db1f2f",
+      "text_chars": 126527,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 219
+    },
+    {
+      "source_id": "rfc9110",
+      "uri": "https://www.rfc-editor.org/rfc/rfc9110.txt",
+      "retrieved_at": "2026-11-24T07:07:31.669660Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 502941,
+      "truncated": false,
+      "sha256": "21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a",
+      "text_chars": 457670,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 281
+    },
+    {
+      "source_id": "rfc9498",
+      "uri": "https://www.rfc-editor.org/rfc/rfc9498.txt",
+      "retrieved_at": "2026-11-24T07:07:32.669921Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 172405,
+      "truncated": false,
+      "sha256": "6c640e3705df9284eabddeb45f811ee5e56ec28f80f12ccc599d8c7c895ec799",
+      "text_chars": 143426,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 212
+    },
+    {
+      "source_id": "rfc977",
+      "uri": "https://www.rfc-editor.org/rfc/rfc977.txt",
+      "retrieved_at": "2026-11-24T07:07:33.670105Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 53523,
+      "truncated": false,
+      "sha256": "c6c987a0a0d832344d66f07c69f13398705dd23467df205c51a97609f5bc98ae",
+      "text_chars": 46536,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 196
+    },
+    {
+      "source_id": "scion_home",
+      "uri": "https://www.scion.org/",
+      "retrieved_at": "2026-11-24T07:07:33.867880Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 393039,
+      "truncated": false,
+      "sha256": "18a2fce6eca0a600a3131b11ba38a37f6d291e17315efa0eb4ced2c2ea54875e",
+      "text_chars": 5163,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 227
+    },
+    {
+      "source_id": "tor_design_2004",
+      "uri": "https://www.usenix.org/legacy/event/sec04/tech/dingledine.html",
+      "retrieved_at": "2026-11-24T07:07:34.102459Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 7712,
+      "truncated": false,
+      "sha256": "cf85c9b4a40f4f94c9223a4090cdb59a254e5096623c558404cb724011c983ac",
+      "text_chars": 1767,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 292
+    },
+    {
+      "source_id": "tor_history",
+      "uri": "https://www.torproject.org/about/history/",
+      "retrieved_at": "2026-11-24T07:07:34.397043Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 28791,
+      "truncated": false,
+      "sha256": "d1d44577876db3be5e0779ab77cd70d1da3c3f08dd465e4da1f7b3d91163da64",
+      "text_chars": 5945,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 702
+    },
+    {
+      "source_id": "tor_rend_spec_overview",
+      "uri": "https://spec.torproject.org/rend-spec/overview.html",
+      "retrieved_at": "2026-11-24T07:07:35.104382Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 21600,
+      "truncated": false,
+      "sha256": "59e6ce13623ce0a0f6c9579acd2a0b2b65f177a902234885c51df281c0ee42b0",
+      "text_chars": 9002,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 645
+    },
+    {
+      "source_id": "tor_spec_intro",
+      "uri": "https://spec.torproject.org/intro/index.html",
+      "retrieved_at": "2026-11-24T07:07:36.104577Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 16615,
+      "truncated": false,
+      "sha256": "48d64cc27e4a1325714ee9fd9935fbc24344b4d4171f8d48a30d3e18032bc7f2",
+      "text_chars": 4885,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 676
+    },
+    {
+      "source_id": "w3c_activitypub",
+      "uri": "https://www.w3.org/TR/activitypub/",
+      "retrieved_at": "2026-11-24T07:07:36.783355Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 155172,
+      "truncated": false,
+      "sha256": "a909bcb86559b6412ae993569f2790a23b7ac4f393f8b96fbff09b9453c65109",
+      "text_chars": 69117,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 158
+    },
+    {
+      "source_id": "w3c_tbl_alt_hypertext_1991",
+      "uri": "https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt",
+      "retrieved_at": "2026-11-24T07:07:37.783581Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain",
+      "bytes": 2875,
+      "truncated": false,
+      "sha256": "2527a0f013234d2e64ad1d55d5846020cee0ae33d4d5ebd73c8b8e35420a14d3",
+      "text_chars": 2715,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 199
+    },
+    {
+      "source_id": "w3c_tbl_proposal_1989",
+      "uri": "https://www.w3.org/History/1989/proposal.html",
+      "retrieved_at": "2026-11-24T07:07:38.783766Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=iso-8859-1",
+      "bytes": 33993,
+      "truncated": false,
+      "sha256": "d74149d3e170535ab9f33d35c94a9f92812e4b31bf89b4611bc75bcf730c64ac",
+      "text_chars": 29699,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 143
+    },
+    {
+      "source_id": "wireguard_paper",
+      "uri": "https://www.wireguard.com/papers/wireguard.pdf",
+      "retrieved_at": "2026-11-24T07:07:38.934092Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 550175,
+      "truncated": false,
+      "sha256": "b4cf398c21d054e8774af568395b0f7cd0e2b01322809c5dbd66c4135021ca57",
+      "text_chars": 79149,
+      "extraction_method": "pdftotext",
+      "error": null,
+      "elapsed_ms": 956
+    },
+    {
+      "source_id": "yggdrasil_home",
+      "uri": "https://yggdrasil-network.github.io/",
+      "retrieved_at": "2026-11-24T07:07:40.477387Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 6975,
+      "truncated": false,
+      "sha256": "51c0d9c74cc2e8f14190af3e8ece8073e4991712be9eeac047ca45c6dfbeade2",
+      "text_chars": 1933,
+      "extraction_method": "html",
+      "error": null,
+      "elapsed_ms": 266
+    },
+    {
+      "source_id": "zeronet_readme",
+      "uri": "https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md",
+      "retrieved_at": "2026-11-24T07:07:40.744979Z",
+      "outcome": "ok",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 6561,
+      "truncated": false,
+      "sha256": "82460d0062c68fe7879ff66a4dfb5731a274a63e75eec69eac76ac09c16e0a35",
+      "text_chars": 6430,
+      "extraction_method": "text",
+      "error": null,
+      "elapsed_ms": 161
+    }
+  ],
+  "citations": [
+    {
+      "entry": "mesh",
+      "facet": "architecture",
+      "ref": "batman_adv_docs",
+      "quote": "is an implementation of the B.A.T.M.A.N. routing protocol in form of a Linux kernel module operating on layer 2",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "purpose",
+      "ref": "bep3",
+      "quote": "when multiple downloads of the same file happen concurrently, the downloaders upload to each other",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "protocols",
+      "ref": "bep3",
+      "quote": "A BitTorrent tracker",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "resource_identification",
+      "ref": "bep3",
+      "quote": "It identifies content by URL and is designed to integrate seamlessly with the web.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "protocols",
+      "ref": "bep5",
+      "quote": "In Kademlia, the distance metric is XOR and the result is interpreted as an unsigned integer.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "documentation",
+      "ref": "bep5",
+      "quote": "DHT Protocol",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "purpose",
+      "ref": "bitcoin_whitepaper",
+      "quote": "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "origin",
+      "ref": "cern_info_first_website",
+      "quote": "home of the first website",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "origin",
+      "ref": "chord_sigcomm2001",
+      "quote": "SIGCOMM'01, August 27-31, 2001, San Diego, California, USA.",
+      "outcome": "VERIFIED",
+      "match_mode": "whitespace_insensitive"
+    },
+    {
+      "entry": "dht",
+      "facet": "purpose",
+      "ref": "chord_sigcomm2001",
+      "quote": "A fundamental problem that confronts peer-to-peer applications is to efficiently locate the node that stores a particular data item.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "public_disclosure",
+      "ref": "chord_sigcomm2001",
+      "quote": "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "architecture",
+      "ref": "chord_sigcomm2001",
+      "quote": "Chord provides support for just one operation: given a key, it maps the key onto a node.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "purpose",
+      "ref": "freenet_home",
+      "quote": "Freenet is a peer-to-peer platform for apps that no company controls.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "public_disclosure",
+      "ref": "freenet_home",
+      "quote": "River, group chat that feels like Signal or WhatsApp with nobody in the middle",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "documentation",
+      "ref": "freenet_home",
+      "quote": "Whitepaper",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "infrastructure_relationship",
+      "ref": "freenet_home",
+      "quote": "Your computer becomes part of a global network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "origin",
+      "ref": "gemini_faq",
+      "quote": "Project Gemini started in June 2019.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "purpose",
+      "ref": "gemini_faq",
+      "quote": "Gemini is not intended to replace either Gopher or the web, but to co-exist peacefully alongside them",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "distinguishing_characteristics",
+      "ref": "gemini_faq",
+      "quote": "\"Geminispace\" is simply the total collection of every single file that is served via the Gemini protocol.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "comparison",
+      "ref": "gemini_spec",
+      "quote": "It can be thought of as an incremental improvement over Gopher [RFC1436] rather than a stripped down HTTP",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "architecture",
+      "ref": "gemini_spec",
+      "quote": "with a simple request and response transaction",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "protocols",
+      "ref": "gemini_spec",
+      "quote": "It runs over TCP [STD7] port 1965 with encryption provided by TLS [RFC8446]",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "protocols",
+      "ref": "gemini_spec",
+      "quote": "Clients are strongly RECOMMENDED to use a Trust on First Use or \"TOFU\" certificate-pinning system",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "resource_identification",
+      "ref": "gemini_spec",
+      "quote": "gemini://example.net/search?hello",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "documentation",
+      "ref": "gemini_spec",
+      "quote": "This document specifies the Gemini protocol for file transfer.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gemini",
+      "facet": "comparison",
+      "ref": "gemini_spec",
+      "quote": "It can be thought of as an incremental improvement over Gopher [RFC1436] rather than a stripped down HTTP",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "purpose",
+      "ref": "gnunet_about",
+      "quote": "We believe liberal societies need a network architecture that uses the anti-authoritarian decentralized peer-to-peer paradigm and privacy-preserving cryptographic protocols.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "purpose",
+      "ref": "gnunet_about",
+      "quote": "The goal of the GNUnet project is to provide a Free Software realization of this ideal.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "documentation",
+      "ref": "gnunet_about",
+      "quote": "start with its most mature component, the GNU Name System",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "origin",
+      "ref": "gnunet_home",
+      "quote": "Copyright \u00a9 GNUnet e.V. 2001",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "origin",
+      "ref": "hyphanet_about",
+      "quote": "Ian started the Freenet Project around July of 1999",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "origin",
+      "ref": "hyphanet_about",
+      "quote": "Hyphanet is based on Ian's paper \"A Distributed Decentralised Information Storage and Retrieval System\"",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "architecture",
+      "ref": "hyphanet_about",
+      "quote": "Communications by Hyphanet nodes are encrypted and routed through other nodes",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "architecture",
+      "ref": "hyphanet_about",
+      "quote": "Users contribute to the network by giving bandwidth and a portion of their hard drive (called the \"data store\") for storing encrypted chunks of data.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "architecture",
+      "ref": "hyphanet_about",
+      "quote": "if used in \"darknet\" mode, where users only connect to their friends, is very difficult to detect",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "resource_identification",
+      "ref": "hyphanet_docs",
+      "quote": "Hyphanet has long-supported the concept of \"Content Hash Keys\" which guarantee the integrity of retrieved data.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "resource_identification",
+      "ref": "hyphanet_docs",
+      "quote": "Hyphanet also supports \"Signed Subspace Keys\" which allow content to be digitally signed.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "documentation",
+      "ref": "hyphanet_docs",
+      "quote": "Forward Error Correction",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "distinguishing_characteristics",
+      "ref": "hyphanet_docs",
+      "quote": "Uniquely, Hyphanet also supports \"healing\"",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "purpose",
+      "ref": "hyphanet_home",
+      "quote": "Hyphanet is peer-to-peer network for censorship-resistant and privacy-respecting publishing and communication.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "origin",
+      "ref": "hyphanet_rename_2023",
+      "quote": "decided to rename its new project Locutus to \"Freenet.\" This required that Freenet change its name.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "public_disclosure",
+      "ref": "hyphanet_rename_2023",
+      "quote": "Freenet renamed to Hyphanet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "hyphanet",
+      "facet": "public_disclosure",
+      "ref": "hyphanet_rename_2023",
+      "quote": "Freenet began development in 1999.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "freenet",
+      "facet": "origin",
+      "ref": "hyphanet_rename_2023",
+      "quote": "Locutus began development in 2019, and has different design priorities.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "origin",
+      "ref": "i2p_intro",
+      "quote": "It has been in active development since early 2003",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "origin",
+      "ref": "i2p_intro",
+      "quote": "This document was originally written by jrandom in 2003.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "purpose",
+      "ref": "i2p_intro",
+      "quote": "I2P is a scalable, self organizing, resilient packet switched anonymous network layer, upon which any number of different anonymity or security conscious applications can operate.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "architecture",
+      "ref": "i2p_intro",
+      "quote": "I2P is an overlay network designed to be run on top of a functional packet switched network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "architecture",
+      "ref": "i2p_intro",
+      "quote": "lets Alice's router wrap up multiple messages into a single \"garlic message\"",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "architecture",
+      "ref": "i2p_intro",
+      "quote": "Those routers that do participate in the DHT and respond to leaseset lookups are called 'floodfills'.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "discovery",
+      "ref": "i2p_intro",
+      "quote": "Those routers that do participate in the DHT and respond to leaseset lookups are called 'floodfills'.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "documentation",
+      "ref": "i2p_intro",
+      "quote": "some information may be obsolete or incomplete",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "i2p",
+      "facet": "infrastructure_relationship",
+      "ref": "i2p_intro",
+      "quote": "I2P is an overlay network designed to be run on top of a functional packet switched network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "resource_identification",
+      "ref": "ipfs_docs_cid",
+      "quote": "CIDs are based on the content's cryptographic hash.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "resource_identification",
+      "ref": "ipfs_docs_cid",
+      "quote": "IPFS uses the sha-256 hashing algorithm by default",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "distinguishing_characteristics",
+      "ref": "ipfs_docs_cid",
+      "quote": "Any difference in the content will produce a different CID.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "architecture",
+      "ref": "ipfs_docs_dht",
+      "quote": "In IPFS, the DHT is used as the fundamental component of the content routing system",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "protocols",
+      "ref": "ipfs_docs_dht",
+      "quote": "Kademlia",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "protocols",
+      "ref": "ipfs_docs_dht",
+      "quote": "IPNS (InterPlanetary Name System)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "discovery",
+      "ref": "ipfs_docs_dht",
+      "quote": "It maps what the user is looking for to the peer that is storing the matching content.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "architecture",
+      "ref": "ipfs_docs_what",
+      "quote": "IPFS is a set of open protocols for addressing, routing, and transferring",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "documentation",
+      "ref": "ipfs_docs_what",
+      "quote": "What is IPFS",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "origin",
+      "ref": "ipfs_whitepaper_arxiv",
+      "quote": "Submitted on 14 Jul 2014",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "origin",
+      "ref": "ipfs_whitepaper_arxiv",
+      "quote": "IPFS - Content Addressed, Versioned, P2P File System",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "purpose",
+      "ref": "ipfs_whitepaper_arxiv",
+      "quote": "The InterPlanetary File System (IPFS) is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "ipfs",
+      "facet": "public_disclosure",
+      "ref": "ipfs_whitepaper_arxiv",
+      "quote": "Submitted on 14 Jul 2014",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "origin",
+      "ref": "isoc_brief_history",
+      "quote": "in September 1969 when BBN installed the first IMP at UCLA and the first host computer was connected",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "origin",
+      "ref": "isoc_brief_history",
+      "quote": "by the end of 1969, four host computers were connected together into the initial ARPANET",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "purpose",
+      "ref": "isoc_brief_history",
+      "quote": "A major initial motivation for both the ARPANET and the Internet was resource sharing",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "public_disclosure",
+      "ref": "isoc_brief_history",
+      "quote": "Kahn organized a large, very successful demonstration of the ARPANET at the International Computer Communication Conference (ICCC)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "public_disclosure",
+      "ref": "isoc_brief_history",
+      "quote": "This was the first public demonstration of this new network technology to the public.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "documentation",
+      "ref": "isoc_brief_history",
+      "quote": "In 1969 a key step was taken by S. Crocker (then at UCLA) in establishing the Request for Comments (or RFC) series of notes.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "origin",
+      "ref": "isoc_brief_history",
+      "quote": "spawned USENET, based on UNIX' built-in UUCP communication protocols",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "dht",
+      "facet": "origin",
+      "ref": "kademlia_iptps2002",
+      "quote": "Kademlia: A Peer-to-peer Information System Based on the XOR Metric",
+      "outcome": "SOURCE_UNEXTRACTABLE",
+      "match_mode": null
+    },
+    {
+      "entry": "federated",
+      "facet": "purpose",
+      "ref": "matrix_spec",
+      "quote": "over a global open federation of servers with no single point of control",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "documentation",
+      "ref": "matrix_spec",
+      "quote": "Matrix defines a set of open APIs for decentralised communication",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "purpose",
+      "ref": "meshtastic_docs",
+      "quote": "radios as a long range off-grid communication platform in areas without existing or reliable communications infrastructure",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "experimental_protocols",
+      "facet": "origin",
+      "ref": "ndn_project",
+      "quote": "The NDN project was launched with National Science Foundation funding in September 2010 as one of the four projects under NSF's Future Internet Architecture Program.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "experimental_protocols",
+      "facet": "documentation",
+      "ref": "ndn_project",
+      "quote": "Named Data Networking",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "architecture",
+      "ref": "nist_sp800_207",
+      "quote": "Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "documentation",
+      "ref": "nist_sp800_207",
+      "quote": "NIST Special Publication 800-207 Zero Trust Architecture",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "infrastructure_relationship",
+      "ref": "nist_sp800_207",
+      "quote": "move defenses from static, network-based perimeters to focus on users, assets, and resources",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "documentation",
+      "ref": "reticulum_home",
+      "quote": "Reticulum is the cryptography-based networking stack for building local and wide-area networks with readily available hardware.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "distinguishing_characteristics",
+      "ref": "reticulum_home",
+      "quote": "Reticulum can continue to operate even in adverse conditions with very high latency and extremely low bandwidth.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "origin",
+      "ref": "rfc1",
+      "quote": "Date: 7 April 1969",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "architecture",
+      "ref": "rfc1",
+      "quote": "The software for the ARPA Network exists partly in the IMPs and partly in the respective HOSTs.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "architecture",
+      "ref": "rfc1",
+      "quote": "BB&N has specified the software of the IMPs and it is the responsibility of the HOST groups to agree on HOST software.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "public_disclosure",
+      "ref": "rfc1036",
+      "quote": "December 1987 Standard for Interchange of USENET Messages",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "resource_identification",
+      "ref": "rfc1036",
+      "quote": "Message-ID",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "origin",
+      "ref": "rfc1436",
+      "quote": "University of Minnesota March 1993",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "purpose",
+      "ref": "rfc1436",
+      "quote": "The Internet Gopher Protocol (a distributed document search and retrieval protocol)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "public_disclosure",
+      "ref": "rfc1436",
+      "quote": "This memo provides information for the Internet community. It does not specify an Internet standard.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "architecture",
+      "ref": "rfc1436",
+      "quote": "Documents reside on many autonomous servers on the Internet.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "protocols",
+      "ref": "rfc1436",
+      "quote": "Gopher servers should listen on port 70 (port 70 is assigned to Internet Gopher by IANA).",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "documentation",
+      "ref": "rfc1436",
+      "quote": "The Internet Gopher Protocol",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "infrastructure_relationship",
+      "ref": "rfc1436",
+      "quote": "This protocol assumes a reliable data stream; TCP is assumed.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "origin",
+      "ref": "rfc1918",
+      "quote": "February 1996 Address Allocation for Private Internets",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "purpose",
+      "ref": "rfc1918",
+      "quote": "has reserved the following three blocks of the IP address space for private internets",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "resource_identification",
+      "ref": "rfc1918",
+      "quote": "10.0.0.0 - 10.255.255.255 (10/8 prefix)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "origin",
+      "ref": "rfc2501",
+      "quote": "Mobile Ad hoc Networking (MANET): Routing Protocol Performance Issues and Evaluation Considerations",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "origin",
+      "ref": "rfc3626",
+      "quote": "Category: Experimental",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "protocols",
+      "ref": "rfc3626",
+      "quote": "The key concept used in the protocol is that of multipoint relays (MPRs).",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "protocols",
+      "ref": "rfc3977",
+      "quote": "Network News Transfer Protocol (NNTP)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "protocols",
+      "ref": "rfc3986",
+      "quote": "This specification defines the generic URI syntax",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "resource_identification",
+      "ref": "rfc3986",
+      "quote": "A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gopher",
+      "facet": "resource_identification",
+      "ref": "rfc4266",
+      "quote": "The gopher URI Scheme",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "architecture",
+      "ref": "rfc4364",
+      "quote": "This document describes a method by which a Service Provider may use an IP backbone to provide IP Virtual Private Networks (VPNs) for its customers.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "protocols",
+      "ref": "rfc5321",
+      "quote": "This document is a specification of the basic protocol for Internet electronic mail transport.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "purpose",
+      "ref": "rfc5537",
+      "quote": "These protocols most commonly use a flooding algorithm that propagates copies throughout a network of participating servers.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "architecture",
+      "ref": "rfc5537",
+      "quote": "Typically, only one copy is stored per server",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "architecture",
+      "ref": "rfc5537",
+      "quote": "\"Usenet\" is a particular worldwide, publicly accessible network based on the Netnews protocols.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "documentation",
+      "ref": "rfc5537",
+      "quote": "Netnews Architecture and Protocols",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "infrastructure_relationship",
+      "ref": "rfc5537",
+      "quote": "there are deployments of the Netnews protocols other than Usenet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "public_disclosure",
+      "ref": "rfc5694",
+      "quote": "In this document, we provide a survey of P2P (Peer-to-Peer) systems.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "architecture",
+      "ref": "rfc5694",
+      "quote": "The survey includes a definition and several taxonomies of P2P systems.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "p2p",
+      "facet": "documentation",
+      "ref": "rfc5694",
+      "quote": "Peer-to-Peer (P2P) Architecture: Definition, Taxonomies, Examples, and Applicability",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "protocols",
+      "ref": "rfc6120",
+      "quote": "The Extensible Messaging and Presence Protocol (XMPP) is an application profile of the Extensible Markup Language (XML)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "arpanet",
+      "facet": "protocols",
+      "ref": "rfc801",
+      "quote": "The goal is to make a complete switch over from the NCP to IP/TCP by 1 January 1983.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "public_disclosure",
+      "ref": "rfc850",
+      "quote": "Standard for Interchange of USENET Messages",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "mesh",
+      "facet": "protocols",
+      "ref": "rfc8966",
+      "quote": "Babel is a loop-avoiding, distance-vector routing protocol that is robust and efficient both in ordinary wired networks and in wireless mesh networks.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "architecture",
+      "ref": "rfc9110",
+      "quote": "for distributed, collaborative, hypertext information systems",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "protocols",
+      "ref": "rfc9110",
+      "quote": "HTTP Semantics",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "documentation",
+      "ref": "rfc9110",
+      "quote": "HTTP Semantics",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "public_disclosure",
+      "ref": "rfc9498",
+      "quote": "November 2023 The GNU Name System",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "protocols",
+      "ref": "rfc9498",
+      "quote": "GNS is a decentralized and censorship-resistant domain name resolution protocol that provides a privacy-enhancing alternative to the Domain Name System (DNS) protocols.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "resource_identification",
+      "ref": "rfc9498",
+      "quote": "Zone Top-Level Domain (zTLD)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "gnunet",
+      "facet": "discovery",
+      "ref": "rfc9498",
+      "quote": "DHTs as Remote Storage",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "usenet",
+      "facet": "protocols",
+      "ref": "rfc977",
+      "quote": "NNTP specifies a protocol for the distribution, inquiry, retrieval, and posting of news articles",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "experimental_protocols",
+      "facet": "architecture",
+      "ref": "scion_home",
+      "quote": "SCION, a more secure and reliable Internet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "public_disclosure",
+      "ref": "tor_design_2004",
+      "quote": "Tor: The Second-Generation Onion Router",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "public_disclosure",
+      "ref": "tor_design_2004",
+      "quote": "We present Tor, a circuit-based low-latency anonymous communication service.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "architecture",
+      "ref": "tor_design_2004",
+      "quote": "adding perfect forward secrecy, congestion control, directory servers, integrity checking, configurable exit policies, and a practical design for location-hidden services via rendezvous points",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "origin",
+      "ref": "tor_history",
+      "quote": "in 1995, David Goldschlag, Michael G. Reed, and Paul Syverson at the U.S. Naval Research Lab (NRL)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "origin",
+      "ref": "tor_history",
+      "quote": "in October 2002 when the Tor network was initially deployed, its code was released under a free and open software license",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "origin",
+      "ref": "tor_history",
+      "quote": "In 2006, the Tor Project, Inc., a 501(c)(3) nonprofit organization, was founded",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "protocols",
+      "ref": "tor_rend_spec_overview",
+      "quote": "Hidden services aim to provide responder anonymity for bidirectional stream-based communication on the Tor network.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "purpose",
+      "ref": "tor_spec_intro",
+      "quote": "Tor is a distributed overlay network designed to anonymize low-latency TCP-based applications",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "architecture",
+      "ref": "tor_spec_intro",
+      "quote": "To connect to the network, a client needs to download an up-to-date signed directory of the relays on the network.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "tor",
+      "facet": "documentation",
+      "ref": "tor_spec_intro",
+      "quote": "A short introduction to Tor",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "public_disclosure",
+      "ref": "w3c_activitypub",
+      "quote": "W3C Recommendation 23 January 2018",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "architecture",
+      "ref": "w3c_activitypub",
+      "quote": "A server to server federation protocol (so decentralized websites can share information)",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "federated",
+      "facet": "protocols",
+      "ref": "w3c_activitypub",
+      "quote": "The ActivityPub protocol is a decentralized social networking protocol based upon the [ActivityStreams] 2.0 data format.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "public_disclosure",
+      "ref": "w3c_tbl_alt_hypertext_1991",
+      "quote": "Newsgroups: alt.hypertext",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "public_disclosure",
+      "ref": "w3c_tbl_alt_hypertext_1991",
+      "quote": "The WorldWideWeb (WWW) project aims to allow links to be made to any information anywhere.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "resource_identification",
+      "ref": "w3c_tbl_alt_hypertext_1991",
+      "quote": "The address format includes an access method (=namespace), and for most name spaces a hostname and some sort of path.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "origin",
+      "ref": "w3c_tbl_proposal_1989",
+      "quote": "Information Management: A Proposal",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "origin",
+      "ref": "w3c_tbl_proposal_1989",
+      "quote": "written in March 1989 and later redistributed unchanged apart from the date added in May 1990",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "www",
+      "facet": "purpose",
+      "ref": "w3c_tbl_proposal_1989",
+      "quote": "This proposal concerns the management of general information about accelerators and experiments at CERN.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "architecture",
+      "ref": "wireguard_paper",
+      "quote": "WireGuard is a secure network tunnel, operating at layer 3",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "private_intranet",
+      "facet": "protocols",
+      "ref": "wireguard_paper",
+      "quote": "It uses a single round trip key exchange, based on NoiseIK",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "experimental_protocols",
+      "facet": "purpose",
+      "ref": "yggdrasil_home",
+      "quote": "It is designed to be a future-proof and decentralised alternative to the structured routing protocols commonly used today on the Internet",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "experimental_protocols",
+      "facet": "architecture",
+      "ref": "yggdrasil_home",
+      "quote": "Yggdrasil is a new experimental compact routing scheme.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "purpose",
+      "ref": "zeronet_readme",
+      "quote": "Decentralized websites using Bitcoin crypto and the BitTorrent network",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "architecture",
+      "ref": "zeronet_readme",
+      "quote": "Each visited site is also served by you.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "architecture",
+      "ref": "zeronet_readme",
+      "quote": "Every site contains a `content.json` file which holds all other files in a sha512 hash and a signature generated using the site's private key.",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "protocols",
+      "ref": "zeronet_readme",
+      "quote": "it tries to find peers using the BitTorrent network so it can download the site files",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "protocols",
+      "ref": "zeronet_readme",
+      "quote": "TLS encrypted connections",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "resource_identification",
+      "ref": "zeronet_readme",
+      "quote": "Namecoin .bit domains support",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "documentation",
+      "ref": "zeronet_readme",
+      "quote": "How does it work?",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "infrastructure_relationship",
+      "ref": "zeronet_readme",
+      "quote": "http://127.0.0.1:43110/{zeronet_address}",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    },
+    {
+      "entry": "zeronet",
+      "facet": "distinguishing_characteristics",
+      "ref": "zeronet_readme",
+      "quote": "Real-time updated sites",
+      "outcome": "VERIFIED",
+      "match_mode": "exact_normalized"
+    }
+  ],
+  "notes": [
+    "Retrieved content is hashed but not stored in Phase 0 (licence/retention not yet reviewed per source).",
+    "Reachability reflects the environment the run executed in; see environment and DATA_SOURCE_REGISTRY.md.",
+    "A VERIFIED citation means the quoted text was present at retrieval time; it doesn't independently prove the quoted claim is true."
+  ]
+}

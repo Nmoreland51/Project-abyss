@@ -1,0 +1,410 @@
+# Candidate ingestion sources for Phase 1+ adapters. NOTHING here has been ingested yet.
+# Before an adapter is built for a source, its terms must be read and recorded (terms_verified: true),
+# and the owner must approve it (docs/DECISION_LOG.md). Rate-limit notes marked "reported" come from
+# general knowledge and must be confirmed against the source's own documentation.
+# Reachability from the Phase 0 environment: evidence/phase0/source_probe_report.json.
+registry_version: 0.1.0
+description: Candidate APIs, feeds and datasets for discovering obscure tools, research and network data.
+sources:
+  # ---------------------------------------------------------------- standards & research literature
+  - id: rfc_index_xml
+    kind: dataset
+    title: RFC Editor index (XML)
+    uri: https://www.rfc-editor.org/rfc-index.xml
+    publisher: RFC Editor
+    access_basis: public_open
+    license_or_terms: "Publicly downloadable; IETF Trust provisions not reviewed"
+    terms_uri: https://trustee.ietf.org/documents/trust-legal-provisions/
+    reliability: primary
+    coverage: Metadata for every RFC (titles, dates, status, obsoletes/updates relations).
+    limitations: Large file (~13 MB); metadata only, not full text.
+    added: 2026-11-24
+  - id: ietf_datatracker_api
+    kind: ingestion_endpoint
+    title: IETF Datatracker API
+    uri: https://datatracker.ietf.org/api/v1/
+    publisher: IETF
+    access_basis: public_api_terms
+    license_or_terms: "Public API; terms not reviewed"
+    reliability: primary
+    coverage: Internet-Drafts, working groups, document history (useful for experimental protocols before RFC publication).
+    added: 2026-11-24
+  - id: arxiv_api
+    kind: ingestion_endpoint
+    title: arXiv API
+    uri: https://export.arxiv.org/api/query
+    probe_uri: https://export.arxiv.org/api/query?search_query=all:peer-to-peer&max_results=1
+    publisher: arXiv / Cornell University
+    access_basis: public_api_terms
+    license_or_terms: "arXiv API Terms of Use apply; paper licences vary per paper; not reviewed"
+    terms_uri: https://info.arxiv.org/help/api/tou.html
+    reliability: primary
+    rate_limit_notes: "Reported: no more than one request every three seconds; confirm in terms."
+    coverage: Preprints in CS (networking, AI, systems) and other fields.
+    limitations: Preprints are not peer-reviewed.
+    added: 2026-11-24
+  - id: openalex_api
+    kind: ingestion_endpoint
+    title: OpenAlex API
+    uri: https://api.openalex.org/
+    probe_uri: https://api.openalex.org/works?search=kademlia&per-page=1
+    publisher: OurResearch
+    access_basis: public_api_terms
+    license_or_terms: "Reported: data released CC0; not reviewed"
+    reliability: secondary
+    coverage: Scholarly works, authors, venues, citations graph.
+    limitations: Automated metadata; disambiguation errors possible.
+    added: 2026-11-24
+  - id: crossref_api
+    kind: ingestion_endpoint
+    title: Crossref REST API
+    uri: https://api.crossref.org/
+    probe_uri: https://api.crossref.org/works?query=chord&rows=1
+    publisher: Crossref
+    access_basis: public_api_terms
+    license_or_terms: "Public metadata API; etiquette asks for a contact address (owner decision: see SCOPE_AND_RESTRICTIONS.md); not reviewed"
+    reliability: secondary
+    rate_limit_notes: "Returned HTTP 429 on first contact from this environment during Phase 0 exploration."
+    coverage: DOI metadata.
+    added: 2026-11-24
+  - id: dblp_api
+    kind: ingestion_endpoint
+    title: dblp search API
+    uri: https://dblp.org/search/publ/api
+    probe_uri: https://dblp.org/search/publ/api?q=kademlia&format=json&h=1
+    publisher: dblp (Schloss Dagstuhl)
+    access_basis: public_api_terms
+    license_or_terms: "Reported: metadata CC0; not reviewed"
+    reliability: secondary
+    coverage: Computer science bibliography.
+    added: 2026-11-24
+  - id: semantic_scholar_api
+    kind: ingestion_endpoint
+    title: Semantic Scholar Graph API
+    uri: https://api.semanticscholar.org/graph/v1/
+    probe_uri: https://api.semanticscholar.org/graph/v1/paper/search?query=kademlia&limit=1
+    publisher: Allen Institute for AI
+    access_basis: public_api_key
+    license_or_terms: "API licence agreement; optional free key for higher limits; not reviewed"
+    reliability: secondary
+    rate_limit_notes: "Returned HTTP 429 without a key from this environment during Phase 0 exploration."
+    added: 2026-11-24
+  - id: zenodo_api
+    kind: ingestion_endpoint
+    title: Zenodo records API
+    uri: https://zenodo.org/api/records
+    probe_uri: https://zenodo.org/api/records?q=mesh%20network&size=1
+    publisher: CERN / OpenAIRE
+    access_basis: public_api_terms
+    license_or_terms: "Per-record licences; API terms not reviewed"
+    reliability: community
+    coverage: Research software and datasets, including small, rarely-cited tools (hidden-value candidate source).
+    added: 2026-11-24
+  # ---------------------------------------------------------------- software forges & package registries
+  - id: software_heritage_api
+    kind: ingestion_endpoint
+    title: Software Heritage archive API
+    uri: https://archive.softwareheritage.org/api/1/
+    probe_uri: https://archive.softwareheritage.org/api/1/origin/search/gemini/?limit=2
+    publisher: Software Heritage (Inria / UNESCO)
+    access_basis: public_api_terms
+    license_or_terms: "API terms and per-archive content licences not reviewed; anonymous rate limit applies"
+    reliability: primary
+    coverage: Archive of source code from many forges, including ones not indexed by mainstream search.
+    limitations: Search is by origin URL fragment; metadata quality varies.
+    added: 2026-11-24
+  - id: github_api
+    kind: ingestion_endpoint
+    title: GitHub REST API
+    uri: https://api.github.com/
+    probe_uri: https://api.github.com/repos/HelloZeroNet/ZeroNet
+    publisher: GitHub
+    access_basis: public_api_key
+    license_or_terms: "GitHub Terms of Service and API terms; token recommended; not reviewed"
+    reliability: primary
+    limitations: "BLOCKED in the Phase 0 cloud environment (session-scoped GitHub access). Works on the owner's machine with a personal token."
+    added: 2026-11-24
+  - id: github_raw
+    kind: ingestion_endpoint
+    title: GitHub raw content
+    uri: https://raw.githubusercontent.com/
+    probe_uri: https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md
+    publisher: GitHub
+    access_basis: public_open
+    license_or_terms: "Per-repository licences; not reviewed"
+    reliability: primary
+    limitations: Only retrieves files at known paths; no search.
+    added: 2026-11-24
+  - id: awesome_lists_seed
+    kind: ingestion_endpoint
+    title: "Curated 'awesome' lists (seed: sindresorhus/awesome)"
+    uri: https://raw.githubusercontent.com/sindresorhus/awesome/main/readme.md
+    publisher: Community-maintained (GitHub)
+    access_basis: public_open
+    license_or_terms: "Per-list licences (often CC0); not reviewed"
+    reliability: community
+    coverage: Human-curated links into niche tool ecosystems; a starting graph for hidden-value expansion.
+    limitations: Popularity-biased curation; link rot.
+    added: 2026-11-24
+  - id: gitlab_api
+    kind: ingestion_endpoint
+    title: GitLab.com projects API
+    uri: https://gitlab.com/api/v4/projects
+    probe_uri: https://gitlab.com/api/v4/projects?search=gemini&per_page=1
+    publisher: GitLab
+    access_basis: public_api_terms
+    license_or_terms: "GitLab terms; not reviewed"
+    reliability: primary
+    added: 2026-11-24
+  - id: codeberg_api
+    kind: ingestion_endpoint
+    title: Codeberg (Forgejo) API
+    uri: https://codeberg.org/api/v1/
+    probe_uri: https://codeberg.org/api/v1/repos/search?q=gemini&limit=1
+    publisher: Codeberg e.V.
+    access_basis: public_api_terms
+    license_or_terms: "Codeberg terms of use; not reviewed"
+    reliability: primary
+    rate_limit_notes: "Returned HTTP 429 on first contact during Phase 0 exploration."
+    coverage: Non-GitHub community forge; under-indexed projects (hidden-value candidate).
+    added: 2026-11-24
+  - id: sourcehut_git
+    kind: ingestion_endpoint
+    title: SourceHut git hosting
+    uri: https://git.sr.ht/
+    publisher: SourceHut
+    access_basis: public_open
+    license_or_terms: "SourceHut terms; not reviewed"
+    reliability: primary
+    limitations: "Returned HTTP 502 from this environment during Phase 0 exploration."
+    added: 2026-11-24
+  - id: pypi_json
+    kind: ingestion_endpoint
+    title: PyPI JSON API
+    uri: https://pypi.org/pypi/
+    probe_uri: https://pypi.org/pypi/requests/json
+    publisher: Python Software Foundation
+    access_basis: public_api_terms
+    license_or_terms: "PyPI terms of use; per-package licences; not reviewed"
+    reliability: primary
+    coverage: Package metadata, release history (maintenance signal), project URLs.
+    added: 2026-11-24
+  - id: npm_registry
+    kind: ingestion_endpoint
+    title: npm registry search API
+    uri: https://registry.npmjs.org/
+    probe_uri: https://registry.npmjs.org/-/v1/search?text=gemini&size=1
+    publisher: npm, Inc. (GitHub)
+    access_basis: public_api_terms
+    license_or_terms: "npm terms; not reviewed"
+    reliability: primary
+    added: 2026-11-24
+  - id: crates_io_api
+    kind: ingestion_endpoint
+    title: crates.io API
+    uri: https://crates.io/api/v1/
+    probe_uri: https://crates.io/api/v1/crates?q=gemini&per_page=1
+    publisher: Rust Foundation
+    access_basis: public_api_terms
+    license_or_terms: "crates.io data access policy (requires identifying User-Agent); not reviewed"
+    reliability: primary
+    rate_limit_notes: "Returned 403 without a User-Agent; 200 with a generic one during Phase 0 exploration."
+    added: 2026-11-24
+  - id: fdroid_index
+    kind: dataset
+    title: F-Droid repository index (v2)
+    uri: https://f-droid.org/repo/index-v2.json
+    publisher: F-Droid
+    access_basis: public_open
+    license_or_terms: "Index metadata licence not reviewed; apps are FOSS-licensed per entry"
+    reliability: primary
+    coverage: Free/open-source Android apps with source links (alternative software ecosystem).
+    limitations: ~75 MB; probe samples only the first 64 KiB.
+    added: 2026-11-24
+  - id: debian_sources_api
+    kind: ingestion_endpoint
+    title: Debian Sources API
+    uri: https://sources.debian.org/api/
+    probe_uri: https://sources.debian.org/api/ping/
+    publisher: Debian
+    access_basis: public_api_terms
+    license_or_terms: "Per-package licences; API terms not reviewed"
+    reliability: primary
+    added: 2026-11-24
+  - id: huggingface_api
+    kind: ingestion_endpoint
+    title: Hugging Face Hub API
+    uri: https://huggingface.co/api/
+    probe_uri: https://huggingface.co/api/models?search=agent&limit=1
+    publisher: Hugging Face
+    access_basis: public_api_terms
+    license_or_terms: "Hub terms; per-model licences; not reviewed"
+    reliability: community
+    coverage: AI models, datasets and Spaces (AI agents / tools priority area).
+    added: 2026-11-24
+  # ---------------------------------------------------------------- community discussion
+  - id: hn_api
+    kind: ingestion_endpoint
+    title: Hacker News API (Firebase)
+    uri: https://hacker-news.firebaseio.com/v0/
+    probe_uri: https://hacker-news.firebaseio.com/v0/maxitem.json
+    publisher: Y Combinator
+    access_basis: public_api_terms
+    license_or_terms: "Not reviewed"
+    reliability: community
+    coverage: Show HN posts are a stream of new, often obscure tools.
+    limitations: Popularity-biased; comments are opinions, not evidence of capability.
+    added: 2026-11-24
+  - id: lobsters_json
+    kind: ingestion_endpoint
+    title: Lobsters JSON feeds
+    uri: https://lobste.rs/
+    probe_uri: https://lobste.rs/newest.json
+    publisher: Lobsters
+    access_basis: public_open
+    license_or_terms: "Not reviewed"
+    reliability: community
+    added: 2026-11-24
+  # ---------------------------------------------------------------- archives
+  - id: internet_archive_search
+    kind: ingestion_endpoint
+    title: Internet Archive advanced search
+    uri: https://archive.org/advancedsearch.php
+    probe_uri: https://archive.org/advancedsearch.php?q=gopher&fl[]=identifier&rows=1&output=json
+    publisher: Internet Archive
+    access_basis: public_api_terms
+    license_or_terms: "Internet Archive terms; per-item rights vary; not reviewed"
+    reliability: secondary
+    added: 2026-11-24
+  - id: wayback_availability
+    kind: ingestion_endpoint
+    title: Wayback Machine availability API
+    uri: https://archive.org/wayback/available
+    probe_uri: https://archive.org/wayback/available?url=info.cern.ch
+    publisher: Internet Archive
+    access_basis: public_api_terms
+    license_or_terms: "Internet Archive terms; not reviewed"
+    reliability: secondary
+    coverage: Whether and when a URL was archived (link-rot recovery, historical evidence).
+    added: 2026-11-24
+  - id: wayback_cdx
+    kind: ingestion_endpoint
+    title: Wayback Machine CDX server / snapshots
+    uri: https://web.archive.org/cdx/search/cdx
+    probe_uri: https://web.archive.org/cdx/search/cdx?url=info.cern.ch&limit=1
+    publisher: Internet Archive
+    access_basis: public_api_terms
+    license_or_terms: "Internet Archive terms; not reviewed"
+    reliability: secondary
+    limitations: "Connection reset from this environment during Phase 0 exploration."
+    added: 2026-11-24
+  - id: common_crawl_index
+    kind: ingestion_endpoint
+    title: Common Crawl index server
+    uri: https://index.commoncrawl.org/
+    probe_uri: https://index.commoncrawl.org/collinfo.json
+    publisher: Common Crawl Foundation
+    access_basis: public_api_terms
+    license_or_terms: "Common Crawl terms of use; not reviewed"
+    reliability: secondary
+    coverage: "Proxy for 'present in a mainstream web crawl' (obscurity measurement baseline)."
+    limitations: "Intermittent from this environment: a curl request was reset during Phase 0 exploration; the recorded probe succeeded."
+    added: 2026-11-24
+  - id: wikidata_api
+    kind: ingestion_endpoint
+    title: Wikidata API
+    uri: https://www.wikidata.org/w/api.php
+    probe_uri: https://www.wikidata.org/w/api.php?action=wbsearchentities&search=IPFS&language=en&format=json
+    publisher: Wikimedia Foundation
+    access_basis: public_api_terms
+    license_or_terms: "Reported: data CC0; Wikimedia User-Agent policy applies; not reviewed"
+    reliability: community
+    coverage: "Proxy for 'documented in a mainstream knowledge base' (obscurity baseline)."
+    limitations: "HTTP 429 from this environment during Phase 0 exploration."
+    added: 2026-11-24
+  - id: wikipedia_api
+    kind: ingestion_endpoint
+    title: English Wikipedia API
+    uri: https://en.wikipedia.org/w/api.php
+    probe_uri: https://en.wikipedia.org/w/api.php?action=query&titles=Gopher_(protocol)&format=json
+    publisher: Wikimedia Foundation
+    access_basis: public_api_terms
+    license_or_terms: "Text CC BY-SA; Wikimedia User-Agent policy applies; not reviewed"
+    reliability: community
+    limitations: "HTTP 429 from this environment during Phase 0 exploration."
+    added: 2026-11-24
+  - id: ipfs_gateway
+    kind: ingestion_endpoint
+    title: IPFS public HTTP gateway (ipfs.io)
+    uri: https://ipfs.io/
+    publisher: IPFS project / Protocol Labs
+    access_basis: public_open
+    license_or_terms: "Gateway terms not reviewed; content rights vary per CID"
+    reliability: secondary
+    limitations: A gateway is a centralized view of a decentralized network; native IPFS node access is a Phase 4 decision.
+    added: 2026-11-24
+  # ---------------------------------------------------------------- network measurement (anomaly laboratory candidates)
+  - id: caida_catalog
+    kind: dataset
+    title: CAIDA data catalog
+    uri: https://www.caida.org/catalog/datasets/
+    publisher: CAIDA (UC San Diego)
+    access_basis: public_api_terms
+    license_or_terms: "Per-dataset acceptable use policies; some datasets require a request; not reviewed"
+    reliability: primary
+    coverage: Internet topology, BGP and measurement datasets.
+    limitations: Restricted datasets must be recorded as leads, not ingested, unless access is granted.
+    added: 2026-11-24
+  - id: ripe_ris
+    kind: dataset
+    title: RIPE RIS (Routing Information Service)
+    uri: https://ris.ripe.net/
+    publisher: RIPE NCC
+    access_basis: public_open
+    license_or_terms: "RIPE NCC terms; not reviewed"
+    reliability: primary
+    coverage: "Public BGP routing data. For the anomaly laboratory, ordinary explanations such as misconfiguration come first."
+    added: 2026-11-24
+  - id: ripestat_api
+    kind: ingestion_endpoint
+    title: RIPEstat Data API
+    uri: https://stat.ripe.net/data/
+    probe_uri: https://stat.ripe.net/data/as-overview/data.json?resource=3333
+    publisher: RIPE NCC
+    access_basis: public_api_terms
+    license_or_terms: "RIPEstat terms; not reviewed"
+    reliability: primary
+    added: 2026-11-24
+  - id: tor_onionoo
+    kind: ingestion_endpoint
+    title: Tor Metrics Onionoo API (public relay data)
+    uri: https://onionoo.torproject.org/
+    probe_uri: https://onionoo.torproject.org/summary?limit=1
+    publisher: The Tor Project
+    access_basis: public_api_terms
+    license_or_terms: "Tor Metrics data; licence not reviewed"
+    reliability: primary
+    coverage: Aggregate public relay descriptors (not user traffic, not onion-service contents).
+    added: 2026-11-24
+  - id: ooni_api
+    kind: ingestion_endpoint
+    title: OONI measurements API
+    uri: https://api.ooni.io/
+    probe_uri: https://api.ooni.io/api/v1/measurements?limit=1
+    publisher: Open Observatory of Network Interference
+    access_basis: public_api_terms
+    license_or_terms: "Reported: open data; not reviewed"
+    reliability: primary
+    coverage: Public network-interference measurements contributed by volunteers.
+    added: 2026-11-24
+  - id: peeringdb_api
+    kind: ingestion_endpoint
+    title: PeeringDB API
+    uri: https://www.peeringdb.com/api/
+    probe_uri: https://www.peeringdb.com/api/net?limit=1
+    publisher: PeeringDB
+    access_basis: public_api_terms
+    license_or_terms: "PeeringDB acceptable use policy; not reviewed"
+    reliability: community
+    coverage: Self-reported network interconnection data.
+    added: 2026-11-24

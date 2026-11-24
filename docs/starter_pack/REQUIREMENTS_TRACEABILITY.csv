@@ -1,0 +1,13 @@
+requirement_id,requirement,phase,test_ids,status
+R01,Versioned source registry and provenance,1,T01;T08,Not implemented
+R02,Persistence and recovery,1,T02;T11,Not implemented
+R03,Known architecture taxonomy and recognition,2,T03,Not implemented
+R04,Unknown architecture recognition,3,T04;T05,Not implemented
+R05,Anomaly analysis and false positive handling,3,T06,Not implemented
+R06,Hypothesis falsification and verification,3,T07;T08,Not implemented
+R07,Useful technology discovery and ranking,4,T09,Not implemented
+R08,Autonomous bounded research orchestration,5,T10;T11;T13,Not implemented
+R09,Transparent scope and untrusted data isolation,1,T12;T14,Not implemented
+R10,Actual status dashboard,5,T15,Not implemented
+R11,Benchmark driven improvements,6,T03;T04;T09;T16,Not implemented
+R12,Comprehensive release validation,7,T01-T16,Not implemented

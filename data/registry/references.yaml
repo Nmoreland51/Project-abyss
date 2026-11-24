@@ -1,0 +1,623 @@
+# Reference documents cited as evidence by data/taxonomy/network_taxonomy.yaml.
+# Every entry below was retrieved live during Phase 0 (see evidence/phase0/citation_report.json).
+# 'terms_verified: false' means the licence/terms page was NOT read; only public readability is known.
+# Dates in 'published' are as printed on the document itself unless reliability_notes say otherwise.
+registry_version: 0.1.0
+description: Reference documents (specifications, RFCs, papers, project pages) cited by the network taxonomy.
+sources:
+  # ---------------------------------------------------------------- ARPANET / Internet history
+  - id: rfc1
+    kind: reference_document
+    title: "RFC 1: Host Software"
+    uri: https://www.rfc-editor.org/rfc/rfc1.txt
+    publisher: RFC Editor
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    terms_uri: https://trustee.ietf.org/documents/trust-legal-provisions/
+    published: "1969-04-07"
+    reliability: primary
+    reliability_notes: Original ARPANET Network Working Group memo by S. Crocker.
+    added: 2026-11-24
+  - id: rfc801
+    kind: reference_document
+    title: "RFC 801: NCP/TCP Transition Plan"
+    uri: https://www.rfc-editor.org/rfc/rfc801.txt
+    publisher: RFC Editor
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1981-11"
+    reliability: primary
+    reliability_notes: A plan, not a record of what actually happened on the planned date.
+    added: 2026-11-24
+  - id: isoc_brief_history
+    kind: reference_document
+    title: "A Brief History of the Internet"
+    uri: https://www.internetsociety.org/internet/history-internet/brief-history-internet/
+    publisher: Internet Society (Leiner, Cerf, Clark, Kahn, Kleinrock, Lynch, Postel, Roberts, Wolff)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: authoritative_secondary
+    reliability_notes: Retrospective written by participants; not contemporaneous. Original publication date not checked.
+    added: 2026-11-24
+  # ---------------------------------------------------------------- World Wide Web
+  - id: w3c_tbl_proposal_1989
+    kind: reference_document
+    title: "Information Management: A Proposal (Berners-Lee, 1989/1990), HTML conversion"
+    uri: https://www.w3.org/History/1989/proposal.html
+    publisher: W3C (hosting); author T. Berners-Lee, CERN
+    access_basis: public_open
+    license_or_terms: "Page states 'All rights reserved' (Tim Berners-Lee); read-only citation"
+    published: "1989-03"
+    reliability: primary
+    reliability_notes: Hand conversion of the original document, as the page itself states.
+    added: 2026-11-24
+  - id: cern_info_first_website
+    kind: reference_document
+    title: "info.cern.ch: home of the first website"
+    uri: https://info.cern.ch/
+    publisher: CERN
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: w3c_tbl_alt_hypertext_1991
+    kind: reference_document
+    title: "Berners-Lee, alt.hypertext post 'Re: Qualifiers on Hypertext links' (6 Aug 1991), archived copy"
+    uri: https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt
+    publisher: W3C (archive)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: "1991-08-06"
+    reliability: primary
+    reliability_notes: Archived copy of a Usenet post; date as shown in the post header.
+    added: 2026-11-24
+  - id: rfc3986
+    kind: reference_document
+    title: "RFC 3986: Uniform Resource Identifier (URI): Generic Syntax"
+    uri: https://www.rfc-editor.org/rfc/rfc3986.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2005-01"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc9110
+    kind: reference_document
+    title: "RFC 9110: HTTP Semantics"
+    uri: https://www.rfc-editor.org/rfc/rfc9110.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2022-06"
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Tor
+  - id: tor_design_2004
+    kind: reference_document
+    title: "Tor: The Second-Generation Onion Router (USENIX Security 2004), abstract page"
+    uri: https://www.usenix.org/legacy/event/sec04/tech/dingledine.html
+    publisher: USENIX
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: "2004"
+    reliability: primary
+    reliability_notes: Peer-reviewed design paper by the Tor designers.
+    added: 2026-11-24
+  - id: tor_history
+    kind: reference_document
+    title: "Tor Project: History"
+    uri: https://www.torproject.org/about/history/
+    publisher: The Tor Project, Inc.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    reliability_notes: Self-published organisational history; primary for dates of the project's own actions.
+    added: 2026-11-24
+  - id: tor_spec_intro
+    kind: reference_document
+    title: "Tor Specifications: A short introduction to Tor"
+    uri: https://spec.torproject.org/intro/index.html
+    publisher: The Tor Project, Inc.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: tor_rend_spec_overview
+    kind: reference_document
+    title: "Tor Specifications: Hidden services: overview and preliminaries"
+    uri: https://spec.torproject.org/rend-spec/overview.html
+    publisher: The Tor Project, Inc.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- I2P
+  - id: i2p_intro
+    kind: reference_document
+    title: "I2P: A Scalable Framework for Anonymous Communication"
+    uri: https://geti2p.net/en/about/intro
+    publisher: The I2P Project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: "2003 (original); updated 2025-01 per page"
+    reliability: primary
+    reliability_notes: The page says it was originally written in 2003 and that some information may be obsolete.
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Hyphanet / Freenet
+  - id: hyphanet_home
+    kind: reference_document
+    title: "Hyphanet home page"
+    uri: https://www.hyphanet.org/
+    publisher: Hyphanet project
+    access_basis: public_open
+    license_or_terms: "Site states it is licensed under the GFDL; not reviewed in detail"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: hyphanet_about
+    kind: reference_document
+    title: "Hyphanet: About"
+    uri: https://www.hyphanet.org/pages/about.html
+    publisher: Hyphanet project
+    access_basis: public_open
+    license_or_terms: "GFDL per site footer; not reviewed in detail"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: hyphanet_docs
+    kind: reference_document
+    title: "Hyphanet: Documentation"
+    uri: https://www.hyphanet.org/pages/documentation.html
+    publisher: Hyphanet project
+    access_basis: public_open
+    license_or_terms: "GFDL per site footer; not reviewed in detail"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: hyphanet_rename_2023
+    kind: reference_document
+    title: "Freenet renamed to Hyphanet (26 June 2023)"
+    uri: https://www.hyphanet.org/freenet-renamed-to-hyphanet.html
+    publisher: Hyphanet project (S. Dougherty)
+    access_basis: public_open
+    license_or_terms: "GFDL per site footer; not reviewed in detail"
+    published: "2023-06-26"
+    reliability: primary
+    reliability_notes: Written by one side of the rename; the new Freenet project's account was not compared in Phase 0.
+    added: 2026-11-24
+  - id: freenet_home
+    kind: reference_document
+    title: "Freenet (formerly Locutus) home page"
+    uri: https://freenet.org/
+    publisher: Freenet Project Inc.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    reliability_notes: Marketing-oriented landing page; technical claims need the project's whitepaper (not yet registered).
+    added: 2026-11-24
+  # ---------------------------------------------------------------- GNUnet
+  - id: gnunet_home
+    kind: reference_document
+    title: "GNUnet home page"
+    uri: https://www.gnunet.org/en/
+    publisher: GNUnet e.V.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: gnunet_about
+    kind: reference_document
+    title: "GNUnet: About"
+    uri: https://www.gnunet.org/en/about.html
+    publisher: GNUnet e.V.
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc9498
+    kind: reference_document
+    title: "RFC 9498: The GNU Name System"
+    uri: https://www.rfc-editor.org/rfc/rfc9498.txt
+    publisher: RFC Editor (Independent Submission)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2023-11"
+    reliability: primary
+    reliability_notes: Informational Independent Submission; not an IETF standard.
+    added: 2026-11-24
+  # ---------------------------------------------------------------- IPFS
+  - id: ipfs_whitepaper_arxiv
+    kind: reference_document
+    title: "IPFS - Content Addressed, Versioned, P2P File System (arXiv:1407.3561), abstract page"
+    uri: https://arxiv.org/abs/1407.3561
+    publisher: arXiv (author J. Benet)
+    access_basis: public_open
+    license_or_terms: "arXiv abstract page; paper licence not reviewed"
+    terms_uri: https://info.arxiv.org/help/api/tou.html
+    published: "2014-07-14"
+    reliability: primary
+    reliability_notes: Preprint, not peer-reviewed. The described design differs from current implementations.
+    added: 2026-11-24
+  - id: ipfs_docs_what
+    kind: reference_document
+    title: "IPFS Docs: What is IPFS"
+    uri: https://docs.ipfs.tech/concepts/what-is-ipfs/
+    publisher: IPFS project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: ipfs_docs_cid
+    kind: reference_document
+    title: "IPFS Docs: Content Identifiers (CIDs)"
+    uri: https://docs.ipfs.tech/concepts/content-addressing/
+    publisher: IPFS project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: ipfs_docs_dht
+    kind: reference_document
+    title: "IPFS Docs: Distributed Hash Tables (DHTs)"
+    uri: https://docs.ipfs.tech/concepts/dht/
+    publisher: IPFS project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- ZeroNet
+  - id: zeronet_readme
+    kind: reference_document
+    title: "ZeroNet README (HelloZeroNet/ZeroNet, py3 branch)"
+    uri: https://raw.githubusercontent.com/HelloZeroNet/ZeroNet/py3/README.md
+    publisher: ZeroNet project (GitHub)
+    access_basis: public_open
+    license_or_terms: "Repository licence not reviewed (GitHub API unreachable from this environment)"
+    published: null
+    reliability: primary
+    reliability_notes: Project self-description. Maintenance status could not be checked (GitHub API/HTML blocked here).
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Gopher / Gemini
+  - id: rfc1436
+    kind: reference_document
+    title: "RFC 1436: The Internet Gopher Protocol"
+    uri: https://www.rfc-editor.org/rfc/rfc1436.txt
+    publisher: RFC Editor (University of Minnesota authors)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1993-03"
+    reliability: primary
+    reliability_notes: Informational RFC, not an Internet standard (stated in the memo).
+    added: 2026-11-24
+  - id: rfc4266
+    kind: reference_document
+    title: "RFC 4266: The gopher URI Scheme"
+    uri: https://www.rfc-editor.org/rfc/rfc4266.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2005-11"
+    reliability: primary
+    added: 2026-11-24
+  - id: gemini_spec
+    kind: reference_document
+    title: "Gemini network protocol specification"
+    uri: https://geminiprotocol.net/docs/protocol-specification.gmi
+    publisher: Project Gemini
+    access_basis: public_open
+    license_or_terms: "Document states CC0 public domain dedication (not reviewed in detail)"
+    published: null
+    reliability: primary
+    reliability_notes: Retrieved over HTTPS (the project's HTTP mirror), because outbound port 1965 is closed in this environment.
+    added: 2026-11-24
+  - id: gemini_faq
+    kind: reference_document
+    title: "Project Gemini FAQ"
+    uri: https://geminiprotocol.net/docs/faq.gmi
+    publisher: Project Gemini
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Usenet / Netnews
+  - id: rfc850
+    kind: reference_document
+    title: "RFC 850: Standard for Interchange of USENET Messages"
+    uri: https://www.rfc-editor.org/rfc/rfc850.txt
+    publisher: RFC Editor (M. Horton)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1983-06"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc1036
+    kind: reference_document
+    title: "RFC 1036: Standard for Interchange of USENET Messages"
+    uri: https://www.rfc-editor.org/rfc/rfc1036.txt
+    publisher: RFC Editor (M. Horton, R. Adams)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1987-12"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc977
+    kind: reference_document
+    title: "RFC 977: Network News Transfer Protocol"
+    uri: https://www.rfc-editor.org/rfc/rfc977.txt
+    publisher: RFC Editor (B. Kantor, P. Lapsley)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1986-02"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc3977
+    kind: reference_document
+    title: "RFC 3977: Network News Transfer Protocol (NNTP)"
+    uri: https://www.rfc-editor.org/rfc/rfc3977.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2006-10"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc5537
+    kind: reference_document
+    title: "RFC 5537: Netnews Architecture and Protocols"
+    uri: https://www.rfc-editor.org/rfc/rfc5537.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2009-11"
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- DHT / P2P
+  - id: chord_sigcomm2001
+    kind: reference_document
+    title: "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications (SIGCOMM 2001)"
+    uri: https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
+    publisher: MIT PDOS (authors' copy)
+    access_basis: public_open
+    license_or_terms: "ACM copyright notice in PDF; authors' copy read for citation only"
+    published: "2001-08"
+    reliability: primary
+    added: 2026-11-24
+  - id: kademlia_iptps2002
+    kind: reference_document
+    title: "Kademlia: A Peer-to-peer Information System Based on the XOR Metric (IPTPS 2002), authors' copy"
+    uri: https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf
+    publisher: MIT PDOS (authors' copy)
+    access_basis: public_open
+    license_or_terms: "LNCS copyright likely; not reviewed"
+    published: "2002"
+    reliability: primary
+    reliability_notes: In Phase 0 checks the PDF's text layer is font-encoded and doesn't extract with pypdf or pdftotext, so quotes from it can't be machine-verified.
+    added: 2026-11-24
+  - id: bep5
+    kind: reference_document
+    title: "BEP 5: DHT Protocol (BitTorrent Mainline DHT)"
+    uri: https://www.bittorrent.org/beps/bep_0005.html
+    publisher: BitTorrent.org
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: bep3
+    kind: reference_document
+    title: "BEP 3: The BitTorrent Protocol Specification"
+    uri: https://www.bittorrent.org/beps/bep_0003.html
+    publisher: BitTorrent.org
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc5694
+    kind: reference_document
+    title: "RFC 5694: Peer-to-Peer (P2P) Architecture: Definition, Taxonomies, Examples, and Applicability"
+    uri: https://www.rfc-editor.org/rfc/rfc5694.txt
+    publisher: RFC Editor / IAB
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2009-11"
+    reliability: authoritative_secondary
+    reliability_notes: IAB survey; secondary with respect to the systems it describes.
+    added: 2026-11-24
+  - id: bitcoin_whitepaper
+    kind: reference_document
+    title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+    uri: https://bitcoin.org/bitcoin.pdf
+    publisher: bitcoin.org (author 'Satoshi Nakamoto')
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Mesh
+  - id: rfc2501
+    kind: reference_document
+    title: "RFC 2501: Mobile Ad hoc Networking (MANET): Routing Protocol Performance Issues and Evaluation Considerations"
+    uri: https://www.rfc-editor.org/rfc/rfc2501.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1999-01"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc3626
+    kind: reference_document
+    title: "RFC 3626: Optimized Link State Routing Protocol (OLSR)"
+    uri: https://www.rfc-editor.org/rfc/rfc3626.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2003-10"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc8966
+    kind: reference_document
+    title: "RFC 8966: The Babel Routing Protocol"
+    uri: https://www.rfc-editor.org/rfc/rfc8966.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2021-01"
+    reliability: primary
+    added: 2026-11-24
+  - id: batman_adv_docs
+    kind: reference_document
+    title: "batman-adv documentation overview (Open Mesh)"
+    uri: https://www.open-mesh.org/projects/batman-adv/wiki
+    publisher: Open Mesh
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: meshtastic_docs
+    kind: reference_document
+    title: "Meshtastic documentation: Introduction"
+    uri: https://meshtastic.org/docs/
+    publisher: Meshtastic project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: reticulum_home
+    kind: reference_document
+    title: "Reticulum Network home page"
+    uri: https://reticulum.network/
+    publisher: Reticulum project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Federated
+  - id: w3c_activitypub
+    kind: reference_document
+    title: "ActivityPub, W3C Recommendation"
+    uri: https://www.w3.org/TR/activitypub/
+    publisher: W3C
+    access_basis: public_open
+    license_or_terms: "W3C document licence (stated on page; not reviewed in detail)"
+    published: "2018-01-23"
+    reliability: primary
+    added: 2026-11-24
+  - id: matrix_spec
+    kind: reference_document
+    title: "Matrix Specification (latest)"
+    uri: https://spec.matrix.org/latest/
+    publisher: The Matrix.org Foundation
+    access_basis: public_open
+    license_or_terms: "Licence section exists on page; not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc5321
+    kind: reference_document
+    title: "RFC 5321: Simple Mail Transfer Protocol"
+    uri: https://www.rfc-editor.org/rfc/rfc5321.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2008-10"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc6120
+    kind: reference_document
+    title: "RFC 6120: Extensible Messaging and Presence Protocol (XMPP): Core"
+    uri: https://www.rfc-editor.org/rfc/rfc6120.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2011-03"
+    reliability: primary
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Experimental architectures
+  - id: ndn_project
+    kind: reference_document
+    title: "Named Data Networking: Project Overview"
+    uri: https://named-data.net/project/
+    publisher: NDN project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: yggdrasil_home
+    kind: reference_document
+    title: "Yggdrasil Network home page"
+    uri: https://yggdrasil-network.github.io/
+    publisher: Yggdrasil Network project
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    added: 2026-11-24
+  - id: scion_home
+    kind: reference_document
+    title: "SCION home page"
+    uri: https://www.scion.org/
+    publisher: SCION Association
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    reliability_notes: Marketing-oriented landing page; architecture claims need the SCION specifications (not yet registered).
+    added: 2026-11-24
+  # ---------------------------------------------------------------- Private networks
+  - id: rfc1918
+    kind: reference_document
+    title: "RFC 1918: Address Allocation for Private Internets"
+    uri: https://www.rfc-editor.org/rfc/rfc1918.txt
+    publisher: RFC Editor / IETF (BCP 5)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "1996-02"
+    reliability: primary
+    added: 2026-11-24
+  - id: rfc4364
+    kind: reference_document
+    title: "RFC 4364: BGP/MPLS IP Virtual Private Networks (VPNs)"
+    uri: https://www.rfc-editor.org/rfc/rfc4364.txt
+    publisher: RFC Editor / IETF
+    access_basis: public_open
+    license_or_terms: "Publicly readable; IETF Trust provisions not reviewed"
+    published: "2006-02"
+    reliability: primary
+    added: 2026-11-24
+  - id: nist_sp800_207
+    kind: reference_document
+    title: "NIST SP 800-207: Zero Trust Architecture"
+    uri: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
+    publisher: NIST
+    access_basis: public_open
+    license_or_terms: "US Government publication, stated 'available free of charge'; reuse terms not reviewed"
+    published: "2020-08"
+    reliability: primary
+    added: 2026-11-24
+  - id: wireguard_paper
+    kind: reference_document
+    title: "WireGuard: Next Generation Kernel Network Tunnel (whitepaper, draft revision)"
+    uri: https://www.wireguard.com/papers/wireguard.pdf
+    publisher: wireguard.com (J. A. Donenfeld)
+    access_basis: public_open
+    license_or_terms: "Publicly readable; terms not reviewed"
+    published: null
+    reliability: primary
+    reliability_notes: The PDF labels itself 'Draft Revision'.
+    added: 2026-11-24

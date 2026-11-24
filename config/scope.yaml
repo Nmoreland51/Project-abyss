@@ -1,0 +1,17 @@
+# Owner-controlled research scope (see docs/SCOPE_AND_RESTRICTIONS.md).
+# This file is configuration you own. Ingested documents can never modify it.
+# Hard legal/security limits (abyss/core/scope.py HARD_LIMITS) are not configurable here.
+
+allowed_access_bases:
+  - public_open
+  - public_api_terms
+  - public_api_key
+  - owner_authorized
+  - lab_owned
+  - synthetic
+
+# Hosts you never want contacted, even if public. Empty by default.
+denied_hosts: []
+
+# If non-empty, ONLY these hosts may be contacted. Empty = any host not denied.
+allowed_hosts: []

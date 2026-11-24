@@ -1,0 +1,26 @@
+requirement_id,requirement,phase,test_ids,status,implementation,evidence,notes
+R00,"Phase 0 scientific foundation: taxonomy, source registry, methodology, architecture, benchmark pre-registration, traceability",0,T21;T22;T23,implemented_unverified,data/taxonomy/network_taxonomy.yaml; data/registry/*.yaml; data/benchmarks/definitions.yaml; abyss/foundation/*; docs/*,evidence/phase0/citation_report.json; evidence/phase0/test_results.txt,160 of 161 taxonomy quotes verified live; 1 unextractable PDF. Exit gate needs owner review (DEVELOPMENT_ROADMAP Phase 0).
+R01,Versioned source registry and provenance,1,T01;T08,partial,"abyss/core/contracts.py (Source, RetrievalRecord); abyss/foundation/registry.py; abyss/foundation/fetch.py",evidence/phase0/citation_report.json; evidence/phase0/source_probe_report.json,Registry v0.1.0 and per-retrieval hash records exist. No ingestion adapters or persistent evidence store yet (Phase 1).
+R02,Persistence and recovery,1,T02;T11,not_implemented,,,"Phase 1: SQLite store, migrations, restart/restore test."
+R03,Known architecture taxonomy and recognition,2,T03;T21,partial,data/taxonomy/network_taxonomy.yaml; abyss/foundation/taxonomy.py,evidence/phase0/citation_report.json,Taxonomy done (18 entries x 12 facets). Recognition not implemented; B01 pre-registered.
+R04,Unknown architecture recognition,3,T04;T05;T24,not_implemented,,,B02/B03 pre-registered.
+R05,Anomaly analysis and false positive handling,3,T06,not_implemented,,,B04 pre-registered.
+R06,Hypothesis falsification and verification,3,T07;T08,partial,"abyss/core/contracts.py (Hypothesis, Finding); abyss/foundation/citations.py",evidence/phase0/citation_report.json,Contracts require alternatives and falsifiers and enforce corroboration rules; the citation verifier exists. No hypothesis engine.
+R07,Useful technology discovery and ranking,4,T09,not_implemented,docs/DISCOVERY_ENGINE_SPECIFICATION.md,,Specified; B05 pre-registered; needs owner need statements and blind ratings.
+R08,Autonomous bounded research orchestration,5,T10;T11;T13,not_implemented,"abyss/core/contracts.py (Job, Budget)",,Contract only. 24/72-hour runs need a persistent host (cloud session is ephemeral).
+R09,Transparent scope and untrusted data isolation,1,T12;T14,partial,abyss/core/scope.py; config/scope.yaml; docs/SCOPE_AND_RESTRICTIONS.md,,Scope policy and hard limits exist and are tested offline. Embedded-instruction (T12) suite not yet written.
+R10,Actual status dashboard,5,T15,not_implemented,,,JobStatus vocabulary fixed in contracts.
+R11,Benchmark driven improvements,6,T03;T04;T09;T16;T20,not_implemented,data/benchmarks/definitions.yaml,,Benchmarks pre-registered; nothing run.
+R12,Comprehensive release validation,7,T01-T24,not_implemented,docs/FINAL_SYSTEM_AUDIT.md,,Template only.
+R13,Historical research engine: trace origins and disclosure patterns across networks (directive 4.1),2,T21,not_implemented,,,Taxonomy facets origin/public_disclosure are the seed data.
+R14,"Signature library: source, architecture, reliability, limitations, overlap, last verification, evidence (directive 4.3)",2,T03;T21,not_implemented,abyss/core/contracts.py (Signature); docs/SIGNATURE_SPECIFICATION.md,,Contract and specification only.
+R15,Persistent knowledge graph with history and contradictory evidence (directive 4.10),1,T02;T07;T18,not_implemented,,,Phase 1: SQLite tables + NetworkX projection.
+R16,"Evidence engine separating observations, inferences, hypotheses, verified findings and retractions (directive 4.9)",1,T08,partial,"abyss/core/contracts.py (ClaimBasis, RecordScope, Finding)",evidence/phase0/citation_report.json,Typed separation exists; no store.
+R17,"Continuous learning: versioned, benchmarked, reversible model and ranking updates (directive 4.12)",6,T16;T20,not_implemented,,,
+R18,Dataset contamination and train/evaluation leakage controls (directive 8),2,T17,not_implemented,data/benchmarks/definitions.yaml (leakage_controls),,Controls specified per benchmark.
+R19,Duplicate discovery detection and entity resolution (directive 8; e.g. Freenet/Hyphanet naming),1,T18,not_implemented,,,
+R20,LLM never sole authority for classification or verification; model failure handling (MASTER_AUDIT s4; directive 8),2,T19,not_implemented,docs/MASTER_ARCHITECTURE.md,,Design rule recorded.
+R21,"Research dashboard with the 15 workspaces listed in directive 6, showing only real status",5,T15,not_implemented,,,Minimal UI first (MASTER_AUDIT s7).
+R22,"Owner control: configurable scope and objectives, disclosed restrictions, no silent goal changes",0,T14;T23,partial,config/scope.yaml; docs/SCOPE_AND_RESTRICTIONS.md; docs/starter_pack/; tests/unit/test_project_integrity.py,evidence/phase0/test_results.txt,Original requirements and directive preserved and checksum-tested.
+R23,"Reproducible environment: pinned dependencies, licences, resource use, deployment (directive 10)",1,T16,partial,pyproject.toml; docs/IMPLEMENTATION_STATUS.md,,Tested versions recorded; lock file and container in Phase 1.
+R24,Unknown-type labelling: every unresolved item states which of the seven unknown categories applies (directive 2),3,T24,not_implemented,docs/RESEARCH_METHODOLOGY.md,,Vocabulary defined in methodology.

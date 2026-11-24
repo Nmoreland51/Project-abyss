@@ -1,0 +1,214 @@
+# Pre-registered benchmark definitions. Fixed BEFORE any data is collected or any model is trained.
+# Changing a definition after data is seen requires a new definitions_version and a DECISION_LOG entry,
+# and the change must be reported alongside results. Targets marked "MASTER_AUDIT s9" are the owner's
+# proposed targets; others are Phase 0 proposals awaiting owner approval (DECISION_LOG D-007).
+definitions_version: 0.1.0
+pre_registered: 2026-11-24
+description: Benchmarks for recognition (B01-B04), discovery usefulness (B05) and evidence integrity (B06).
+benchmarks:
+  - id: B01
+    title: Known-architecture-family recognition
+    phase: 2
+    requirement_ids: [R03, R11]
+    test_ids: [T03]
+    question: >-
+      Given an observation derived from a software project's public technical documentation, does the classifier
+      assign the correct architecture family from the frozen label set?
+    unit_of_observation: >-
+      One independent software project (implementation, client, server or library) represented by a feature record
+      extracted from its own documentation (README, spec or manual pages), with provenance and content hash.
+    label_space: >-
+      Family label set v0.1, proposed in SIGNATURE_SPECIFICATION.md section 4 (11 pattern-level families). It is frozen
+      at the start of Phase 2 after owner approval (D-004) and a census of available items per family.
+    dataset_plan: >-
+      Candidate projects from registered sources (Software Heritage, PyPI, crates.io, npm, GitLab, Codeberg, raw
+      GitHub READMEs). Labels are assigned by written rules from each project's own documentation, with the rule and
+      quote stored per label. 20% of items are labelled independently a second time, and Cohen's kappa is reported.
+    split_protocol: >-
+      Group split by lineage (forks, same organisation and shared upstream go in the same group), 60/20/20
+      train/validation/test, stratified by family where possible. The split manifest (item ids plus sha256) is frozen
+      and committed before training. The test split is evaluated once per frozen model version.
+    leakage_controls:
+      - "Near-duplicate removal across splits (word 5-gram shingles, Jaccard >= 0.8 means same group)."
+      - "Name-blind variant: project names, family names and network names are masked from text features. Name-visible and name-blind results are both reported."
+      - "No item whose documentation quotes another item's README verbatim may cross splits."
+    metrics:
+      - name: macro_f1
+        definition: Unweighted mean over families of per-family F1 on the test split.
+      - name: per_class_precision_recall
+        definition: Precision and recall for each family, with support counts.
+      - name: confusion_matrix
+        definition: Counts of true family by predicted family on the test split.
+      - name: macro_f1_ci95
+        definition: 95% percentile bootstrap interval of macro F1 (2000 stratified resamples of test items).
+    baselines:
+      - Majority class
+      - Keyword rules written from the taxonomy vocabulary (no learning)
+      - TF-IDF plus logistic regression
+      - k-nearest-neighbour on the same features
+    proposed_targets:
+      - {metric: macro_f1, comparator: ">=", value: 0.90, source: "MASTER_AUDIT s9 (proposed)"}
+    minimum_sample_size: >-
+      At least 50 lineage-independent items per family, which gives about 10 test items at a 20% split. The bootstrap
+      interval will be wide at this size and is always reported. Families below 50 items are merged by a documented
+      rule or reported separately and excluded from macro F1, and the exclusion is stated next to the result.
+    threshold_policy: Hyperparameters are selected on validation only. The test split is never used for tuning.
+    owner_dependencies: ["Approve family label set (D-004)", "Approve observation modality (D-003)"]
+    status: defined_not_run
+
+  - id: B02
+    title: Withheld-family (open-set) recognition
+    phase: 3
+    requirement_ids: [R04, R11]
+    test_ids: [T04]
+    question: >-
+      When an entire architecture family is withheld from training, does the system label its observations as unknown
+      rather than assigning a known family, while still recognising known families?
+    unit_of_observation: Same as B01.
+    label_space: B01 families plus 'unknown'.
+    dataset_plan: B01 dataset. Each family is withheld once (leave-one-family-out folds).
+    split_protocol: >-
+      For each fold, all items of the withheld family go to test-unknown. A second, different family is withheld for
+      validation-unknown and used only to fit the rejection threshold. Known families keep the B01 group split.
+    leakage_controls:
+      - "Thresholds are fitted on validation-unknown only, never on the test-withheld family."
+      - "Same near-duplicate and name-blind controls as B01."
+    metrics:
+      - name: unknown_recall
+        definition: Withheld-family test items labelled 'unknown' divided by all withheld-family test items, averaged over folds.
+      - name: false_unknown_rate
+        definition: Known-family test items labelled 'unknown' divided by all known-family test items, averaged over folds.
+      - name: wrong_identity_rate
+        definition: Withheld-family items confidently assigned to a known family. This is the error the directive forbids most explicitly.
+      - name: novelty_auroc
+        definition: AUROC of the novelty score separating withheld-family from known-family test items.
+    baselines:
+      - Maximum softmax probability threshold
+      - Distance to nearest class centroid
+      - Isolation forest on features
+    proposed_targets:
+      - {metric: unknown_recall, comparator: ">=", value: 0.80, source: "MASTER_AUDIT s9 (proposed)"}
+      - {metric: false_unknown_rate, comparator: "<=", value: 0.05, source: "MASTER_AUDIT s9 (proposed)"}
+    minimum_sample_size: At least 8 families meeting the B01 minimum, so that every fold has a meaningful withheld family.
+    threshold_policy: Fitted on validation-unknown. The values are recorded per fold.
+    owner_dependencies: ["Same as B01"]
+    status: defined_not_run
+
+  - id: B03
+    title: Calibration and abstention
+    phase: 3
+    requirement_ids: [R04]
+    test_ids: [T05]
+    question: Do confidence scores mean what they say, and does abstaining on low-confidence items reduce error?
+    unit_of_observation: Same as B01.
+    label_space: B01 families plus 'abstain'.
+    dataset_plan: B01 and B02 test predictions.
+    split_protocol: Calibration (if any) is fitted on validation and evaluated on test.
+    leakage_controls: ["Calibrator is never fitted on test predictions."]
+    metrics:
+      - name: ece_15
+        definition: Expected calibration error with 15 equal-width confidence bins.
+      - name: risk_coverage_auc
+        definition: Area under the risk-coverage curve, where error is measured on retained items as coverage decreases.
+      - name: abstention_rate
+        definition: Fraction of test items on which the system abstains at the chosen operating point.
+    baselines: ["Uncalibrated model scores"]
+    proposed_targets: []
+    minimum_sample_size: Same as B01.
+    threshold_policy: Operating point chosen on validation.
+    status: defined_not_run
+
+  - id: B04
+    title: Anomaly false-positive control under ordinary change
+    phase: 3
+    requirement_ids: [R05]
+    test_ids: [T06]
+    question: >-
+      Do ordinary changes (new versions, truncated or corrupted documents, missing sections) get flagged as anomalies or
+      unknown families? They shouldn't be.
+    unit_of_observation: A B01 known-family test item and its perturbed variants.
+    label_space: "'expected/known' compared with 'anomalous/unknown'."
+    dataset_plan: >-
+      Each known test item gets a fixed set of perturbations (version bump text, 50% truncation, encoding corruption,
+      section removal), generated by a seeded, versioned script. These items are synthetic and are labelled as such.
+    split_protocol: Perturbations are applied to test items only. Perturbation parameters are frozen before evaluation.
+    leakage_controls: ["The perturbation generator is not used to create training data for the same run."]
+    metrics:
+      - name: false_anomaly_rate
+        definition: Perturbed known items flagged anomalous or unknown, divided by all perturbed known items, reported per perturbation type.
+      - name: ordinary_explanation_rate
+        definition: Fraction of flagged items whose hypothesis record lists the true ordinary cause among alternatives.
+    baselines: ["Unperturbed false unknown rate from B02"]
+    proposed_targets:
+      - {metric: false_anomaly_rate, comparator: "<=", value: 0.10, source: "Phase 0 proposal (owner approval pending, D-007)"}
+    minimum_sample_size: At least 100 perturbed items per perturbation type.
+    threshold_policy: Uses the B02 operating point unchanged.
+    status: defined_not_run
+
+  - id: B05
+    title: Hidden-value discovery usefulness compared with a conventional-search baseline
+    phase: 4
+    requirement_ids: [R07, R11]
+    test_ids: [T09]
+    question: >-
+      For the owner's real needs, are tools surfaced by Abyss (absent from the frozen initial corpus) rated more useful,
+      and more often new to the owner, than results from a conventional-search baseline?
+    unit_of_observation: A (need statement, candidate tool) pair.
+    label_space: "Usefulness 0-3 (graded), 'already known to me' yes/no, 'would try it' yes/no."
+    dataset_plan: >-
+      The owner writes at least 10 need statements in the priority areas before Phase 4 starts (frozen with a hash).
+      For each need, Abyss returns its top 5 and the baseline returns its top 5. Results are pooled, deduplicated,
+      shuffled and stripped of their origin. The owner rates them blind. Every Abyss capability claim must carry
+      verified citations at rating time.
+    split_protocol: >-
+      Needs used to develop the ranker (development needs) are disjoint from evaluation needs. Evaluation needs are
+      hashed before development and revealed only at evaluation.
+    leakage_controls:
+      - "The initial corpus manifest is frozen at Phase 1 exit, and 'absent from initial corpus' is checked against that manifest."
+      - "The rater can't see which system produced an item."
+    metrics:
+      - name: ndcg_at_5
+        definition: Mean over needs of nDCG@5 using the 0-3 ratings (ideal ranking from the pooled ratings for that need).
+      - name: precision_at_5
+        definition: Fraction of top-5 items rated at least 2.
+      - name: novelty_at_5
+        definition: Fraction of top-5 items both marked 'not already known' by the owner and absent from the frozen initial corpus.
+      - name: paired_difference_ci95
+        definition: 95% bootstrap interval (over needs) of Abyss minus baseline for nDCG@5, plus a Wilcoxon signed-rank p-value.
+      - name: verified_claim_rate
+        definition: Fraction of capability claims shown to the rater that are backed by VERIFIED citations.
+    baselines:
+      - "Conventional search baseline: one option, chosen by the owner (D-008), from (a) a web search API, (b) GitHub or forge search sorted by stars, or (c) the owner's own 10-minute manual search per need"
+    proposed_targets:
+      - {metric: verified_claim_rate, comparator: "==", value: 1.0, source: "MASTER_AUDIT s9 (proposed)"}
+      - {metric: novelty_at_5, comparator: ">=", value: 0.5, source: "Phase 0 proposal (owner approval pending, D-007)"}
+    minimum_sample_size: At least 10 evaluation needs. Fewer than 10 makes the paired interval uninformative, and that's reported as such.
+    threshold_policy: Ranker settings frozen before evaluation needs are revealed.
+    owner_dependencies: ["Write need statements", "Choose baseline (D-008)", "About 2-3 hours of blind rating"]
+    status: defined_not_run
+
+  - id: B06
+    title: Evidence traceability and citation fabrication in system-generated reports
+    phase: 1
+    requirement_ids: [R01, R06]
+    test_ids: [T08]
+    question: >-
+      Is every claim in a report Abyss marks as verified backed by evidence that can be retrieved again, with zero
+      fabricated citations?
+    unit_of_observation: One claim in a system-generated report, together with its citations.
+    label_space: "VERIFIED / QUOTE_NOT_FOUND / SOURCE_UNAVAILABLE / NO_CITATION."
+    dataset_plan: All reports produced by the system during a phase's evaluation runs. Live re-verification uses the Phase 0 citation checker.
+    split_protocol: Not applicable (an audit of all outputs, not a sample).
+    leakage_controls: ["Re-verification is a fresh retrieval, never the cached copy used to write the report."]
+    metrics:
+      - name: traceability_rate
+        definition: Verified-status claims with at least one VERIFIED citation, divided by all verified-status claims.
+      - name: fabricated_citation_count
+        definition: Citations whose source doesn't exist or whose quote isn't in the source, manually confirmed after the automatic flag.
+    baselines: ["Not applicable"]
+    proposed_targets:
+      - {metric: traceability_rate, comparator: "==", value: 1.0, source: "MASTER_AUDIT s9 (proposed)"}
+      - {metric: fabricated_citation_count, comparator: "==", value: 0, source: "MASTER_AUDIT s9 (proposed)"}
+    minimum_sample_size: All claims (census).
+    threshold_policy: Not applicable.
+    status: defined_not_run

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-abyss"
+version = "0.1.0"
+description = "Evidence-driven research system for discovering overlooked, useful tools and information ecosystems (Phase 0 foundation)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "UNLICENSED - owner to choose (see docs/DECISION_LOG.md D-010)" }
+# Versions below are the ones actually tested in Phase 0 (see docs/IMPLEMENTATION_STATUS.md).
+dependencies = [
+  "pydantic>=2.6,<3",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4,<7"]
+dev = ["pytest>=8,<10", "pypdf>=4,<7"]
+
+[project.scripts]
+abyss = "abyss.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["abyss*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "live: performs real network requests; run with ABYSS_LIVE=1. A skipped live test is NOT a pass.",
+]
+addopts = "-ra"
