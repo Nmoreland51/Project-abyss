@@ -42,6 +42,10 @@ Python 3.13.18; pydantic 2.13.5; PyYAML 6.0.3; pytest 9.1.1; pypdf 6.17.0; poppl
 container with 4 CPU, 15 GiB RAM, no GPU, and HTTPS egress through a policy proxy. A lock file and a container
 recipe are Phase 1 work (R23).
 
+Packaging check: `pip install -e '.[dev]'` into a fresh virtual environment resolved pydantic 2.14.4, PyYAML
+6.0.4, pytest 9.2.0 and pypdf 6.21.4. With those versions the unit tier gave the same result (99 passed, 2
+live skipped) and `abyss validate` passed. So the declared version ranges work on at least two resolved sets.
+
 ## 4. What isn't claimed
 
 - No discovery has been made. No benchmark has been run. No classifier exists.
